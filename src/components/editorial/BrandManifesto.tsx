@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 interface Props {
   eyebrow?: string;
@@ -11,7 +11,7 @@ export function BrandManifesto({
   paragraphs,
 }: Props) {
   const content = paragraphs ?? [
-    "لونا بر اساس تقویم طراحی نمی‌کند؛ ما بر اساس پارچه طراحی می‌کنیم — وقتی پشم استراحت کرده، وقتی چرم‌سازی دور دوم پخت را تمام کرده، وقتی رنگ در دومین عبور آرام گرفته است.",
+    "لیا بر اساس تقویم طراحی نمی‌کند؛ ما بر اساس پارچه طراحی می‌کنیم — وقتی پشم استراحت کرده، وقتی چرم‌سازی دور دوم پخت را تمام کرده، وقتی رنگ در دومین عبور آرام گرفته است.",
     "هر آنچه منتشر می‌کنیم در تعداد محدود و در کارگاه‌های ما در تهران و اصفهان تولید می‌شود. هر تکه به دست سازنده‌ای تمام می‌شود که نامش بر برچسب درون لباس درج شده است. برچسب یک برند نیست؛ یک سند است.",
     "ما بر کیفیت و آرامش پایبندیم — هم به‌عنوان شیوهٔ ساخت، هم به‌عنوان تجربهٔ استفاده از محصول. هیچ چیز در اینجا پرسروصدا نیست؛ هیچ چیز هم قرار نیست باشد.",
   ];
@@ -34,7 +34,7 @@ export function BrandManifesto({
           ))}
           <div className="mt-12 flex items-center gap-3">
             <span className="h-px w-10 bg-ink/40" />
-            <LonaLogo variant="default" size={28} title="لوگوی لونا" className="h-7 w-7" />
+            <LiaLogo variant="default" size={28} title="لوگوی لیا" className="h-7 w-7" />
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ export default function Product() {
   const primaryImage = product?.imageUrls?.[0];
   usePageMeta({
     title: product ? `خرید ${product.name}` : "محصول یافت نشد",
-    description: product?.description?.slice(0, 155) ?? "محصول از کالکسیون لونا",
+    description: product?.description?.slice(0, 155) ?? "محصول از کالکسیون لیا",
     canonical: product ? `${window.location.origin}/shop/${product.slug}` : undefined,
     ogImage: primaryImage,
     ogType: "product",
@@ -286,7 +286,7 @@ export default function Product() {
                 id: "returns",
                 label: "بازگشت و تعمیر",
                 body:
-                  "ارسال در ۴۸ ساعت از تهران یا اصفهان. بازگشت تا ۷ روز، در بسته‌بندی اصلی و بدون استفاده. تعمیر مادام‌العمر در بوتیک لونا.",
+                  "ارسال در ۴۸ ساعت از تهران یا اصفهان. بازگشت تا ۷ روز، در بسته‌بندی اصلی و بدون استفاده. تعمیر مادام‌العمر در بوتیک لیا.",
               },
             ].map((item) => (
               <div key={item.id}>
@@ -369,13 +369,13 @@ export default function Product() {
             </h3>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-ink-soft">
               سه هفته در کارگاه نساجی، دو هفته با خیاط، و باقی با پارچه.
-              ساخت یک محصول در لونا، بیشتر شبیه ویرایش یک دست‌نوشته است تا تولید انبوه.
+              ساخت یک محصول در لیا، بیشتر شبیه ویرایش یک دست‌نوشته است تا تولید انبوه.
             </p>
             <Link
               to="/press"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-canvas hover:bg-primary"
             >
-              خواندن مجله لونا
+              خواندن مجله لیا
             </Link>
           </div>
           <div className="gradient-oat relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-inset ring-white/40">

@@ -1,5 +1,5 @@
 /**
- * Lona — Vogue-style editorial hero.
+ * Lia — Vogue-style editorial hero.
  *
  * Asymmetric 70 / 30 layout: a single pearl/rose editorial plate on one
  * side, a narrow text column with generous whitespace on the other. No
@@ -16,7 +16,7 @@ import { ArrowLeft } from "lucide-react";
 import { EASE_LUXURY } from "@/lib/motion";
 import { useReducedMotionStrict } from "@/hooks/use-prefers-reduced-motion";
 import { EditorialImage } from "@/components/ui/EditorialImage";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 import { useHomepageImages } from "@/lib/homepage-images";
 
 export function Hero() {
@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       className="relative mx-auto flex min-h-[88vh] max-w-[1728px] flex-col gap-10 px-6 pt-24 pb-20 lg:flex-row-reverse lg:items-center lg:gap-16 lg:px-10 lg:pt-32 lg:pb-28"
-      aria-label="هero لونا"
+      aria-label="هero لیا"
     >
       {/* Editorial plate — 70% width on desktop (flex-row-reverse so it sits on the right in RTL) */}
       <motion.div
@@ -36,10 +36,10 @@ export function Hero() {
       >
         <EditorialImage
           src={images.hero}
-          alt="تصویر ادیتوریال کالکشن جدید لونا"
+          alt="تصویر ادیتوریال کالکشن جدید لیا"
           priority
           className="absolute inset-0 h-full w-full"
-          fallbackClassName="gradient-lona-rose"
+          fallbackClassName="gradient-lia-rose"
         />
         {/* Sheen — soft top-light wash */}
         <div
@@ -68,10 +68,10 @@ export function Hero() {
         </div>
         {/* Editorial label, bottom-left */}
         <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10">
-          <LonaLogo
+          <LiaLogo
             variant="default"
             size={30}
-            title="لوگوی لونا"
+            title="لوگوی لیا"
             className="h-8 w-8"
           />
           <p className="mt-2 font-display text-[clamp(2rem,4vw,3.6rem)] font-light leading-[0.96] text-canvas">
@@ -88,7 +88,7 @@ export function Hero() {
         transition={{ duration: 1.1, ease: EASE_LUXURY, delay: 0.25 }}
         className="flex w-full flex-col lg:w-[32%]"
       >
-        <p className="type-eyebrow text-ink-muted">بوتیک لونا</p>
+        <p className="type-eyebrow text-ink-muted">بوتیک لیا</p>
 
         <h1 className="mt-7 font-display text-[clamp(2.4rem,4.4vw,4.4rem)] font-light leading-[1.18] tracking-[-0.005em] text-ink">
           زیبایی، راحتی و اعتمادبه‌نفس؛
@@ -97,7 +97,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-8 max-w-md font-sans text-[15px] font-light leading-[1.85] text-ink-soft">
-          لونا مجموعه‌ای از لباس زیر، لباس خواب و پوشاک راحتی زنانه را با تمرکز
+          لیا مجموعه‌ای از لباس زیر، لباس خواب و پوشاک راحتی زنانه را با تمرکز
           بر کیفیت پارچه، طراحی ظریف و راحتی روزمره ارائه می‌دهد تا تجربه‌ای
           دلپذیر از خرید آنلاین برای شما فراهم شود.
         </p>

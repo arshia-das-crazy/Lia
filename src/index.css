@@ -1,11 +1,13 @@
 /* ============================================================
-   لونا — Luxury Lingerie Frontend Foundation
-   Persian / RTL · Light Glassmorphism · Full type scale
+   LIA Lingerie — Dark Luxury Frontend Foundation
+   Persian / RTL · Dark maroon · champagne gold · serif editorial
    ============================================================ */
 
 /* Fonts — preconnect to GStatic, then load. `display=swap` keeps
-   render time low. Each weights tuple covers the type ramp. */
-@import url("https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700&family=Lalezar:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+   render time low. Each weights tuple covers the type ramp.
+   Amiri = Persian naskh serif (editorial display), Estedad = Persian
+   sans (body/UI), Cormorant Garamond = Latin serif wordmark. */
+@import url("https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -56,20 +58,20 @@
   --color-glass-border: var(--glass-border);
   --color-glass-highlight: var(--glass-highlight);
 
-  --color-lona-rose: var(--lona-rose);
-  --color-lona-rose-soft: var(--lona-rose-soft);
-  --color-lona-pearl: var(--lona-pearl);
-  --color-lona-pearl-deep: var(--lona-pearl-deep);
-  --color-lona-noir: var(--lona-noir);
-  --color-lona-gold: var(--lona-gold);
-  --color-lona-blush: var(--lona-blush);
+  --color-lia-rose: var(--lia-rose);
+  --color-lia-rose-soft: var(--lia-rose-soft);
+  --color-lia-pearl: var(--lia-pearl);
+  --color-lia-pearl-deep: var(--lia-pearl-deep);
+  --color-lia-noir: var(--lia-noir);
+  --color-lia-gold: var(--lia-gold);
+  --color-lia-blush: var(--lia-blush);
 
-  /* Font stack — Vazirmatn (UI + body), Estedad (editorial display),
-     Lalezar (decorative campaign only), Cormorant Garamond (Latin wordmark) */
-  --font-display: "Estedad", serif;
+  /* Font stack — Amiri (editorial serif display), Estedad (UI + body),
+     Cormorant Garamond (Latin wordmark) */
+  --font-display: "Amiri", "Cormorant Garamond", "Estedad", serif;
   --font-sans: "Estedad", "Inter", system-ui, sans-serif;
   --font-latin-display: "Cormorant Garamond", serif;
-  --font-decorative: "Lalezar", "Estedad", serif;
+  --font-decorative: "Cormorant Garamond", "Amiri", serif;
 
   --shadow-soft: var(--shadow-soft-value);
   --shadow-float: var(--shadow-float-value);
@@ -88,76 +90,71 @@
 }
 
 /* ============================================================
-   DESIGN TOKENS — Lona · pearl + rose + champagne
+   DESIGN TOKENS — LIA · near-black maroon + burgundy + champagne
    ============================================================ */
 :root {
   --radius: 0.875rem;
 
-  --background: oklch(0.985 0.012 75);
-  --foreground: oklch(0.22 0.03 30);
-  --card: oklch(0.995 0.008 75);
-  --card-foreground: oklch(0.22 0.03 30);
-  --popover: oklch(0.995 0.008 75);
-  --popover-foreground: oklch(0.22 0.03 30);
+  --background: oklch(0.165 0.022 18);
+  --foreground: oklch(0.92 0.02 85);
+  --card: oklch(0.21 0.026 18);
+  --card-foreground: oklch(0.93 0.02 85);
+  --popover: oklch(0.21 0.026 18);
+  --popover-foreground: oklch(0.93 0.02 85);
 
-  --primary: oklch(0.5 0.08 25);
-  --primary-foreground: oklch(0.985 0.012 75);
+  --primary: oklch(0.44 0.12 14);
+  --primary-foreground: oklch(0.95 0.02 85);
 
-  --secondary: oklch(0.96 0.018 70);
-  --secondary-foreground: oklch(0.22 0.03 30);
+  --secondary: oklch(0.24 0.03 18);
+  --secondary-foreground: oklch(0.9 0.02 85);
 
-  --muted: oklch(0.95 0.018 70);
-  --muted-foreground: oklch(0.5 0.025 35);
+  --muted: oklch(0.23 0.028 18);
+  --muted-foreground: oklch(0.62 0.02 70);
 
-  --accent: oklch(0.94 0.03 60);
-  --accent-foreground: oklch(0.35 0.06 25);
+  --accent: oklch(0.8 0.09 85);
+  --accent-foreground: oklch(0.2 0.03 18);
 
   --destructive: oklch(0.62 0.2 25);
 
-  --border: oklch(0.88 0.018 75);
-  --input: oklch(0.9 0.018 75);
-  --ring: oklch(0.5 0.08 25);
+  --border: oklch(0.3 0.024 18);
+  --input: oklch(0.28 0.024 18);
+  --ring: oklch(0.8 0.09 85);
 
-  --ink: oklch(0.22 0.03 30);
-  --ink-soft: oklch(0.36 0.03 30);
-  --ink-muted: oklch(0.55 0.025 35);
-  --canvas: oklch(0.985 0.012 75);
-  --canvas-soft: oklch(0.96 0.018 70);
-  --canvas-deep: oklch(0.93 0.022 65);
-  --edge: oklch(1 0 0 / 0.55);
-  --edge-bright: oklch(1 0 0 / 0.85);
+  --ink: oklch(0.92 0.02 85);
+  --ink-soft: oklch(0.78 0.02 80);
+  --ink-muted: oklch(0.6 0.02 70);
+  --canvas: oklch(0.165 0.022 18);
+  --canvas-soft: oklch(0.21 0.026 18);
+  --canvas-deep: oklch(0.13 0.02 18);
+  --edge: oklch(0.82 0.09 85 / 0.12);
+  --edge-bright: oklch(0.82 0.09 85 / 0.5);
 
-  --glass-fill: oklch(1 0 0 / 0.5);
-  --glass-fill-strong: oklch(1 0 0 / 0.78);
-  --glass-border: oklch(1 0 0 / 0.6);
-  --glass-highlight: oklch(1 0 0 / 0.95);
+  --glass-fill: oklch(0.2 0.026 18 / 0.55);
+  --glass-fill-strong: oklch(0.2 0.026 18 / 0.85);
+  --glass-border: oklch(0.82 0.09 85 / 0.16);
+  --glass-highlight: oklch(0.82 0.09 85 / 0.5);
 
-  --lona-rose: oklch(0.62 0.13 18);
-  --lona-rose-soft: oklch(0.86 0.06 25);
-  --lona-pearl: oklch(0.95 0.02 80);
-  --lona-pearl-deep: oklch(0.86 0.04 60);
-  --lona-noir: oklch(0.22 0.03 30);
-  --lona-gold: oklch(0.78 0.08 75);
-  --lona-blush: oklch(0.92 0.04 20);
+  --lia-rose: oklch(0.44 0.12 14);
+  --lia-rose-soft: oklch(0.55 0.09 16);
+  --lia-pearl: oklch(0.92 0.02 85);
+  --lia-pearl-deep: oklch(0.78 0.03 75);
+  --lia-noir: oklch(0.14 0.02 18);
+  --lia-gold: oklch(0.8 0.09 85);
+  --lia-blush: oklch(0.5 0.08 15);
 
-  --shadow-soft-value: 0 1px 2px oklch(0.35 0.03 30 / 0.04),
-    0 6px 18px oklch(0.35 0.03 30 / 0.05);
-  --shadow-float-value: 0 2px 4px oklch(0.35 0.03 30 / 0.05),
-    0 18px 40px oklch(0.35 0.03 30 / 0.08);
-  --shadow-glass-value: inset 0 1px 0 oklch(1 0 0 / 0.6),
-    0 1px 2px oklch(0.35 0.03 30 / 0.04),
-    0 12px 32px oklch(0.35 0.03 30 / 0.06);
-  --shadow-hero-value: 0 24px 60px oklch(0.35 0.03 30 / 0.1),
-    0 4px 12px oklch(0.35 0.03 30 / 0.05);
+  --shadow-soft-value: 0 1px 2px oklch(0.08 0.02 18 / 0.5),
+    0 6px 18px oklch(0.08 0.02 18 / 0.5);
+  --shadow-float-value: 0 2px 4px oklch(0.08 0.02 18 / 0.55),
+    0 18px 40px oklch(0.08 0.02 18 / 0.6);
+  --shadow-glass-value: inset 0 1px 0 oklch(0.82 0.09 85 / 0.12),
+    0 1px 2px oklch(0.08 0.02 18 / 0.5),
+    0 12px 32px oklch(0.08 0.02 18 / 0.55);
+  --shadow-hero-value: 0 24px 60px oklch(0.08 0.02 18 / 0.7),
+    0 4px 12px oklch(0.08 0.02 18 / 0.5);
 
   --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-precise: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Preconnect for faster font delivery. */
-@layer base {
-  @import url("https://fonts.gstatic.com");
 }
 
 /* ============================================================
@@ -202,17 +199,17 @@
     @apply bg-background text-foreground font-sans;
     background-image: radial-gradient(
         ellipse 80% 50% at 80% -10%,
-        oklch(0.94 0.04 35 / 0.55),
+        oklch(0.3 0.06 15 / 0.5),
         transparent 60%
       ),
       radial-gradient(
         ellipse 70% 50% at 0% 20%,
-        oklch(0.95 0.04 65 / 0.5),
+        oklch(0.26 0.04 30 / 0.35),
         transparent 60%
       ),
       radial-gradient(
         ellipse 60% 40% at 50% 110%,
-        oklch(0.94 0.04 50 / 0.45),
+        oklch(0.22 0.05 12 / 0.4),
         transparent 70%
       );
     background-attachment: fixed;
@@ -223,8 +220,8 @@
     cursor: pointer;
   }
   ::selection {
-    background: oklch(0.62 0.13 18 / 0.22);
-    color: oklch(0.22 0.03 30);
+    background: oklch(0.44 0.12 14 / 0.35);
+    color: oklch(0.95 0.02 85);
   }
 
   h1, h2, h3, h4 {
@@ -246,10 +243,10 @@
 }
 
 /* ============================================================
-   UTILITY LAYER — glass, type ramps, brand gradients, RTL marquee
+   UTILITY LAYER — dark glass, type ramps, brand gradients, RTL marquee
    ============================================================ */
 @layer utilities {
-  /* Glass surfaces — light glassmorphism */
+  /* Glass surfaces — dark glassmorphism with gold hairline */
   .glass-subtle {
     background: var(--glass-fill);
     border: 1px solid var(--glass-border);
@@ -295,24 +292,24 @@
   }
 
   .hairline { border: 1px solid var(--edge); }
-  .hairline-strong { border: 1px solid oklch(1 0 0 / 0.85); }
+  .hairline-strong { border: 1px solid var(--edge-bright); }
 
   /* ----------------------------------------------------------
-     LONA PERSIAN TYPE SCALE
+     LIA PERSIAN TYPE SCALE
      every component must pick ONE of these classes
      ---------------------------------------------------------- */
 
   /* DISPLAY — campaign / hero only */
   .type-display-xl {
     font-family: var(--font-display);
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(2.6rem, 5.6vw, 4.6rem);
     line-height: 1.05;
     letter-spacing: 0;
   }
   .type-display-l {
     font-family: var(--font-display);
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(2.2rem, 4.4vw, 3.6rem);
     line-height: 1.08;
     letter-spacing: 0;
@@ -417,83 +414,83 @@
     letter-spacing: 0.04em;
   }
 
-  /* Brand-aligned product placeholder gradients */
+  /* Brand-aligned product placeholder gradients — dark luxury */
   .gradient-mist {
     background-image: radial-gradient(
         ellipse 60% 75% at 70% 25%,
-        oklch(0.97 0.018 75),
+        oklch(0.32 0.03 20),
         transparent 70%
       ),
-      linear-gradient(135deg, oklch(0.94 0.03 200), oklch(0.96 0.02 65));
+      linear-gradient(135deg, oklch(0.24 0.028 22), oklch(0.18 0.024 18));
   }
   .gradient-oat {
     background-image: radial-gradient(
         ellipse 60% 75% at 30% 30%,
-        oklch(0.97 0.03 80),
+        oklch(0.36 0.03 30),
         transparent 70%
       ),
-      linear-gradient(160deg, oklch(0.95 0.04 75), oklch(0.93 0.04 50));
+      linear-gradient(160deg, oklch(0.26 0.03 25), oklch(0.2 0.03 18));
   }
   .gradient-rose-quartz {
     background-image: radial-gradient(
         ellipse 70% 80% at 65% 20%,
-        oklch(0.95 0.04 25),
+        oklch(0.34 0.05 16),
         transparent 60%
       ),
-      linear-gradient(135deg, oklch(0.92 0.05 15), oklch(0.94 0.04 45));
+      linear-gradient(135deg, oklch(0.28 0.05 14), oklch(0.2 0.035 14));
   }
   .gradient-deep {
     background-image: radial-gradient(
         ellipse 70% 80% at 70% 20%,
-        oklch(0.32 0.05 30),
-        oklch(0.22 0.05 30)
+        oklch(0.2 0.03 18),
+        oklch(0.14 0.02 18)
       ),
-      linear-gradient(160deg, oklch(0.28 0.04 30), oklch(0.18 0.04 30));
+      linear-gradient(160deg, oklch(0.18 0.03 18), oklch(0.12 0.02 16));
   }
-  .gradient-lona-pearl {
+  .gradient-lia-pearl {
     background-image: radial-gradient(
         ellipse 70% 80% at 35% 25%,
-        oklch(0.97 0.03 75),
+        oklch(0.34 0.02 60),
         transparent 60%
       ),
-      linear-gradient(160deg, oklch(0.94 0.03 60), oklch(0.88 0.05 40));
+      linear-gradient(160deg, oklch(0.26 0.02 45), oklch(0.18 0.024 20));
   }
-  .gradient-lona-rose {
+  .gradient-lia-rose {
     background-image: radial-gradient(
         ellipse 70% 80% at 30% 20%,
-        oklch(0.96 0.05 25),
+        oklch(0.34 0.05 15),
         transparent 60%
       ),
-      linear-gradient(135deg, oklch(0.88 0.08 18), oklch(0.78 0.1 12));
+      linear-gradient(135deg, oklch(0.28 0.055 14), oklch(0.19 0.045 12));
   }
-  .gradient-lona-noir {
+  .gradient-lia-noir {
     background-image: radial-gradient(
         ellipse 70% 80% at 30% 20%,
-        oklch(0.32 0.05 30),
-        oklch(0.22 0.05 30)
+        oklch(0.2 0.03 18),
+        oklch(0.14 0.02 18)
       ),
-      linear-gradient(160deg, oklch(0.28 0.04 30), oklch(0.16 0.04 25));
+      linear-gradient(160deg, oklch(0.17 0.028 18), oklch(0.11 0.02 14));
   }
 
   .ring-luxury {
     box-shadow: 0 0 0 1px var(--edge-bright),
-      0 0 0 4px oklch(0.5 0.08 25 / 0.1);
+      0 0 0 4px oklch(0.44 0.12 14 / 0.15);
   }
   .focus-luxury:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px oklch(0.985 0.012 75),
-      0 0 0 4px oklch(0.5 0.08 25 / 0.45);
+    box-shadow: 0 0 0 2px oklch(0.2 0.03 18),
+      0 0 0 4px oklch(0.8 0.09 85 / 0.5);
     border-radius: var(--radius);
   }
 
   .scroll-luxe::-webkit-scrollbar { width: 6px; height: 6px; }
   .scroll-luxe::-webkit-scrollbar-track { background: transparent; }
   .scroll-luxe::-webkit-scrollbar-thumb {
-    background: oklch(0.88 0.018 75 / 0.6);
+    background: oklch(0.3 0.024 18 / 0.8);
     border-radius: 3px;
   }
   .scroll-luxe::-webkit-scrollbar-thumb:hover {
-    background: oklch(0.5 0.08 25 / 0.45);
+    background: oklch(0.8 0.09 85 / 0.5);
   }
 
   /* Marquee — RTL-safe translation */

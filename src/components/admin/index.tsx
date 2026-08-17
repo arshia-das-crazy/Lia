@@ -39,7 +39,7 @@ import {
   type AdminPermission,
   type AdminRole,
 } from "@/lib/data/permissions";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 const GROUP_LABEL_FA: Record<string, string> = {
   Catalogue: "کاتالوگ",
@@ -105,7 +105,7 @@ function AdminSidebar({ role }: { role?: AdminRole }) {
     <aside className="sticky top-0 hidden h-screen border-r border-edge bg-canvas/95 backdrop-blur-xl lg:block">
       <div className="flex h-16 items-center gap-3 border-b border-edge px-5">
         <Link to="/admin" className="flex items-center gap-3">
-          <LonaLogo variant="default" size={32} title="لوگوی لونا" className="h-8 w-8" />
+          <LiaLogo variant="default" size={32} title="لوگوی لیا" className="h-8 w-8" />
           <span className="text-ink-muted">— مدیریت</span>
         </Link>
       </div>
@@ -127,7 +127,7 @@ function AdminSidebar({ role }: { role?: AdminRole }) {
                           "flex items-center gap-2 rounded-xl px-3 py-2 text-[12.5px] font-medium transition",
                           isActive
                             ? "bg-ink text-canvas"
-                            : "text-ink-soft hover:bg-white/70 hover:text-ink",
+                            : "text-ink-soft hover:bg-canvas/60 hover:text-ink",
                         )
                       }
                     >
@@ -140,7 +140,7 @@ function AdminSidebar({ role }: { role?: AdminRole }) {
             </div>
           ),
         )}
-        <div className="mt-12 rounded-2xl border border-edge bg-white/60 p-4 text-xs leading-relaxed text-ink-soft">
+        <div className="mt-12 rounded-2xl border border-edge bg-canvas/60 p-4 text-xs leading-relaxed text-ink-soft">
           <Stethoscope className="h-4 w-4 text-primary" />
           <p className="mt-2 text-ink">شما در حالت عملیاتی هستید.</p>
           <p className="mt-1">
@@ -178,7 +178,7 @@ function AdminTopBar({
     <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b border-edge bg-canvas/90 px-6 backdrop-blur-xl lg:px-10">
       <form
         role="search"
-        className="flex flex-1 items-center gap-2 rounded-full border border-edge bg-white/70 px-3 py-1.5"
+        className="flex flex-1 items-center gap-2 rounded-full border border-edge bg-canvas/70 px-3 py-1.5"
       >
         <Search className="h-3.5 w-3.5 text-ink-muted" />
         <input
@@ -193,7 +193,7 @@ function AdminTopBar({
       </form>
       <button
         type="button"
-        className="grid h-9 w-9 place-items-center rounded-full hairline hover:bg-white"
+        className="grid h-9 w-9 place-items-center rounded-full hairline hover:bg-canvas/60"
         aria-label="اعلان‌ها"
       >
         <Bell className="h-3.5 w-3.5 text-ink" />
@@ -210,7 +210,7 @@ function AdminTopBar({
         <button
           type="button"
           onClick={onSignOut}
-          className="grid h-9 w-9 place-items-center rounded-full hairline text-ink-soft hover:bg-white hover:text-ink"
+          className="grid h-9 w-9 place-items-center rounded-full hairline text-ink-soft hover:bg-canvas/60 hover:text-ink"
           aria-label="خروج"
         >
           <LogOut className="h-3.5 w-3.5" />
@@ -296,17 +296,17 @@ export type StatusKind =
   | "inactive";
 
 const STATUS_TONE: Record<StatusKind, { dot: string; ink: string; bg: string }> = {
-  draft: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-white/70" },
-  published: { dot: "bg-emerald-500", ink: "text-emerald-700", bg: "bg-emerald-50" },
-  archived: { dot: "bg-zinc-400", ink: "text-zinc-600", bg: "bg-zinc-100" },
-  pending: { dot: "bg-amber-500", ink: "text-amber-700", bg: "bg-amber-50" },
-  processing: { dot: "bg-amber-500", ink: "text-amber-700", bg: "bg-amber-50" },
-  shipped: { dot: "bg-sky-500", ink: "text-sky-700", bg: "bg-sky-50" },
-  delivered: { dot: "bg-emerald-500", ink: "text-emerald-700", bg: "bg-emerald-50" },
-  returning: { dot: "bg-rose-500", ink: "text-rose-700", bg: "bg-rose-50" },
-  cancelled: { dot: "bg-zinc-400", ink: "text-zinc-600", bg: "bg-zinc-100" },
-  active: { dot: "bg-emerald-500", ink: "text-emerald-700", bg: "bg-emerald-50" },
-  inactive: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-white/70" },
+  draft: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-canvas/70" },
+  published: { dot: "bg-emerald-400", ink: "text-emerald-300", bg: "bg-emerald-500/15" },
+  archived: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-canvas/70" },
+  pending: { dot: "bg-amber-400", ink: "text-amber-300", bg: "bg-amber-500/15" },
+  processing: { dot: "bg-amber-400", ink: "text-amber-300", bg: "bg-amber-500/15" },
+  shipped: { dot: "bg-sky-400", ink: "text-sky-300", bg: "bg-sky-500/15" },
+  delivered: { dot: "bg-emerald-400", ink: "text-emerald-300", bg: "bg-emerald-500/15" },
+  returning: { dot: "bg-rose-400", ink: "text-rose-300", bg: "bg-rose-500/15" },
+  cancelled: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-canvas/70" },
+  active: { dot: "bg-emerald-400", ink: "text-emerald-300", bg: "bg-emerald-500/15" },
+  inactive: { dot: "bg-ink-muted", ink: "text-ink-muted", bg: "bg-canvas/70" },
 };
 
 const STATUS_LABEL_FA: Record<StatusKind, string> = {
@@ -412,7 +412,7 @@ export function AdminTable<T>({
           ) : null}
         </div>
       )}
-      <div className="overflow-hidden rounded-2xl border border-edge bg-white/85">
+      <div className="overflow-hidden rounded-2xl border border-edge bg-canvas-soft">
         <table className="w-full text-left text-sm">
           <thead className="bg-canvas-soft text-ink-muted">
             <tr>
@@ -512,10 +512,10 @@ export function AdminKPI({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <div className="flex items-center gap-2 text-ink-muted">
         {icon ? (
-          <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-white">
+          <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-canvas/60">
             {icon}
           </span>
         ) : null}
@@ -543,9 +543,9 @@ export function AdminEmptyState({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl border border-dashed border-edge bg-white/60 px-8 py-16 text-center">
+    <div className="rounded-3xl border border-dashed border-edge bg-canvas/60 px-8 py-16 text-center">
       {icon ? (
-        <span className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full hairline bg-white text-primary">
+        <span className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full hairline bg-canvas/60 text-primary">
           {icon}
         </span>
       ) : null}

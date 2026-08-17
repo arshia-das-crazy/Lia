@@ -40,33 +40,33 @@ export default function BackupsPage() {
 
   return (
     <div className="space-y-6">
-      <header><h1 className="font-display text-3xl text-ink">پشتیبان‌گیری</h1><p className="text-sm text-ink-muted mt-1">Export JSON/CSV · Import · نسخه‌ها</p></header>
+      <header className="space-y-2"><p className="type-eyebrow text-ink-muted">سیستم</p><h1 className="font-display text-3xl text-ink">پشتیبان‌گیری</h1><p className="text-sm text-ink-muted mt-1">Export JSON/CSV · Import · نسخه‌ها</p></header>
 
       <div className="glass rounded-3xl p-6 flex flex-wrap gap-3 items-end">
         <label className="flex-1 min-w-[200px]">
           <span className="text-xs text-ink-muted">برچسب نسخه</span>
-          <input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="مثلاً پیش از آپدیت" className="mt-1 w-full rounded-2xl border border-edge bg-white px-4 py-2.5 text-sm" />
+          <input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="مثلاً پیش از آپدیت" className="mt-1 w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-primary focus:outline-none" />
         </label>
-        <button onClick={handleExport} className="rounded-full bg-ink px-6 py-2.5 text-sm text-canvas hover:bg-primary">ساخت نسخه</button>
-        <label className="rounded-full border border-edge bg-white px-5 py-2.5 text-sm cursor-pointer inline-flex items-center gap-2">
+        <button onClick={handleExport} className="rounded-full bg-ink px-6 py-2.5 text-sm text-canvas transition hover:bg-primary">ساخت نسخه</button>
+        <label className="rounded-full hairline bg-canvas/70 px-5 py-2.5 text-sm text-ink-soft cursor-pointer inline-flex items-center gap-2 transition hover:bg-canvas-soft hover:text-ink">
           <Upload className="h-4 w-4" /> وارد کردن JSON
           <input type="file" accept=".json" className="hidden" onChange={(e) => e.target.files?.[0] && handleImportFile(e.target.files[0])} />
         </label>
       </div>
-      {msg && <p className="text-xs text-emerald-600">{msg}</p>}
+      {msg && <p className="text-xs text-emerald-300">{msg}</p>}
       {fileErr && <p className="text-xs text-destructive">{fileErr}</p>}
 
-      {snaps === undefined ? <Loader2 className="h-5 w-5 animate-spin" /> : snaps.length === 0 ? <p className="rounded-3xl border border-dashed border-edge bg-white/60 px-6 py-12 text-center text-sm text-ink-muted">هنوز نسخه‌ای ساخته نشده.</p> : (
+      {snaps === undefined ? <Loader2 className="h-5 w-5 animate-spin text-ink-muted" /> : snaps.length === 0 ? <p className="rounded-3xl border border-dashed border-edge bg-canvas/60 px-6 py-12 text-center text-sm text-ink-muted">هنوز نسخه‌ای ساخته نشده.</p> : (
         <ul className="space-y-2">
           {snaps.map((s) => (
-            <li key={s._id} className="rounded-2xl border border-edge bg-white px-4 py-3 flex items-center justify-between gap-3">
+            <li key={s._id} className="rounded-2xl border border-edge bg-canvas-soft px-4 py-3 flex items-center justify-between gap-3">
               <div>
                 <p className="text-sm font-medium text-ink">{s.label} — نسخه {String(s.version).padStart(2, "0")}</p>
                 <p className="text-xs text-ink-muted">{new Date(s.createdAt).toLocaleString("fa-IR")}</p>
               </div>
               <div className="flex gap-2">
-                <button onClick={() => dl(s.payload, `backup-v${s.version}.json`)} className="grid h-8 w-8 place-items-center rounded-full border border-edge bg-white hover:bg-canvas-soft"><Download className="h-4 w-4" /></button>
-                <button onClick={() => { if (confirm("حذف نسخه؟")) del({ id: s._id }); }} className="grid h-8 w-8 place-items-center rounded-full border border-edge bg-white text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
+                <button onClick={() => dl(s.payload, `backup-v${s.version}.json`)} className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 text-ink-soft transition hover:bg-canvas-soft hover:text-ink"><Download className="h-4 w-4" /></button>
+                <button onClick={() => { if (confirm("حذف نسخه؟")) del({ id: s._id }); }} className="grid h-8 w-8 place-items-center rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-300 transition hover:bg-rose-500/20"><Trash2 className="h-4 w-4" /></button>
               </div>
             </li>
           ))}

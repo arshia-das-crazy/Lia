@@ -1,5 +1,5 @@
 /**
- * Lona — canonical money module (Phase 8.1).
+ * Lia — canonical money module (Phase 8.1).
  *
  * Single source of truth for every money value in the app: Persian
  * Toman formatting, integer-only arithmetic and rounding. All other

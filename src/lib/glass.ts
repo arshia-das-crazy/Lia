@@ -1,5 +1,5 @@
 /**
- * Glass surface variants and class helpers — Lona theme.
+ * Glass surface variants and class helpers — LIA theme.
  */
 import type { ClassValue } from "clsx";
 import { clsx } from "clsx";
@@ -22,22 +22,22 @@ export const glassClass = (tier: "subtle" | "default" | "strong") => {
 
 /**
  * CSS gradient class strings for product placeholder imagery.
- * Lona-aligned palette: pearl / oat / rose / blush / noir / ivory.
+ * LIA-aligned palette: wine / pearl / gold / blush / noir / ivory.
  */
 export const PRODUCT_GRADIENTS = {
   mist: "gradient-mist",
   oat: "gradient-oat",
   rose: "gradient-rose-quartz",
-  blush: "gradient-lona-rose",
-  pearl: "gradient-lona-pearl",
+  blush: "gradient-lia-rose",
+  pearl: "gradient-lia-pearl",
   deep: "gradient-deep",
-  noir: "gradient-lona-noir",
+  noir: "gradient-lia-noir",
 } as const;
 
 export type GradientKey = keyof typeof PRODUCT_GRADIENTS;
 
-/** Legacy glass surface tokens — used by admin pages. */
+/** Admin surface tokens — dark luxury glass. Used by admin pages. */
 export const glass = {
-  surface: "rounded-2xl border border-white/60 bg-white/75 backdrop-blur-lg",
-  modal: "rounded-2xl border border-white/60 bg-white/90 backdrop-blur-2xl",
+  surface: "rounded-2xl border border-edge bg-canvas-soft backdrop-blur-lg",
+  modal: "rounded-2xl border border-edge bg-canvas-soft backdrop-blur-2xl",
 } as const;

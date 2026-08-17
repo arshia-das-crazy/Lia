@@ -389,7 +389,7 @@ function GiftNoteInline() {
           <textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
-            placeholder="یک یادداشت کوتاه — با حروف چاپ لونا روی کارت."
+            placeholder="یک یادداشت کوتاه — با حروف چاپ لیا روی کارت."
             rows={3}
             className={cn(
               "mt-2 w-full resize-none rounded-xl bg-white/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",
@@ -397,7 +397,7 @@ function GiftNoteInline() {
             )}
           />
           <p className="mt-2 text-[11px] text-ink-muted">
-            در بوتیک لونا با حروف دست‌نویس چاپ می‌شود. حداکثر ۸۰ کاراکتر.
+            در بوتیک لیا با حروف دست‌نویس چاپ می‌شود. حداکثر ۸۰ کاراکتر.
           </p>
         </div>
       )}

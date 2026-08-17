@@ -19,7 +19,7 @@ const COLLECTION_SLOTS = [
 export default function Collections() {
   usePageMeta({
     title: "کالکسیون‌ها",
-    description: "کالکسیون‌های لونا — مجموعه‌های فصلی و ماندگار لباس زیر، لباس خواب و پوشاک راحتی زنانه با طراحی ظریف و کیفیت بالا.",
+    description: "کالکسیون‌های لیا — مجموعه‌های فصلی و ماندگار لباس زیر، لباس خواب و پوشاک راحتی زنانه با طراحی ظریف و کیفیت بالا.",
     canonical: `${window.location.origin}/collections`,
     ogType: "website",
   });
@@ -29,12 +29,12 @@ export default function Collections() {
   return (
     <div className="mx-auto max-w-[1728px] px-6 pt-16 pb-24 lg:px-10 lg:pt-24">
       <header>
-        <p className="type-eyebrow text-ink-muted">خانهٔ لونا</p>
+        <p className="type-eyebrow text-ink-muted">خانهٔ لیا</p>
         <h1 className="mt-3 font-display text-5xl leading-[1.02] text-ink lg:text-8xl">
           کالکسیون‌ها
         </h1>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft lg:text-base">
-          چهار فصل. لونا هر سال دو دورهٔ تازه منتشر می‌کند. کالکسیون ماندگار در
+          چهار فصل. لیا هر سال دو دورهٔ تازه منتشر می‌کند. کالکسیون ماندگار در
           کنار آن‌ها اصلاح می‌شود، هرگز جایگزین نمی‌گردد.
         </p>
       </header>
@@ -54,7 +54,7 @@ export default function Collections() {
             >
               <EditorialImage
                   src={c.coverImage || images[COLLECTION_SLOTS[i % COLLECTION_SLOTS.length]]}
-                  alt={`${c.name} — تصویر کالکشن لونا`}
+                  alt={`${c.name} — تصویر کالکشن لیا`}
                   className={cn(
                     "relative aspect-[4/3] w-full transition duration-700 group-hover:scale-[1.03]",
                     c.gradient === "oat" && "gradient-oat",

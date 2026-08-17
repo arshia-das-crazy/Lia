@@ -197,7 +197,7 @@ export default function Categories() {
             "rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] transition",
             showArchived
               ? "bg-primary text-canvas"
-              : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+              : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
           )}
         >
           {showArchived ? (
@@ -366,7 +366,7 @@ function RowActions({
         disabled={busy || isFirst}
         onClick={() => moveLevel(-1)}
         aria-label="بالا"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-30"
+        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-30"
       >
         <ArrowUp className="h-3.5 w-3.5 text-ink" />
       </button>
@@ -375,7 +375,7 @@ function RowActions({
         disabled={busy || isLast}
         onClick={() => moveLevel(1)}
         aria-label="پایین"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-30"
+        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-30"
       >
         <ArrowDown className="h-3.5 w-3.5 text-ink" />
       </button>
@@ -383,7 +383,7 @@ function RowActions({
         type="button"
         onClick={onEdit}
         aria-label="ویرایش"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
       >
         <Pencil className="h-3.5 w-3.5 text-ink" />
       </button>
@@ -400,7 +400,7 @@ function RowActions({
             }
           }}
           aria-label="آرشیو"
-          className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+          className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
         >
           <Archive className="h-3.5 w-3.5 text-ink" />
         </button>
@@ -417,7 +417,7 @@ function RowActions({
             }
           }}
           aria-label="بازنشانی"
-          className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+          className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
         >
           <RotateCcw className="h-3.5 w-3.5 text-ink" />
         </button>
@@ -427,7 +427,7 @@ function RowActions({
         disabled={busy}
         onClick={onDelete}
         aria-label="حذف"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 text-rose-700 hover:bg-rose-50 disabled:opacity-40"
+        className="grid h-8 w-8 place-items-center rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-300 hover:bg-rose-500/20 disabled:opacity-40"
       >
         <Trash2 className="h-3.5 w-3.5" />
       </button>
@@ -499,7 +499,7 @@ function CategoryEditDrawer({
         initial={{ x: 32, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: EASE_LUXURY }}
-        className="flex h-full w-full max-w-2xl flex-col overflow-hidden border border-edge bg-white/95 shadow-2xl"
+        className="flex h-full w-full max-w-2xl flex-col overflow-hidden border border-edge bg-canvas-soft shadow-2xl"
       >
         <header className="flex items-start justify-between gap-4 border-b border-edge px-7 py-6">
           <div className="text-start">
@@ -514,7 +514,7 @@ function CategoryEditDrawer({
             type="button"
             onClick={onClose}
             aria-label="بستن"
-            className="grid h-9 w-9 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+            className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
           >
             <X className="h-3.5 w-3.5 text-ink" />
           </button>
@@ -666,7 +666,7 @@ function CategoryEditDrawer({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
               >
                 انصراف
               </button>

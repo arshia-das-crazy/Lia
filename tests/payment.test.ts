@@ -79,7 +79,7 @@ describe("ZarinpalProvider adapter", () => {
   test("createPayment uses a path-based callback with the order id", async () => {
     let seen: { orderId: string; callbackUrl: string } | null = null;
     const p = new ZarinpalProvider({
-      origin: "https://lona.shop",
+      origin: "https://lia.shop",
       request: async (input) => {
         seen = input;
         return { authority: "AUTH-123", redirectUrl: "https://zarinpal/pay" };

@@ -143,7 +143,7 @@ export function ProductPickerDialog({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.98 }}
             transition={{ duration: 0.35, ease: EASE_LUXURY }}
-            className="w-full max-w-3xl overflow-hidden rounded-3xl border border-edge bg-white/95 shadow-2xl backdrop-blur-xl"
+            className="w-full max-w-3xl overflow-hidden rounded-3xl border border-edge bg-canvas-soft shadow-2xl backdrop-blur-xl"
           >
             <header className="flex items-start justify-between gap-4 border-b border-edge px-7 py-6">
               <div className="text-start">
@@ -160,7 +160,7 @@ export function ProductPickerDialog({
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
-                className="grid h-9 w-9 shrink-0 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                 aria-label="بستن"
               >
                 <X className="h-3.5 w-3.5 text-ink" />
@@ -183,7 +183,7 @@ export function ProductPickerDialog({
                     <Reorder.Item
                       key={p._id}
                       value={p._id}
-                      className="flex items-center gap-3 rounded-2xl border border-edge bg-white px-3 py-2.5 text-sm"
+                      className="flex items-center gap-3 rounded-2xl border border-edge bg-canvas/60 px-3 py-2.5 text-sm"
                     >
                       <GripVertical className="h-4 w-4 shrink-0 cursor-grab text-ink-muted" />
                       <span className="hidden h-7 w-7 shrink-0 place-items-center overflow-hidden rounded-md bg-canvas-soft sm:grid" />
@@ -201,7 +201,7 @@ export function ProductPickerDialog({
                       <button
                         type="button"
                         onClick={() => togglePick(p._id)}
-                        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white hover:bg-rose-50"
+                        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-rose-500/15"
                         aria-label="حذف از فهرست"
                       >
                         <X className="h-3.5 w-3.5 text-ink-soft" />
@@ -246,7 +246,7 @@ export function ProductPickerDialog({
                             "flex w-full items-center gap-3 rounded-2xl border px-3 py-2.5 text-start text-sm transition",
                             isPicked
                               ? "border-primary bg-primary/8 text-ink"
-                              : "border-edge bg-white/70 text-ink-soft hover:bg-white",
+                              : "border-edge bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
                           )}
                         >
                           <span
@@ -254,7 +254,7 @@ export function ProductPickerDialog({
                               "grid h-7 w-7 shrink-0 place-items-center rounded-md border",
                               isPicked
                                 ? "border-primary bg-primary text-canvas"
-                                : "border-edge bg-white text-ink-muted",
+                                : "border-edge bg-canvas/60 text-ink-muted",
                             )}
                           >
                             {isPicked ? (
@@ -284,7 +284,7 @@ export function ProductPickerDialog({
               <button
                 type="button"
                 onClick={() => onOpenChange(false)}
-                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
               >
                 انصراف
               </button>

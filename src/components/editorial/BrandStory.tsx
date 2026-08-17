@@ -1,12 +1,12 @@
 /**
- * Lona — Brand story.
+ * Lia — Brand story.
  *
  * Editorial two-column section with verbatim copy: headline + body +
  * tiny signature line. Generous whitespace, serif headline, no icons,
  * no stat dl. Reads like a quiet magazine letter.
  */
 import { Reveal } from "@/components/motion/Reveal";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 interface Props {
   eyebrow?: string;
@@ -15,9 +15,9 @@ interface Props {
 }
 
 export function BrandStory({
-  eyebrow = "داستان لونا",
-  title = "لونا؛ ظرافتی که هر روز همراه شماست",
-  body = "در لونا باور داریم لباس زیر تنها یک پوشش نیست؛ بخشی از احساس راحتی، اعتمادبه‌نفس و سبک شخصی شماست. به همین دلیل هر محصول با دقت در انتخاب پارچه، دوخت و جزئیات طراحی انتخاب می‌شود تا تجربه‌ای باکیفیت و ماندگار ایجاد کند.",
+  eyebrow = "داستان لیا",
+  title = "لیا؛ ظرافتی که هر روز همراه شماست",
+  body = "در لیا باور داریم لباس زیر تنها یک پوشش نیست؛ بخشی از احساس راحتی، اعتمادبه‌نفس و سبک شخصی شماست. به همین دلیل هر محصول با دقت در انتخاب پارچه، دوخت و جزئیات طراحی انتخاب می‌شود تا تجربه‌ای باکیفیت و ماندگار ایجاد کند.",
 }: Props) {
   return (
     <Reveal
@@ -29,7 +29,7 @@ export function BrandStory({
         <div className="lg:sticky lg:top-32 lg:h-fit">
           <p className="type-eyebrow text-ink-muted">{eyebrow}</p>
           <div className="mt-8 flex items-center gap-3">
-            <LonaLogo variant="default" size={38} title="لوگوی لونا" className="h-10 w-10" />
+            <LiaLogo variant="default" size={38} title="لوگوی لیا" className="h-10 w-10" />
           </div>
           <p className="mt-3 font-display text-base font-light text-ink-soft">
             بوتیک لباس زیر زنانه
@@ -48,10 +48,10 @@ export function BrandStory({
           </p>
           <div className="mt-4 flex items-center gap-3">
             <span className="h-px w-10 bg-ink/35" />
-            <LonaLogo
+            <LiaLogo
               variant="default"
               size={28}
-              title="لوگوی لونا"
+              title="لوگوی لیا"
               className="h-7 w-7"
             />
           </div>

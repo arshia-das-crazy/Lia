@@ -216,11 +216,11 @@ export function MediaUploader({ productId }: MediaUploaderProps) {
         onDragLeave={() => setDragging(false)}
         onDrop={handleDrop}
         className={cn(
-          "flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-edge bg-white/60 px-6 py-12 text-center transition",
+          "flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-edge bg-canvas/60 px-6 py-12 text-center transition",
           dragging && "border-primary bg-primary/10",
         )}
       >
-        <div className="grid h-12 w-12 place-items-center rounded-full hairline bg-white text-primary">
+        <div className="grid h-12 w-12 place-items-center rounded-full hairline bg-canvas/60 text-primary">
           <ImagePlus className="h-5 w-5" />
         </div>
         <p className="font-display text-lg text-ink">تصاویر تکه را در اینجا رها کنید.</p>
@@ -253,7 +253,7 @@ export function MediaUploader({ productId }: MediaUploaderProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.35, ease: EASE_LUXURY }}
-            className="rounded-2xl border border-edge bg-white/85 p-4"
+            className="rounded-2xl border border-edge bg-canvas-soft p-4"
           >
             {row.state === "uploading" && (
               <div className="flex items-center gap-4">
@@ -278,12 +278,12 @@ export function MediaUploader({ productId }: MediaUploaderProps) {
             )}
             {row.state === "success" && (
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 overflow-hidden rounded-xl bg-emerald-100 text-emerald-700 grid place-items-center text-[10px] uppercase">
+                <div className="h-16 w-16 overflow-hidden rounded-xl bg-emerald-500/15 text-emerald-300 grid place-items-center text-[10px] uppercase">
                   آماده
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-medium text-ink">{row.name}</p>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-300">
                     ذخیره شد.
                   </p>
                 </div>
@@ -298,12 +298,12 @@ export function MediaUploader({ productId }: MediaUploaderProps) {
             )}
             {row.state === "failed" && (
               <div className="flex items-center gap-4">
-                <div className="grid h-16 w-16 place-items-center rounded-xl bg-rose-100 text-rose-700">
+                <div className="grid h-16 w-16 place-items-center rounded-xl bg-rose-500/15 text-rose-300">
                   <AlertTriangle className="h-4 w-4" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-medium text-ink">{row.name}</p>
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-rose-700">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-rose-300">
                     خطا · {row.error}
                   </p>
                 </div>
@@ -325,7 +325,7 @@ export function MediaUploader({ productId }: MediaUploaderProps) {
         {persisted.map((row, i) => (
           <div
             key={row._id}
-            className="group relative overflow-hidden rounded-2xl border border-edge bg-white/85"
+            className="group relative overflow-hidden rounded-2xl border border-edge bg-canvas-soft"
           >
             <div className="aspect-[4/5] bg-canvas-soft">
               {row.url ? (

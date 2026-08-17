@@ -4,7 +4,7 @@ import { ArrowLeft, BadgeCheck, Instagram, Mail, MapPin, Phone, ShieldCheck } fr
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { cn } from "@/lib/glass";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 const sections: { title: string; links: { label: string; to: string }[] }[] = [
   {
@@ -19,7 +19,7 @@ const sections: { title: string; links: { label: string; to: string }[] }[] = [
     ],
   },
   {
-    title: "خانه لونا",
+    title: "خانه لیا",
     links: [
       { label: "درباره ما", to: "/about" },
       { label: "مجله", to: "/press" },
@@ -65,13 +65,13 @@ export function Footer() {
       {/* Top band — newsletter */}
       <div className="mx-auto max-w-[1728px] px-6 lg:px-10">
         <div className="glass-strong relative overflow-hidden rounded-3xl px-8 py-12 lg:px-14 lg:py-16">
-          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-lona-blush/40 blur-[120px]" />
+          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-lia-blush/40 blur-[120px]" />
           <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-primary/15 blur-[120px]" />
           <div className="relative grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
             <div>
               <p className="type-eyebrow text-ink-muted">نامه‌ای از بوتیک</p>
               <h3 className="font-display text-3xl leading-[1.15] text-ink lg:text-5xl">
-                هر فصل، یک یادداشت کوتاه از خانه لونا.
+                هر فصل، یک یادداشت کوتاه از خانه لیا.
               </h3>
               <p className="mt-4 max-w-md text-sm text-ink-muted">
                 داستان‌های پارچه، تازه‌ترین تکه‌های کالکسیون و گاهی یک قطعه‌ی
@@ -121,7 +121,7 @@ export function Footer() {
                 </button>
               </div>
               <p className="text-xs text-ink-muted">
-                با عضویت، قوانین حریم خصوصی لونا را می‌پذیرید.
+                با عضویت، قوانین حریم خصوصی لیا را می‌پذیرید.
               </p>
             </form>
           </div>
@@ -133,10 +133,10 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div>
             <div className="flex items-center gap-3">
-              <LonaLogo
+              <LiaLogo
                 variant="default"
                 size={64}
-                title="لوگوی لونا"
+                title="لوگوی لیا"
                 className="h-16 w-16"
               />
               <span className="type-eyebrow text-ink-muted">
@@ -144,7 +144,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-ink-muted">
-              لونا یک خانه‌ی طراحی لباس زیر زنانه است. تکه‌هایی که برای ماندن
+              لیا یک خانه‌ی طراحی لباس زیر زنانه است. تکه‌هایی که برای ماندن
               کنار شما ساخته شده‌اند — به آرامی، برای سال‌ها.
             </p>
             <Link
@@ -226,7 +226,7 @@ export function Footer() {
       <div className="mx-auto mt-10 max-w-[1728px] border-t border-edge/60 px-6 py-8 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-4 text-xs text-ink-muted md:flex-row md:items-center">
           <p>
-            © {new Date().getFullYear()} {store?.shopName || "لونا"} — بوتیک لباس زیر زنانه.
+            © {new Date().getFullYear()} {store?.shopName || "لیا"} — بوتیک لباس زیر زنانه.
             {store?.nationalId && <> · شناسه ملی {store.nationalId}</>}
           </p>
           <div className="flex items-center gap-5">

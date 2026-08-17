@@ -20,7 +20,7 @@ export default function Wishlist() {
 
   usePageMeta({
     title: "علاقه‌مندی‌ها",
-    description: "محصولات ذخیره‌شده در فهرست علاقه‌مندی‌های شما در لونا",
+    description: "محصولات ذخیره‌شده در فهرست علاقه‌مندی‌های شما در لیا",
     noindex: true,
   });
 

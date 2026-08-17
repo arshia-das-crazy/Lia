@@ -1,5 +1,5 @@
 /**
- * لونا — Analytics foundation
+ * لیا — Analytics foundation
  *
  * Provider-agnostic event tracking layer. Currently a no-op stub that
  * future integrations (Google Analytics, Meta Pixel, Microsoft Clarity,

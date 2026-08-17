@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52" role="img" aria-labelledby="lia-wm-title lia-wm-desc">
+  <title id="lia-wm-title">LIA Lingerie</title>
+  <desc id="lia-wm-desc">لوگوی افقی لیا — LIA عاجی و LINGERIE طلایی</desc>
+
+  <!-- ivory serif wordmark -->
+  <text
+    x="0"
+    y="32"
+    font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-size="38"
+    font-weight="500"
+    letter-spacing="6"
+    fill="#EFE3D0">LIA</text>
+
+  <!-- champagne-gold small-caps tagline -->
+  <text
+    x="3"
+    y="44"
+    font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+    font-size="8.5"
+    letter-spacing="5"
+    fill="#C9A76B">LINGERIE</text>
+
+  <!-- burgundy underline accent -->
+  <rect x="3" y="48" width="44" height="1.2" fill="#6E2138" fill-opacity="0.9" />
+</svg>

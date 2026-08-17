@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn, type GradientKey } from "@/lib/glass";
-import { LONA_MOCK_FALLBACK } from "@/data/mock-images";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LIA_MOCK_FALLBACK } from "@/data/mock-images";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 /** Accept either the unprefixed key ("mist") or the full class ("gradient-mist"). */
 type GradientInput =
@@ -19,7 +19,7 @@ interface ProductImageProps {
   className?: string;
   /**
    * Garment silhouette. The Aeon/Æon outerwear/knitwear taxonomy is preserved
-   * alongside the LONA lingerie taxonomy (bra · brief · robe · tee · bodysuit).
+   * alongside the LIA lingerie taxonomy (bra · brief · robe · tee · bodysuit).
    */
   silhouette?:
     | "coat"
@@ -243,10 +243,10 @@ export function ProductImage({
   alt,
   ...rest
 }: ProductImageProps) {
-  const [imageSrc, setImageSrc] = useState(src ?? LONA_MOCK_FALLBACK);
+  const [imageSrc, setImageSrc] = useState(src ?? LIA_MOCK_FALLBACK);
 
   useEffect(() => {
-    setImageSrc(src ?? LONA_MOCK_FALLBACK);
+    setImageSrc(src ?? LIA_MOCK_FALLBACK);
   }, [src]);
 
   return (
@@ -277,8 +277,8 @@ export function ProductImage({
           className="pointer-events-none absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
           onError={(e) => {
             // Switch to local mock artwork before falling back to the branded silhouette.
-            if (imageSrc !== LONA_MOCK_FALLBACK) {
-              setImageSrc(LONA_MOCK_FALLBACK);
+            if (imageSrc !== LIA_MOCK_FALLBACK) {
+              setImageSrc(LIA_MOCK_FALLBACK);
               return;
             }
             const el = e.currentTarget;
@@ -286,10 +286,10 @@ export function ProductImage({
           }}
         />
       {withMark && (
-        <LonaLogo
+        <LiaLogo
           variant="default"
           size={24}
-          title="لوگوی لونا"
+          title="لوگوی لیا"
           className="absolute bottom-3 start-3 h-6 w-6 opacity-70"
         />
       )}

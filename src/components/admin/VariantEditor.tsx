@@ -146,7 +146,7 @@ export function VariantEditor({
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl border border-edge bg-white/85 p-5">
+      <div className="rounded-2xl border border-edge bg-canvas-soft p-5">
         <div className="flex items-baseline justify-between">
           <div>
             <p className="type-eyebrow text-ink-muted">Step 5 / 9 · Variants</p>
@@ -159,7 +159,7 @@ export function VariantEditor({
               type="button"
               onClick={reset}
               disabled={!dirty || busy}
-              className="inline-flex items-center gap-1.5 rounded-full hairline px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-ink-soft transition hover:bg-white disabled:opacity-40"
+              className="inline-flex items-center gap-1.5 rounded-full hairline px-3 py-2 text-[11px] uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft disabled:opacity-40"
             >
               <RotateCcw className="h-3 w-3" /> بازنشانی
             </button>
@@ -182,7 +182,7 @@ export function VariantEditor({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -6 }}
               transition={{ duration: 0.35, ease: EASE_LUXURY }}
-              className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2 text-[11px] text-emerald-700"
+              className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/15 px-3 py-2 text-[11px] text-emerald-300"
             >
               <Check className="h-3.5 w-3.5" />
               Saved: {lastResult.rows} variants.
@@ -199,7 +199,7 @@ export function VariantEditor({
             to enable the variant matrix.
           </div>
         ) : (
-          <div className="mt-5 overflow-x-auto rounded-2xl border border-edge bg-white">
+          <div className="mt-5 overflow-x-auto rounded-2xl border border-edge bg-canvas-soft">
             <table className="w-full text-left text-sm">
               <thead className="bg-canvas-soft text-ink-muted">
                 <tr>
@@ -226,7 +226,7 @@ export function VariantEditor({
                         key={key}
                         className={cn(
                           "border-t border-edge/60",
-                          row && !row.available && "bg-rose-50/60",
+                          row && !row.available && "bg-rose-500/10",
                         )}
                       >
                         <td className="px-3 py-2 font-medium text-ink">{size}</td>
@@ -291,13 +291,13 @@ export function VariantEditor({
                               }
                               className={cn(
                                 "inline-flex h-6 w-11 items-center rounded-full p-1 transition",
-                                row?.available ? "bg-emerald-500" : "bg-zinc-300",
+                                row?.available ? "bg-emerald-500" : "bg-ink-muted",
                               )}
                               aria-label={`Toggle available: ${row?.available ? "on" : "off"}`}
                             >
                               <span
                                 className={cn(
-                                  "h-4 w-4 rounded-full bg-white transition-transform",
+                                  "h-4 w-4 rounded-full bg-canvas transition-transform",
                                   row?.available && "translate-x-5",
                                 )}
                               />
@@ -313,8 +313,8 @@ export function VariantEditor({
                             className={cn(
                               "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] uppercase tracking-[0.16em]",
                               on
-                                ? "bg-rose-100 text-rose-700 hover:bg-rose-200"
-                                : "bg-emerald-100 text-emerald-700 hover:bg-emerald-200",
+                                ? "bg-rose-500/15 text-rose-300 hover:bg-rose-500/25"
+                                : "bg-emerald-500/15 text-emerald-300 hover:bg-emerald-500/25",
                             )}
                           >
                             {on ? (
@@ -338,7 +338,7 @@ export function VariantEditor({
         )}
 
         {rows.some((r) => !r.available && r.stock > 0) && (
-          <div className="mt-4 flex items-start gap-2 rounded-xl bg-amber-50 px-3 py-2 text-[11px] text-amber-800">
+          <div className="mt-4 flex items-start gap-2 rounded-xl bg-amber-500/15 px-3 py-2 text-[11px] text-amber-300">
             <AlertCircle className="h-3.5 w-3.5" />
             Some variants still hold stock but are flagged unavailable. They
             will be removed from storefront filters but stay reserved for order

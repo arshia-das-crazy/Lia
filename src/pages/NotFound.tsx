@@ -7,7 +7,7 @@ import { usePageMeta } from "@/lib/seo";
 export default function NotFound() {
   usePageMeta({
     title: "صفحه یافت نشد",
-    description: "صفحه مورد نظر یافت نشد. به صفحه اصلی لونا بازگردید.",
+    description: "صفحه مورد نظر یافت نشد. به صفحه اصلی لیا بازگردید.",
     noindex: true,
   });
   return (

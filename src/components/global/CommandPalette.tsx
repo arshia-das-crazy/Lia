@@ -30,8 +30,8 @@ const PAGE_LINKS: { label: string; to: string; group: string }[] = [
   { label: "سبد خرید", to: "/cart", group: "صفحه‌ها" },
   { label: "علاقه‌مندی‌ها", to: "/wishlist", group: "صفحه‌ها" },
   { label: "حساب کاربری", to: "/account", group: "صفحه‌ها" },
-  { label: "درباره لونا", to: "/about", group: "صفحه‌ها" },
-  { label: "مجله لونا", to: "/press", group: "صفحه‌ها" },
+  { label: "درباره لیا", to: "/about", group: "صفحه‌ها" },
+  { label: "مجله لیا", to: "/press", group: "صفحه‌ها" },
 ];
 
 const SUGGESTIONS: { label: string; to: string; meta: string }[] = [
@@ -75,7 +75,7 @@ export function CommandPalette() {
   return (
     <CommandDialog open={commandOpen} onOpenChange={(o) => !o && closeCommand()}>
       <CommandInput
-        placeholder="جست‌وجو در لونا… محصول، کالکسیون، صفحه"
+        placeholder="جست‌وجو در لیا… محصول، کالکسیون، صفحه"
         value={query}
         onValueChange={setQuery}
         dir="rtl"

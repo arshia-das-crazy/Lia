@@ -1,5 +1,5 @@
 /**
- * Lona — Landing page composition.
+ * Lia — Landing page composition.
  *
  * Locked section order (do not change without consulting the spec):
  *   1. Hero
@@ -38,7 +38,7 @@ import {
 export default function Landing() {
   usePageMeta({
     title: "بوتیک لباس زیر زنانه لوکس",
-    description: "لونا — بوتیک آنلاین لباس زیر زنانه لوکس. طراحی‌های ظریف، پارچه‌های مرغوب و تجربه خریدی خاص برای زنان امروزی.",
+    description: "لیا — بوتیک آنلاین لباس زیر زنانه لوکس. طراحی‌های ظریف، پارچه‌های مرغوب و تجربه خریدی خاص برای زنان امروزی.",
     canonical: typeof window !== "undefined" ? window.location.origin : undefined,
     ogType: "website",
   });
@@ -53,10 +53,10 @@ export default function Landing() {
   return (
     <div className="relative bg-canvas text-ink">
       <OrganizationJsonLd
-        name={store?.shopName ?? "لونا"}
+        name={store?.shopName ?? "لیا"}
         url={origin}
         logo={`${origin}/logo.svg`}
-        description="لونا — بوتیک آنلاین لباس زیر زنانه لوکس. طراحی‌های ظریف، پارچه‌های مرغوب و تجربه خریدی خاص."
+        description="لیا — بوتیک آنلاین لباس زیر زنانه لوکس. طراحی‌های ظریف، پارچه‌های مرغوب و تجربه خریدی خاص."
         sameAs={Object.values(store?.social ?? {}).filter(
           (v): v is string => Boolean(v && /^https?:\/\//.test(v)),
         )}
@@ -100,7 +100,7 @@ export default function Landing() {
             </h2>
           </div>
           <p className="max-w-md font-sans text-sm font-light leading-relaxed text-ink-muted md:text-start">
-            چهار تکه‌ی ظریف که تیم لونا این فصل بیشتر پوشیده است.
+            چهار تکه‌ی ظریف که تیم لیا این فصل بیشتر پوشیده است.
           </p>
         </div>
         <div className="mt-12">
@@ -126,10 +126,10 @@ export default function Landing() {
 
       {/* 9 · Journal */}
       <EditorialStory
-        eyebrow="مجله لونا"
+        eyebrow="مجله لیا"
         quote="لباس زیر زنانه، اگر درست انتخاب شود، کمتر دیده می‌شود اما بیشتر حس می‌شود."
-        body="ما در لونا هر فصل با چند مزون ایتالیایی و دو کارگاه ایرانی کار می‌کنیم تا پارچه‌ای انتخاب کنیم که هم لطیف باشد، هم ماندگار. طراحی ما از سادگی شروع می‌شود و در جزئیات تمام می‌شود؛ از دوخت‌های نامرئی تا لبه‌های دست‌دوز."
-        attribution="تحریریه لونا"
+        body="ما در لیا هر فصل با چند مزون ایتالیایی و دو کارگاه ایرانی کار می‌کنیم تا پارچه‌ای انتخاب کنیم که هم لطیف باشد، هم ماندگار. طراحی ما از سادگی شروع می‌شود و در جزئیات تمام می‌شود؛ از دوخت‌های نامرئی تا لبه‌های دست‌دوز."
+        attribution="تحریریه لیا"
       />
 
       {/* 10 · Instagram */}

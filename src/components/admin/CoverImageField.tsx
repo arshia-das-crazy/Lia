@@ -185,7 +185,7 @@ export function CoverImageField({
           type="button"
           onClick={() => inputRef.current?.click()}
           disabled={busy !== null}
-          className="grid h-9 w-9 shrink-0 place-items-center rounded-xl hairline text-ink-soft transition hover:bg-white hover:text-ink disabled:opacity-50"
+          className="grid h-9 w-9 shrink-0 place-items-center rounded-xl hairline text-ink-soft transition hover:bg-canvas-soft hover:text-ink disabled:opacity-50"
           aria-label="بارگذاری از دستگاه"
           title="بارگذاری از دستگاه"
         >
@@ -198,7 +198,7 @@ export function CoverImageField({
               onChange("");
               setDraft("");
             }}
-            className="grid h-9 w-9 shrink-0 place-items-center rounded-xl hairline text-ink-soft transition hover:bg-white hover:text-ink"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-xl hairline text-ink-soft transition hover:bg-canvas-soft hover:text-ink"
             aria-label="حذف تصویر"
             title="حذف تصویر"
           >
@@ -216,7 +216,7 @@ export function CoverImageField({
           }}
         />
       </div>
-      {error ? <p className="text-[11px] text-rose-700">{error}</p> : null}
+      {error ? <p className="text-[11px] text-rose-300">{error}</p> : null}
     </div>
   );
 }

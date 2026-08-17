@@ -207,7 +207,7 @@ export default function MediaLibrary() {
         await attachToLibrary({
           storageId,
           filename: file.name,
-          alt: file.name.replace(/\.[^.]+$/, "").trim() || "تصویر لونا",
+          alt: file.name.replace(/\.[^.]+$/, "").trim() || "تصویر لیا",
           width: undefined,
           height: undefined,
           contentType,
@@ -336,11 +336,11 @@ export default function MediaLibrary() {
           onDragLeave={() => setDragging(false)}
           onDrop={onDrop}
           className={cn(
-            "flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-edge bg-white/60 px-6 py-10 text-center transition",
+            "flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-edge bg-canvas/60 px-6 py-10 text-center transition",
             dragging && "border-primary bg-primary/10",
           )}
         >
-          <div className="grid h-10 w-10 place-items-center rounded-full hairline bg-white text-primary">
+          <div className="grid h-10 w-10 place-items-center rounded-full hairline bg-canvas/60 text-primary">
             <ImagePlus className="h-4 w-4" />
           </div>
           <p className="font-display text-base text-ink">
@@ -379,7 +379,7 @@ export default function MediaLibrary() {
                   "rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.16em]",
                   source === k
                     ? "bg-ink text-canvas"
-                    : "text-ink-soft hover:bg-white",
+                    : "text-ink-soft hover:bg-canvas-soft",
                 )}
               >
                 {label}
@@ -396,7 +396,7 @@ export default function MediaLibrary() {
                   "rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.16em]",
                   section === k
                     ? "bg-ink text-canvas"
-                    : "text-ink-soft hover:bg-white",
+                    : "text-ink-soft hover:bg-canvas-soft",
                 )}
               >
                 {label}
@@ -437,7 +437,7 @@ export default function MediaLibrary() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35, ease: EASE_LUXURY }}
-              className="rounded-2xl border border-edge bg-white/85 p-4"
+              className="rounded-2xl border border-edge bg-canvas-soft p-4"
             >
               {row.state === "uploading" ? (
                 <div className="flex items-center gap-4">
@@ -460,24 +460,24 @@ export default function MediaLibrary() {
                 </div>
               ) : row.state === "success" ? (
                 <div className="flex items-center gap-4">
-                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-emerald-100">
-                    <Check className="h-4 w-4 text-emerald-700" />
+                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-emerald-500/15">
+                    <Check className="h-4 w-4 text-emerald-300" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-ink">{row.name}</p>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-300">
                       با موفقیت ضمیمه شد.
                     </p>
                   </div>
                 </div>
               ) : (
                 <div className="flex items-center gap-4">
-                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-rose-100">
-                    <AlertTriangle className="h-4 w-4 text-rose-700" />
+                  <div className="grid h-14 w-14 place-items-center rounded-xl bg-rose-500/15">
+                    <AlertTriangle className="h-4 w-4 text-rose-300" />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-ink">{row.name}</p>
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-rose-700">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-rose-300">
                       خطا · {row.error}
                     </p>
                   </div>
@@ -487,7 +487,7 @@ export default function MediaLibrary() {
                       setUploads((u) => u.filter((r) => r.key !== row.key));
                       void beginUpload(row.file);
                     }}
-                    className="grid h-8 w-8 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+                    className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                     aria-label="بستن"
                   >
                     <RefreshCw className="h-3.5 w-3.5 text-ink-soft" />
@@ -524,7 +524,7 @@ export default function MediaLibrary() {
             ))}
           </div>
         ) : (
-          <div className="overflow-hidden rounded-2xl border border-edge bg-white/85">
+          <div className="overflow-hidden rounded-2xl border border-edge bg-canvas-soft">
             <ul className="divide-y divide-edge">
               {filtered.map((row) => (
                 <li key={row.id}>
@@ -576,7 +576,7 @@ export default function MediaLibrary() {
             onDelete={() => setDelId(selected.id)}
           />
         ) : (
-          <div className="rounded-3xl border border-dashed border-edge bg-white/60 p-8 text-center">
+          <div className="rounded-3xl border border-dashed border-edge bg-canvas/60 p-8 text-center">
             <p className="text-sm text-ink-soft">
               یک تصویر را انتخاب کنید تا جزئیات کامل، ابعاد و
               مکان‌های استفاده اینجا نمایش داده شود.
@@ -619,7 +619,7 @@ function MediaTile({
       type="button"
       onClick={onSelect}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border bg-white/85 text-start transition hover:border-primary",
+        "group relative overflow-hidden rounded-2xl border bg-canvas-soft text-start transition hover:border-primary",
         selected ? "border-primary ring-1 ring-primary" : "border-edge",
       )}
     >
@@ -738,7 +738,7 @@ function MediaDetailsPanel({
 
   const sizeLabel = row.width && row.height ? `${row.width}×${row.height}` : "—";
   return (
-    <div className="overflow-hidden rounded-3xl border border-edge bg-white/85">
+    <div className="overflow-hidden rounded-3xl border border-edge bg-canvas-soft">
       <div className="border-b border-edge px-6 py-5">
         <div className="flex items-start justify-between gap-3">
           <p className="text-start">
@@ -749,7 +749,7 @@ function MediaDetailsPanel({
             type="button"
             onClick={onClose}
             aria-label="بستن"
-            className="grid h-8 w-8 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+            className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
           >
             <X className="h-3.5 w-3.5 text-ink" />
           </button>
@@ -798,7 +798,7 @@ function MediaDetailsPanel({
               dir="rtl"
               value={altDraft}
               onChange={(e) => setAltDraft(e.target.value)}
-              placeholder="مثال: سوتین گیپور مشکی زنانه لونا"
+              placeholder="مثال: سوتین گیپور مشکی زنانه لیا"
               className="w-full rounded-xl border border-edge bg-canvas/60 px-3 py-2 text-sm text-ink focus:border-primary focus:outline-none"
             />
           </label>
@@ -835,7 +835,7 @@ function MediaDetailsPanel({
           type="button"
           onClick={copyUrl}
           disabled={!row.url}
-          className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white disabled:opacity-40"
+          className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft disabled:opacity-40"
         >
           <Copy className="h-3.5 w-3.5" />
           {copied ? "کپی شد" : "کپی URL"}
@@ -846,7 +846,7 @@ function MediaDetailsPanel({
               type="button"
               onClick={() => replaceInputRef.current?.click()}
               disabled={replaceBusy}
-              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft disabled:opacity-50"
             >
               {replaceBusy ? (
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -871,14 +871,14 @@ function MediaDetailsPanel({
         <button
           type="button"
           onClick={onDelete}
-          className="inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-rose-700 hover:bg-rose-200"
+          className="inline-flex items-center gap-2 rounded-full bg-rose-500/15 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-rose-300 hover:bg-rose-500/25"
         >
           <Trash2 className="h-3.5 w-3.5" />
           حذف
         </button>
       </div>
       {replaceError ? (
-        <p className="border-t border-edge px-6 py-3 text-[11px] text-rose-700">
+        <p className="border-t border-edge px-6 py-3 text-[11px] text-rose-300">
           {replaceError}
         </p>
       ) : null}

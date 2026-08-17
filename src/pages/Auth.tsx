@@ -12,7 +12,7 @@ import { ArrowRight, Loader2, Mail } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import { Reveal } from "@/components/motion/Reveal";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 interface AuthProps {
   redirectAfterAuth?: string;
@@ -103,10 +103,10 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
         <ArrowRight className="h-3.5 w-3.5" />
       </Link>
 
-      <LonaLogo
+      <LiaLogo
         variant="default"
         size={48}
-        title="لوگوی لونا"
+        title="لوگوی لیا"
         className="absolute left-6 top-6 z-10 h-12 w-12"
       />
 
@@ -117,7 +117,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
 
             <div className="relative">
               <p className="type-eyebrow text-ink-muted">
-                بوتیک لونا
+                بوتیک لیا
               </p>
               <h1 className="mt-3 font-display text-3xl leading-[1.05] text-ink">
                 {step === "signIn" ? "به بوتیک خوش آمدید." : "نامه‌ای برای شما رسید."}

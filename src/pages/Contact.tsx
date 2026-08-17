@@ -28,7 +28,7 @@ const initialForm: FormState = { name: "", email: "", phone: "", subject: "", me
 export default function Contact() {
   usePageMeta({
     title: "تماس با ما",
-    description: "راه‌های ارتباط با بوتیک لونا برای مشاوره خرید، پیگیری سفارش و پشتیبانی.",
+    description: "راه‌های ارتباط با بوتیک لیا برای مشاوره خرید، پیگیری سفارش و پشتیبانی.",
     canonical: typeof window === "undefined" ? undefined : `${window.location.origin}/contact`,
   });
   const store = useQuery(api.admin_settings.getStoreInfo, {});
@@ -81,9 +81,9 @@ export default function Contact() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 pb-24 pt-16 lg:px-10 lg:pt-24" dir="rtl">
-      <p className="type-eyebrow text-ink-muted">ارتباط با لونا</p>
+      <p className="type-eyebrow text-ink-muted">ارتباط با لیا</p>
       <h1 className="mt-3 font-display text-5xl leading-[1.02] text-ink lg:text-6xl">در کنار شماییم.</h1>
-      <p className="mt-5 max-w-xl text-sm leading-8 text-ink-soft">برای مشاوره خرید، پیگیری سفارش یا هر پرسش دیگری، تیم پشتیبانی لونا در ساعات پاسخ‌گویی همراه شماست.</p>
+      <p className="mt-5 max-w-xl text-sm leading-8 text-ink-soft">برای مشاوره خرید، پیگیری سفارش یا هر پرسش دیگری، تیم پشتیبانی لیا در ساعات پاسخ‌گویی همراه شماست.</p>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.2fr]">
         <div className="space-y-4">

@@ -49,14 +49,14 @@ export function ConfirmDialog({
 }: ConfirmDialogProps) {
   const toneChip =
     tone === "destructive"
-      ? "bg-rose-100 text-rose-700"
+      ? "bg-rose-500/15 text-rose-300"
       : tone === "info"
-        ? "bg-sky-100 text-sky-700"
+        ? "bg-sky-500/15 text-sky-300"
         : "bg-canvas-soft text-ink-soft";
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent
-        className="max-w-md rounded-3xl border border-edge bg-white/95 p-0 backdrop-blur-xl"
+        className="max-w-md rounded-3xl border border-edge bg-canvas-soft p-0 backdrop-blur-xl"
         dir="rtl"
       >
         <AlertDialogHeader className="space-y-3 px-7 pt-7 text-start">
@@ -96,7 +96,7 @@ export function ConfirmDialog({
           </AlertDialogAction>
           <AlertDialogCancel
             disabled={busy}
-            className="rounded-full hairline bg-canvas/70 px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+            className="rounded-full hairline bg-canvas/70 px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
           >
             {cancelLabel}
           </AlertDialogCancel>

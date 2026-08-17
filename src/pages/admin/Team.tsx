@@ -88,14 +88,14 @@ export default function TeamPage() {
         </header>
         {!member ? <AdminEmptyState title="مدیر پیدا نشد." body="ممکن است دسترسی این حساب حذف یا غیرفعال شده باشد." icon={<ShieldCheck className="h-5 w-5" />} /> : (
           <>
-            <div className="grid gap-4 rounded-3xl border border-edge bg-white/85 p-6 sm:grid-cols-3">
-              <div><p className="text-xs text-ink-muted">نام</p><p className="mt-1 font-medium text-ink">{member.name || "بدون نام"}</p></div>
-              <div><p className="text-xs text-ink-muted">ایمیل</p><p className="mt-1 text-ink" dir="ltr">{member.email}</p></div>
-              <div><p className="text-xs text-ink-muted">آخرین ورود</p><p className="mt-1 text-ink">{formatDate(member.lastLoginAt)}</p></div>
+            <div className="grid gap-4 rounded-3xl border border-edge bg-canvas-soft p-6 sm:grid-cols-3">
+              <div><p className="type-eyebrow text-ink-muted">نام</p><p className="mt-1 font-medium text-ink">{member.name || "بدون نام"}</p></div>
+              <div><p className="type-eyebrow text-ink-muted">ایمیل</p><p className="mt-1 text-ink" dir="ltr">{member.email}</p></div>
+              <div><p className="type-eyebrow text-ink-muted">آخرین ورود</p><p className="mt-1 text-ink">{formatDate(member.lastLoginAt)}</p></div>
             </div>
-            <div className="rounded-3xl border border-edge bg-white/85 p-6">
+            <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
               <h2 className="font-display text-2xl text-ink">فعالیت‌های اخیر</h2>
-              {activity === undefined ? <Loader2 className="mt-6 h-5 w-5 animate-spin" /> : activity.length === 0 ? <p className="mt-5 text-sm text-ink-muted">فعالیتی ثبت نشده است.</p> : <ul className="mt-5 space-y-3">{activity.map((row) => <li key={row._id} className="rounded-2xl border border-edge bg-canvas-soft p-3 text-sm"><span className="text-ink">{row.action}</span><span className="mx-2 text-ink-muted">·</span><span className="text-ink-muted">{formatDate(row.at)}</span></li>)}</ul>}
+              {activity === undefined ? <Loader2 className="mt-6 h-5 w-5 animate-spin text-ink-muted" /> : activity.length === 0 ? <p className="mt-5 text-sm text-ink-muted">فعالیتی ثبت نشده است.</p> : <ul className="mt-5 space-y-3">{activity.map((row) => <li key={row._id} className="rounded-2xl border border-edge bg-canvas-soft p-3 text-sm"><span className="text-ink">{row.action}</span><span className="mx-2 text-ink-muted">·</span><span className="text-ink-muted">{formatDate(row.at)}</span></li>)}</ul>}
             </div>
           </>
         )}
@@ -113,25 +113,25 @@ export default function TeamPage() {
         </div>
       </header>
 
-      <section className="rounded-3xl border border-edge bg-white/85 p-6">
-        <div className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary"><UserPlus className="h-4 w-4" /></span><div><h2 className="font-display text-2xl text-ink">دعوت مدیر جدید</h2><p className="text-sm text-ink-muted">توکن دعوت فقط یک‌بار نمایش داده می‌شود و هفت روز اعتبار دارد.</p></div></div>
+      <section className="rounded-3xl border border-edge bg-canvas-soft p-6">
+        <div className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 text-primary"><UserPlus className="h-4 w-4" /></span><div><h2 className="font-display text-2xl text-ink">دعوت مدیر جدید</h2><p className="text-sm text-ink-muted">توکن دعوت فقط یک‌بار نمایش داده می‌شود و هفت روز اعتبار دارد.</p></div></div>
         <div className="mt-5 grid gap-3 md:grid-cols-[1fr_180px_auto]">
-          <input dir="ltr" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="admin@example.com" className="rounded-2xl border border-edge bg-canvas/60 px-4 py-3 text-sm text-ink focus:border-primary focus:outline-none" />
+          <input dir="ltr" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="admin@example.com" className="rounded-2xl border border-edge bg-canvas/60 px-4 py-3 text-sm text-ink placeholder:text-ink-muted focus:border-primary focus:outline-none" />
           <select value={role} onChange={(event) => setRole(event.target.value)} className="rounded-2xl border border-edge bg-canvas/60 px-4 py-3 text-sm text-ink focus:border-primary focus:outline-none">{Object.keys(roleLabels).filter((key) => key !== "owner").map((key) => <option key={key} value={key}>{roleLabels[key]}</option>)}</select>
-          <button type="button" onClick={() => void invite()} disabled={busy || !email.trim()} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-ink px-5 py-3 text-sm font-medium text-canvas transition hover:bg-primary disabled:opacity-50">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <UserPlus className="h-4 w-4" />} ایجاد دعوت</button>
+          <button type="button" onClick={() => void invite()} disabled={busy || !email.trim()} className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-canvas transition hover:bg-primary disabled:opacity-50">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <UserPlus className="h-4 w-4" />} ایجاد دعوت</button>
         </div>
-        {inviteToken ? <div className="mt-4 rounded-2xl border border-amber-300/60 bg-amber-50 p-4"><p className="text-sm font-medium text-amber-900">توکن امن دعوت — این مقدار را در اختیار فرد دعوت‌شده بگذارید:</p><code dir="ltr" className="mt-2 block select-all break-all rounded-xl bg-white/80 p-3 text-xs text-amber-950">{inviteToken}</code></div> : null}
+        {inviteToken ? <div className="mt-4 rounded-2xl border border-amber-300/30 bg-amber-500/10 p-4"><p className="text-sm font-medium text-amber-200">توکن امن دعوت — این مقدار را در اختیار فرد دعوت‌شده بگذارید:</p><code dir="ltr" className="mt-2 block select-all break-all rounded-xl border border-edge bg-canvas-deep p-3 text-xs text-amber-100">{inviteToken}</code></div> : null}
       </section>
 
-      <section className="rounded-3xl border border-edge bg-white/85 p-6">
-        <div className="mb-5 flex flex-wrap items-center justify-between gap-3"><h2 className="font-display text-2xl text-ink">اعضای تیم</h2><input dir="rtl" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="جست‌وجوی نام یا ایمیل" className="rounded-full border border-edge bg-canvas/60 px-4 py-2 text-sm text-ink focus:border-primary focus:outline-none" /></div>
+      <section className="rounded-3xl border border-edge bg-canvas-soft p-6">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-3"><h2 className="font-display text-2xl text-ink">اعضای تیم</h2><input dir="rtl" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="جست‌وجوی نام یا ایمیل" className="rounded-full border border-edge bg-canvas/60 px-4 py-2 text-sm text-ink placeholder:text-ink-muted focus:border-primary focus:outline-none" /></div>
         <AdminTable
           rows={filtered}
           rowKey={(row) => String(row.id)}
           searchPlaceholder=""
           columns={[
             { key: "identity", header: "هویت", cell: (row) => <div><a href={`/admin/team/${String(row.id)}`} className="font-medium text-ink hover:text-primary">{row.name || "بدون نام"}</a><p className="text-xs text-ink-muted" dir="ltr">{row.email}</p></div> },
-            { key: "role", header: "نقش", cell: (row) => row.role === "owner" ? <span className="font-medium text-ink">مالک</span> : <select value={row.role ?? "support"} onChange={(event) => void changeRole(String(row.id), event.target.value)} className="rounded-lg border border-edge bg-white px-2 py-1 text-xs">{Object.keys(roleLabels).filter((key) => key !== "owner").map((key) => <option key={key} value={key}>{roleLabels[key]}</option>)}</select> },
+            { key: "role", header: "نقش", cell: (row) => row.role === "owner" ? <span className="font-medium text-ink">مالک</span> : <select value={row.role ?? "support"} onChange={(event) => void changeRole(String(row.id), event.target.value)} className="rounded-lg border border-edge bg-canvas/60 px-2 py-1 text-xs text-ink focus:border-primary focus:outline-none">{Object.keys(roleLabels).filter((key) => key !== "owner").map((key) => <option key={key} value={key}>{roleLabels[key]}</option>)}</select> },
             { key: "status", header: "وضعیت", cell: (row) => <StatusBadge status={row.adminStatus === "disabled" ? "inactive" : "active"} label={row.adminStatus === "disabled" ? "غیرفعال" : "فعال"} /> },
             { key: "login", header: "آخرین ورود", cell: (row) => formatDate(row.lastLoginAt) },
             { key: "actions", header: "اقدام", cell: (row) => row.role === "owner" ? <span className="text-xs text-ink-muted">محافظت‌شده</span> : <button type="button" onClick={() => void toggleStatus(String(row.id), row.adminStatus ?? "active")} className="text-xs font-medium text-primary hover:underline">{row.adminStatus === "disabled" ? "فعال‌سازی" : "توقف دسترسی"}</button> },

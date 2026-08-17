@@ -1,5 +1,5 @@
 /**
- * Lona — Lookbook.
+ * Lia — Lookbook.
  *
  * Three editorial plates rendered with maximum whitespace. Each plate
  * pairs a gradient image with a quiet caption + large translucent
@@ -24,8 +24,8 @@ interface Plate {
     | "gradient-oat"
     | "gradient-rose-quartz"
     | "gradient-deep"
-    | "gradient-lona-rose"
-    | "gradient-lona-pearl";
+    | "gradient-lia-rose"
+    | "gradient-lia-pearl";
   align: "left" | "right";
   slot: "lookbook_1" | "lookbook_2" | "lookbook_3";
 }
@@ -35,7 +35,7 @@ const plates: Plate[] = [
     eyebrow: "نگاه ۰۱",
     title: "صبح، در آینه",
     body: "سوتین ابریشمی کرم، شورت هماهنگ، و یک لباس خواب گشاد — اولین ساعت روز، آرام.",
-    gradient: "gradient-lona-pearl",
+    gradient: "gradient-lia-pearl",
     align: "right",
     slot: "lookbook_1",
   },
@@ -73,7 +73,7 @@ export function Lookbook() {
           </h2>
         </div>
         <p className="hidden max-w-md font-sans text-sm font-light leading-relaxed text-ink-muted md:block md:text-start">
-          عکاسی از سه صبح متفاوت، در سه خانه‌ی متفاوت — توسط دفتر ادبی لونا.
+          عکاسی از سه صبح متفاوت، در سه خانه‌ی متفاوت — توسط دفتر ادبی لیا.
         </p>
       </div>
 
@@ -93,7 +93,7 @@ export function Lookbook() {
           >
             <EditorialImage
               src={images[p.slot]}
-              alt={`${p.title} — لوک‌بوک لونا`}
+              alt={`${p.title} — لوک‌بوک لیا`}
               className={cn(
                 "relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-inset ring-white/35",
               )}

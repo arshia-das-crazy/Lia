@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { Printer, ArrowLeft, Loader2 } from "lucide-react";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 import { EASE_LUXURY } from "@/lib/motion";
 import { formatPrice, formatDate, formatNumber } from "@/lib/money";
 import { OrderTimeline } from "@/components/order/OrderTimeline";
@@ -59,7 +59,7 @@ export default function Invoice() {
     );
   }
 
-  const shopName = store?.shopName || "لونا";
+  const shopName = store?.shopName || "لیا";
   const paymentStatus = String(order.paymentStatus ?? "pending");
 
   return (
@@ -91,7 +91,7 @@ export default function Invoice() {
         {/* Header */}
         <div className="flex items-start justify-between gap-6 border-b border-edge pb-8">
           <div className="flex items-center gap-3">
-            <LonaLogo variant="default" size={40} />
+            <LiaLogo variant="default" size={40} />
             <div>
               <p className="type-eyebrow text-ink-muted">{shopName}</p>
             </div>
@@ -228,7 +228,7 @@ export default function Invoice() {
             )}
           </div>
           <p className="mt-4 leading-relaxed">
-            {shopName} — بسته‌بندی محرمانه و ظریف، مطابق استاندارد لونا. در صورت
+            {shopName} — بسته‌بندی محرمانه و ظریف، مطابق استاندارد لیا. در صورت
             نیاز به بازگشت کالا، به صفحه شرایط بازگشت مراجعه کنید.
           </p>
         </div>

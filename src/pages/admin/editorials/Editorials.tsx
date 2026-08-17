@@ -80,7 +80,7 @@ export default function Editorials() {
         <div>
           <p className="type-eyebrow text-ink-muted">محتوا · مجله</p>
           <h1 className="mt-2 font-display text-4xl text-ink lg:text-5xl">
-            مجلهٔ لونا
+            مجلهٔ لیا
           </h1>
           <p className="mt-2 max-w-xl text-sm text-ink-soft">
             روایت‌ها، یادداشت‌های کارگاه و آرشیو کالکسیون‌ها. هر نوشته یک
@@ -98,7 +98,7 @@ export default function Editorials() {
         </button>
       </header>
 
-      <div className="overflow-hidden rounded-2xl border border-edge bg-white/85">
+      <div className="overflow-hidden rounded-2xl border border-edge bg-canvas-soft">
         <div className="overflow-x-auto">
           <table className="w-full text-start text-sm">
             <thead className="bg-canvas-soft text-ink-muted">
@@ -216,7 +216,7 @@ export default function Editorials() {
                                 onClick={() => publish({ id: row._id })}
                                 aria-label="انتشار"
                                 title="انتشار"
-                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 text-emerald-700 hover:bg-emerald-50"
+                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 text-emerald-300 hover:bg-emerald-500/15"
                               >
                                 <Send className="h-3.5 w-3.5" />
                               </button>
@@ -226,7 +226,7 @@ export default function Editorials() {
                                 onClick={() => unpublish({ id: row._id })}
                                 aria-label="برگرداندن به پیش‌نویس"
                                 title="برگرداندن به پیش‌نویس"
-                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                               >
                                 <FileText className="h-3.5 w-3.5 text-ink" />
                               </button>
@@ -235,7 +235,7 @@ export default function Editorials() {
                               type="button"
                               onClick={() => setEditId(row._id)}
                               aria-label="ویرایش"
-                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                             >
                               <Pencil className="h-3.5 w-3.5 text-ink" />
                             </button>
@@ -245,7 +245,7 @@ export default function Editorials() {
                                 onClick={() => archive({ id: row._id })}
                                 aria-label="آرشیو"
                                 title="آرشیو"
-                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 text-ink-soft hover:bg-white"
+                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 text-ink-soft hover:bg-canvas-soft"
                               >
                                 <X className="h-3.5 w-3.5" />
                               </button>
@@ -254,7 +254,7 @@ export default function Editorials() {
                               type="button"
                               onClick={() => setDelId(row._id)}
                               aria-label="حذف"
-                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 text-rose-700 hover:bg-rose-50"
+                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 text-rose-300 hover:bg-rose-500/15"
                             >
                               <Trash2 className="h-3.5 w-3.5" />
                             </button>
@@ -392,7 +392,7 @@ function EditorialDrawer({
         initial={{ x: 32, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: EASE_LUXURY }}
-        className="flex h-full w-full max-w-3xl flex-col overflow-hidden border border-edge bg-white/95 shadow-2xl"
+        className="flex h-full w-full max-w-3xl flex-col overflow-hidden border border-edge bg-canvas-soft shadow-2xl"
       >
         <header className="flex items-start justify-between gap-4 border-b border-edge px-7 py-6">
           <div className="text-start">
@@ -407,7 +407,7 @@ function EditorialDrawer({
             type="button"
             onClick={onClose}
             aria-label="بستن"
-            className="grid h-9 w-9 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+            className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
           >
             <X className="h-3.5 w-3.5 text-ink" />
           </button>
@@ -444,7 +444,7 @@ function EditorialDrawer({
                 onChange={(e) => setAuthor(e.target.value)}
                 dir="rtl"
                 className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
-                placeholder="تیم تحریریه لونا"
+                placeholder="تیم تحریریه لیا"
               />
             </Field>
             <Field label="نوع نوشته">
@@ -465,7 +465,7 @@ function EditorialDrawer({
                       "rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.16em]",
                       kind === k
                         ? "bg-ink text-canvas"
-                        : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+                        : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
                     )}
                   >
                     {label}
@@ -490,7 +490,7 @@ function EditorialDrawer({
                       "rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.16em]",
                       status === s
                         ? "bg-ink text-canvas"
-                        : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+                        : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
                     )}
                   >
                     {label}
@@ -506,7 +506,7 @@ function EditorialDrawer({
                     type="button"
                     onClick={() => setGradient(g.id as GradientId)}
                     className={cn(
-                      "h-12 w-16 rounded-xl ring-1 ring-inset ring-white/40 transition",
+                      "h-12 w-16 rounded-xl ring-1 ring-inset ring-edge-bright/30 transition",
                       g.cls,
                       gradient === g.id
                         ? "ring-2 ring-primary ring-offset-2"
@@ -539,7 +539,7 @@ function EditorialDrawer({
             </Field>
             <Field label="تصویر کاور" full>
               <CoverImageField
-                label={`کاور ${title || "نوشته"} — لونا`}
+                label={`کاور ${title || "نوشته"} — لیا`}
                 value={coverImage}
                 onChange={setCoverImage}
                 section="editorial"
@@ -556,7 +556,7 @@ function EditorialDrawer({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
               >
                 انصراف
               </button>

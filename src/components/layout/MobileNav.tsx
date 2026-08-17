@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { EASE_LUXURY } from "@/lib/motion";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 interface MobileNavProps {
   open: boolean;
@@ -44,7 +44,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
         className="absolute left-0 top-0 h-full w-[88%] max-w-sm glass-strong overflow-y-auto p-8"
       >
         <div className="flex items-center justify-between">
-          <LonaLogo variant="default" size={42} title="لوگوی لونا" className="h-11 w-11" />
+          <LiaLogo variant="default" size={42} title="لوگوی لیا" className="h-11 w-11" />
           <button
             onClick={onClose}
             className="grid h-10 w-10 place-items-center rounded-full hairline text-ink hover:bg-white/60"

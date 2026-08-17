@@ -56,7 +56,7 @@ export function FeaturedCollections({
               <div className="relative aspect-[4/5] w-full">
                 <EditorialImage
                   src={images[COLLECTION_SLOTS[i % COLLECTION_SLOTS.length]]}
-                  alt={`${c.name} — کالکشن لونا`}
+                  alt={`${c.name} — کالکشن لیا`}
                   className="absolute inset-0 h-full w-full transition duration-700 group-hover:scale-105"
                   imgClassName="opacity-90"
                   fallbackClassName={cn(

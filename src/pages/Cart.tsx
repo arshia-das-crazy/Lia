@@ -71,7 +71,7 @@ export default function Cart() {
 
   usePageMeta({
     title: "سبد خرید",
-    description: "بررسی و تکمیل سفارش در سبد خرید لونا",
+    description: "بررسی و تکمیل سفارش در سبد خرید لیا",
     noindex: true,
   });
 
@@ -386,7 +386,7 @@ function GiftNoteInput({
           <textarea
             value={value}
             onChange={(e) => onChange(e.target.value)}
-            placeholder="یک یادداشت کوتاه که روی کارت بوتیک لونا با خط نستعلیق چاپ می‌شود."
+            placeholder="یک یادداشت کوتاه که روی کارت بوتیک لیا با خط نستعلیق چاپ می‌شود."
             rows={3}
             className={cn(
               "mt-2 w-full resize-none rounded-xl bg-white/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",

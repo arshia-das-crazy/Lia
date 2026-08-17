@@ -28,12 +28,12 @@ export default function AcceptInvite() {
 
   return (
     <main className="grid min-h-screen place-items-center bg-canvas-soft px-6" dir="rtl">
-      <section className="w-full max-w-md rounded-3xl border border-edge bg-white/90 p-8 text-center shadow-sm">
+      <section className="w-full max-w-md rounded-3xl border border-edge bg-canvas-soft p-8 text-center shadow-sm">
         <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
           <ShieldCheck className="h-5 w-5" />
         </span>
         <p className="mt-5 type-eyebrow text-ink-muted">دعوت تیم مدیریتی</p>
-        <h1 className="mt-2 font-display text-3xl text-ink">پیوستن به تیم لونا</h1>
+        <h1 className="mt-2 font-display text-3xl text-ink">پیوستن به تیم لیا</h1>
         <p className="mt-3 text-sm leading-7 text-ink-soft">
           برای پذیرش دعوت، ابتدا با همان ایمیلی که دعوت شده‌اید وارد حساب شوید.
           این دعوت فقط یک‌بار و تا هفت روز معتبر است.
