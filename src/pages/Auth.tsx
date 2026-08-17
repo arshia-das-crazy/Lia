@@ -93,7 +93,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
     <div className="relative min-h-screen overflow-hidden">
       {/* Atmospheric background */}
       <div className="pointer-events-none absolute -top-32 -right-32 h-[640px] w-[640px] rounded-full bg-accent/40 blur-[160px]" />
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-[640px] w-[640px] rounded-full bg-rose-quartz/30 blur-[160px] opacity-50" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-[640px] w-[640px] rounded-full bg-lia-rose/30 blur-[160px] opacity-50" />
 
       <Link
         to="/"

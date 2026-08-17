@@ -96,7 +96,7 @@ export function CommandPalette() {
                 onSelect={() => go(`/shop/${p.slug}`)}
                 className="flex items-center gap-3"
               >
-                <span className="grid h-9 w-9 place-items-center rounded-md hairline bg-white/60">
+                <span className="grid h-9 w-9 place-items-center rounded-md hairline bg-canvas/60">
                   <Search className="h-3.5 w-3.5 text-ink-soft" />
                 </span>
                 <div className="flex-1 text-right leading-tight">

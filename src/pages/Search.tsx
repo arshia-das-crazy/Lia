@@ -122,7 +122,7 @@ export default function Search() {
           <button
             type="button"
             onClick={() => navigate("/search")}
-            className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-white"
+            className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
             aria-label="پاک کردن جستجو"
           >
             <X className="h-4 w-4" />
@@ -212,7 +212,7 @@ export default function Search() {
                 <li key={term}>
                   <button
                     onClick={() => submit(term)}
-                    className="rounded-full hairline bg-canvas/60 px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-ink hover:bg-white"
+                    className="rounded-full hairline bg-canvas/60 px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-ink hover:bg-canvas-soft"
                   >
                     {term}
                   </button>
@@ -244,8 +244,8 @@ export default function Search() {
                     <button
                       onClick={() => submit(term)}
                       className={cn(
-                        "flex w-full items-center gap-3 rounded-xl px-3 py-2 text-right text-sm transition hover:bg-white/60",
-                        term === q && "bg-white/80 text-ink"
+                        "flex w-full items-center gap-3 rounded-xl px-3 py-2 text-right text-sm transition hover:bg-canvas-soft",
+                        term === q && "bg-canvas-soft text-ink"
                       )}
                     >
                       <History className="h-3.5 w-3.5 text-ink-muted" />
@@ -267,7 +267,7 @@ export default function Search() {
                 <li key={c.id}>
                   <Link
                     to={`/collections/${c.slug}`}
-                    className="flex items-center justify-between rounded-2xl px-3 py-2.5 text-sm text-ink transition hover:bg-white/60"
+                    className="flex items-center justify-between rounded-2xl px-3 py-2.5 text-sm text-ink transition hover:bg-canvas-soft"
                   >
                     <span>{c.name}</span>
                     <span className="text-[11px] uppercase tracking-[0.18em] text-ink-muted">
@@ -284,13 +284,13 @@ export default function Search() {
               <p className="type-eyebrow text-ink-muted">از حساب شما</p>
               <ul className="mt-4 space-y-2 text-sm">
                 <li>
-                  <Link to="/wishlist" className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-white/60">
+                  <Link to="/wishlist" className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-canvas-soft">
                     <span>محصولات ذخیره‌شده</span>
                     <span className="text-[11px] uppercase tracking-[0.18em] text-ink-muted">{wishlistIds.length.toLocaleString("fa-IR")}</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dashboard" className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-white/60">
+                  <Link to="/dashboard" className="flex items-center justify-between rounded-xl px-3 py-2 hover:bg-canvas-soft">
                     <span>حساب کاربری</span>
                     <ArrowUpLeft className="h-3.5 w-3.5 text-ink-muted" />
                   </Link>

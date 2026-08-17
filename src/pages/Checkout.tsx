@@ -511,8 +511,8 @@ export default function Checkout() {
                       <label
                         key={opt.code}
                         className={cn(
-                          "flex cursor-pointer items-center justify-between gap-3 rounded-2xl border border-edge/70 px-4 py-3 text-sm transition hover:bg-white/60",
-                          shippingMethod === opt.code && "border-primary bg-white/60"
+                          "flex cursor-pointer items-center justify-between gap-3 rounded-2xl border border-edge/70 px-4 py-3 text-sm transition hover:bg-canvas-soft",
+                          shippingMethod === opt.code && "border-primary bg-primary/10"
                         )}
                       >
                         <span className="flex items-center gap-3">
@@ -638,7 +638,7 @@ export default function Checkout() {
           >
             <p className="type-eyebrow text-ink-muted">سفارش شما</p>
             {priceNotice && (
-              <p className="mt-4 rounded-2xl bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-800">
+              <p className="mt-4 rounded-2xl bg-amber-500/15 px-4 py-3 text-xs leading-relaxed text-amber-300">
                 {priceNotice}
               </p>
             )}
@@ -740,7 +740,7 @@ export default function Checkout() {
                       <ShieldCheck className="h-4 w-4 text-primary" />
                       <p className="type-eyebrow text-ink-muted">درگاه پرداخت لیا</p>
                     </div>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-medium text-emerald-700">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2.5 py-1 text-[10px] font-medium text-emerald-300">
                       <Lock className="h-3 w-3" /> اتصال امن
                     </span>
                   </div>
@@ -775,7 +775,7 @@ export default function Checkout() {
                     </button>
                     <button
                       onClick={cancelPayment}
-                      className="inline-flex items-center justify-center gap-2 rounded-full hairline px-6 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-white/60 hover:text-ink"
+                      className="inline-flex items-center justify-center gap-2 rounded-full hairline px-6 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft hover:text-ink"
                     >
                       <X className="h-3.5 w-3.5" />
                       انصراف از پرداخت
@@ -816,7 +816,7 @@ function Header({
 }) {
   return (
     <div className="mb-2 flex items-center gap-3">
-      <span className="grid h-9 w-9 place-items-center rounded-full hairline bg-white/60 text-ink">
+      <span className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 text-ink">
         {icon}
       </span>
       <div>
@@ -913,7 +913,7 @@ function Success({
         </Link>
         <button
           onClick={onContinue}
-          className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white"
+          className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft"
         >
           ادامه خرید
         </button>

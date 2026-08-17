@@ -69,14 +69,14 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
         <div className="flex items-center gap-2">
           <button
             onClick={onMenuToggle}
-            className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-white/40 lg:hidden"
+            className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-canvas/60 lg:hidden"
             aria-label="منو"
           >
             <Menu className="h-5 w-5" />
           </button>
           <button
             onClick={() => setMobileSearch((s) => !s)}
-            className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-white/40 lg:hidden"
+            className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-canvas/60 lg:hidden"
             aria-label="جست‌وجو"
           >
             <Search className="h-4 w-4" />
@@ -115,7 +115,7 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
                             <Link
                               key={c.id}
                               to={`/collections/${c.slug}`}
-                              className="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-white/40"
+                              className="group flex items-start gap-3 rounded-xl p-3 transition hover:bg-canvas/60"
                               onClick={() => setHoverIndex(null)}
                             >
                               <div
@@ -170,7 +170,7 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
             whileTap={{ scale: 0.97 }}
             transition={SPRING_SNAP}
             onClick={openCommand}
-            className="flex items-center gap-2 rounded-full hairline bg-canvas/60 px-3 py-2 text-ink-soft transition hover:bg-white/80"
+            className="flex items-center gap-2 rounded-full hairline bg-canvas/60 px-3 py-2 text-ink-soft transition hover:bg-canvas-soft"
             aria-label="جست‌وجوی فرمان"
           >
             <Search className="h-4 w-4" />
@@ -184,7 +184,7 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
           {isAuthenticated ? (
             <Link
               to="/account"
-              className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-white/40 hover:text-ink"
+              className="grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-canvas/60 hover:text-ink"
               aria-label="حساب کاربری"
             >
               <UserIcon className="h-4 w-4" />
@@ -192,14 +192,14 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
           ) : (
             <Link
               to="/auth"
-              className="hidden md:inline-flex h-9 items-center rounded-full hairline bg-canvas/60 px-3 text-[11px] font-medium tracking-[0.04em] text-ink-soft transition hover:bg-white/80"
+              className="hidden md:inline-flex h-9 items-center rounded-full hairline bg-canvas/60 px-3 text-[11px] font-medium tracking-[0.04em] text-ink-soft transition hover:bg-canvas-soft"
             >
               ورود
             </Link>
           )}
           <Link
             to="/wishlist"
-            className="relative grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-white/40 hover:text-ink"
+            className="relative grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-canvas/60 hover:text-ink"
             aria-label="علاقه‌مندی‌ها"
           >
             <Heart className="h-4 w-4" />
@@ -251,7 +251,7 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
               />
               <button
                 onClick={() => setMobileSearch(false)}
-                className="grid h-7 w-7 place-items-center rounded-full text-ink-muted hover:bg-white"
+                className="grid h-7 w-7 place-items-center rounded-full text-ink-muted hover:bg-canvas-soft"
                 aria-label="بستن جست‌وجو"
               >
                 <CloseIcon className="h-3.5 w-3.5" />
@@ -279,7 +279,7 @@ function BagButton() {
       animate={itemCount > 0 ? { scale: [1, 1.18, 1] } : { scale: 1 }}
       transition={SPRING_GENTLE}
       whileTap={{ scale: 0.94 }}
-      className="relative grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-white/40 hover:text-ink"
+      className="relative grid h-9 w-9 place-items-center rounded-full text-ink-soft transition hover:bg-canvas/60 hover:text-ink"
     >
       <span data-bag-target="" aria-hidden="true">
         <ShoppingBag className="h-4 w-4" />

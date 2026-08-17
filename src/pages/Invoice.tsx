@@ -68,7 +68,7 @@ export default function Invoice() {
       <div className="no-print mb-10 flex items-center justify-between">
         <Link
           to="/dashboard"
-          className="inline-flex items-center gap-2 rounded-full hairline px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-white/60 hover:text-ink"
+          className="inline-flex items-center gap-2 rounded-full hairline px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft hover:text-ink"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           حساب من

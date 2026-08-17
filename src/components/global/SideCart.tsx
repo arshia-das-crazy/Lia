@@ -90,7 +90,7 @@ export function SideCart() {
           </div>
           <button
             onClick={closeSideCart}
-            className="grid h-9 w-9 place-items-center rounded-full hairline text-ink-soft hover:bg-white/60 hover:text-ink"
+            className="grid h-9 w-9 place-items-center rounded-full hairline text-ink-soft hover:bg-canvas-soft hover:text-ink"
             aria-label="بستن سبد خرید"
           >
             <X className="h-4 w-4" />
@@ -114,7 +114,7 @@ export function SideCart() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, x: 40 }}
                     transition={{ duration: 0.4, ease: EASE_LUXURY }}
-                    className="mb-4 flex items-stretch gap-4 rounded-2xl hairline bg-white/55 p-4"
+                    className="mb-4 flex items-stretch gap-4 rounded-2xl hairline bg-canvas/60 p-4"
                   >
                     <div className="h-28 w-20 shrink-0 overflow-hidden rounded-xl">
                       <ProductImage
@@ -145,7 +145,7 @@ export function SideCart() {
                             onClick={() =>
                               update(item.product.id, item.size, item.color, item.quantity - 1)
                             }
-                            className="grid h-7 w-7 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                            className="grid h-7 w-7 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                             aria-label="کاهش تعداد"
                           >
                             <Minus className="h-3 w-3" />
@@ -157,7 +157,7 @@ export function SideCart() {
                             onClick={() =>
                               update(item.product.id, item.size, item.color, item.quantity + 1)
                             }
-                            className="grid h-7 w-7 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                            className="grid h-7 w-7 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                             aria-label="افزایش تعداد"
                           >
                             <Plus className="h-3 w-3" />
@@ -173,7 +173,7 @@ export function SideCart() {
                         remove(item.product.id, item.size, item.color);
                         toast.removed(item.product.name);
                       }}
-                      className="grid h-8 w-8 shrink-0 place-items-center self-start rounded-full hairline text-ink-soft hover:bg-white/60 hover:text-ink"
+                      className="grid h-8 w-8 shrink-0 place-items-center self-start rounded-full hairline text-ink-soft hover:bg-canvas-soft hover:text-ink"
                       aria-label="حذف از سبد خرید"
                     >
                       <X className="h-3.5 w-3.5" />
@@ -183,7 +183,7 @@ export function SideCart() {
               </AnimatePresence>
 
               {/* Recommended upsell */}
-              <div className="mt-8 rounded-2xl hairline bg-white/55 p-5">
+              <div className="mt-8 rounded-2xl hairline bg-canvas/60 p-5">
                 <p className="type-eyebrow text-ink-muted">پیشنهاد بوتیک</p>
                 <p className="mt-2 text-sm text-ink-soft">
                   سه تکه‌ی هماهنگ که بوتیک پیشنهاد می‌دهد.
@@ -273,7 +273,7 @@ export function SideCart() {
                 <Link
                   to="/cart"
                   onClick={closeSideCart}
-                  className="flex w-full items-center justify-center rounded-full hairline px-5 py-3 text-[11px] font-medium uppercase tracking-[0.04em] text-ink hover:bg-white/60"
+                  className="flex w-full items-center justify-center rounded-full hairline px-5 py-3 text-[11px] font-medium uppercase tracking-[0.04em] text-ink hover:bg-canvas-soft"
                 >
                   مشاهده کامل سبد
                 </Link>
@@ -292,7 +292,7 @@ export function SideCart() {
 function EmptyBag({ onClose }: { onClose: () => void }) {
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-8 py-20 text-center">
-      <span className="grid h-16 w-16 place-items-center rounded-full hairline bg-white/50">
+      <span className="grid h-16 w-16 place-items-center rounded-full hairline bg-canvas/60">
         <ShoppingBag className="h-5 w-5 text-ink" />
       </span>
       <p className="mt-6 font-display text-2xl text-ink">ساکت است، فعلاً.</p>
@@ -392,7 +392,7 @@ function GiftNoteInline() {
             placeholder="یک یادداشت کوتاه — با حروف چاپ لیا روی کارت."
             rows={3}
             className={cn(
-              "mt-2 w-full resize-none rounded-xl bg-white/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",
+              "mt-2 w-full resize-none rounded-xl bg-canvas/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",
               "focus:outline-none focus:ring-2 focus:ring-primary"
             )}
           />

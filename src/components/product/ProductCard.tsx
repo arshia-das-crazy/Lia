@@ -228,7 +228,7 @@ export const ProductCard = memo(function ProductCard({ product, priority, classN
           <div className="pointer-events-none absolute inset-x-3 bottom-3 flex translate-y-2 items-center gap-2 opacity-0 transition-all duration-500 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
             <button
               onClick={handleQuickAdd}
-              className="glass-subtle flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2.5 font-sans text-[11px] font-medium tracking-[0.04em] text-ink transition hover:bg-white/85"
+              className="glass-subtle flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2.5 font-sans text-[11px] font-medium tracking-[0.04em] text-ink transition hover:bg-canvas-soft"
             >
               افزودن به سبد
               <ShoppingBag className="h-3.5 w-3.5" />
@@ -236,7 +236,7 @@ export const ProductCard = memo(function ProductCard({ product, priority, classN
             <button
               onClick={handleWishlistToggle}
               className={cn(
-                "grid h-9 w-9 place-items-center rounded-full glass-subtle transition hover:bg-white/85",
+                "grid h-9 w-9 place-items-center rounded-full glass-subtle transition hover:bg-canvas-soft",
                 favorite && "text-primary"
               )}
               aria-label={

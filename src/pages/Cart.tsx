@@ -157,7 +157,7 @@ export default function Cart() {
                         onClick={() =>
                           update(item.product.id, item.size, item.color, item.quantity - 1)
                         }
-                        className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                        className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                         aria-label="کاهش تعداد"
                       >
                         <Minus className="h-3.5 w-3.5" />
@@ -169,7 +169,7 @@ export default function Cart() {
                         onClick={() =>
                           update(item.product.id, item.size, item.color, item.quantity + 1)
                         }
-                        className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                        className="grid h-8 w-8 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                         aria-label="افزایش تعداد"
                       >
                         <Plus className="h-3.5 w-3.5" />
@@ -185,7 +185,7 @@ export default function Cart() {
                     remove(item.product.id, item.size, item.color);
                     toast.removed(item.product?.name ?? "محصول");
                   }}
-                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full hairline text-ink-soft hover:bg-white/60 hover:text-ink"
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full hairline text-ink-soft hover:bg-canvas-soft hover:text-ink"
                   aria-label="حذف از سبد"
                 >
                   <X className="h-3.5 w-3.5" />
@@ -389,7 +389,7 @@ function GiftNoteInput({
             placeholder="یک یادداشت کوتاه که روی کارت بوتیک لیا با خط نستعلیق چاپ می‌شود."
             rows={3}
             className={cn(
-              "mt-2 w-full resize-none rounded-xl bg-white/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",
+              "mt-2 w-full resize-none rounded-xl bg-canvas/60 px-3 py-2 text-sm text-ink placeholder:text-ink-muted",
               "focus:outline-none focus:ring-2 focus:ring-primary"
             )}
           />

@@ -45,7 +45,7 @@ export function ListCard({ product }: ListCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: EASE_LUXURY }}
-      className="grid grid-cols-[112px_1fr] gap-5 rounded-2xl hairline bg-white/45 p-4 sm:grid-cols-[160px_1fr] sm:gap-8 sm:p-6"
+      className="grid grid-cols-[112px_1fr] gap-5 rounded-2xl hairline bg-canvas/60 p-4 sm:grid-cols-[160px_1fr] sm:gap-8 sm:p-6"
     >
       <Link
         to={`/shop/${product.slug}`}
@@ -93,7 +93,7 @@ export function ListCard({ product }: ListCardProps) {
             <button
               onClick={() => toggle(product.id)}
               className={cn(
-                "grid h-9 w-9 place-items-center rounded-full hairline transition hover:bg-white",
+                "grid h-9 w-9 place-items-center rounded-full hairline transition hover:bg-canvas-soft",
                 favorite && "text-primary"
               )}
               aria-label={favorite ? "Remove from wishlist" : "Save to wishlist"}

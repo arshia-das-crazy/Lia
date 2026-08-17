@@ -58,7 +58,7 @@ export function VariantPicker({
                 "rounded-xl py-2.5 text-[11px] uppercase tracking-[0.18em] transition",
                 selectedSize === s.id
                   ? "bg-ink text-canvas"
-                  : "hairline text-ink-soft hover:bg-white/60 hover:text-ink"
+                  : "hairline text-ink-soft hover:bg-canvas-soft hover:text-ink"
               )}
             >
               {s.label}

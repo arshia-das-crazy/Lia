@@ -289,7 +289,7 @@ export default function CheckoutCallback() {
               </Link>
               <Link
                 to="/shop"
-                className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white"
+                className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft"
               >
                 ادامه خرید
               </Link>
@@ -322,7 +322,7 @@ export default function CheckoutCallback() {
               </Link>
               <Link
                 to="/shop"
-                className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white"
+                className="rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft"
               >
                 فروشگاه
               </Link>
@@ -332,7 +332,7 @@ export default function CheckoutCallback() {
 
         {phase === "retryable" && (
           <div>
-            <div className="mx-auto grid h-24 w-24 place-items-center rounded-full hairline bg-amber-50 text-amber-700">
+            <div className="mx-auto grid h-24 w-24 place-items-center rounded-full hairline bg-amber-500/15 text-amber-300">
               <RefreshCw className="h-8 w-8" />
             </div>
             <p className="type-eyebrow mt-8 text-ink-muted">
@@ -355,7 +355,7 @@ export default function CheckoutCallback() {
               <button
                 onClick={() => void cancelPayment()}
                 disabled={cancelling}
-                className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft disabled:opacity-50"
               >
                 {cancelling ? (
                   <Loader2 className="h-3.5 w-3.5 animate-spin" />

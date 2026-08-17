@@ -149,7 +149,7 @@ export default function Dashboard() {
             await signOut();
             navigate("/");
           }}
-          className="inline-flex items-center gap-2 rounded-full hairline px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-white/60 hover:text-ink"
+          className="inline-flex items-center gap-2 rounded-full hairline px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft hover:text-ink"
         >
           <LogOut className="h-4 w-4" />
           خروج از حساب
@@ -165,7 +165,7 @@ export default function Dashboard() {
               "rounded-full px-4 py-2 text-[11px] font-medium uppercase tracking-[0.16em] transition",
               active === key
                 ? "bg-ink text-canvas"
-                : "text-ink-soft hover:bg-white/40 hover:text-ink"
+                : "text-ink-soft hover:bg-canvas/60 hover:text-ink"
             )}
           >
             {tabLabels[key]}
@@ -184,7 +184,7 @@ export default function Dashboard() {
           liveOrders === undefined ? (
             <div className="grid gap-5 md:grid-cols-4">
               {["سفارش‌های فعال", "محصولات ذخیره‌شده", "در سبد خرید", "مشتری از"].map((label) => (
-                <div key={label} className="glass-strong h-36 animate-pulse rounded-3xl bg-white/40" aria-label="در حال بارگذاری" />
+                <div key={label} className="glass-strong h-36 animate-pulse rounded-3xl bg-ink-muted/15" aria-label="در حال بارگذاری" />
               ))}
             </div>
           ) : (
@@ -247,7 +247,7 @@ export default function Dashboard() {
                           کد رهگیری · {order.trackingNumber}
                         </p>
                       )}
-                      <button className="ml-auto inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-ink hover:bg-white">
+                      <button className="ml-auto inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft">
                         مشاهده سفارش
                         <ArrowLeft className="h-3 w-3" />
                       </button>
@@ -277,7 +277,7 @@ export default function Dashboard() {
           ) : (
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
               {saved.map((p) => (
-                <Link key={p.id} to={`/shop/${p.slug}`} className="glass rounded-2xl p-3 transition hover:bg-white/60">
+                <Link key={p.id} to={`/shop/${p.slug}`} className="glass rounded-2xl p-3 transition hover:bg-canvas-soft">
                   <ProductImage
                     gradient={p.colors[0].gradient}
                     silhouette={silhouetteFor(p.category)}
@@ -305,7 +305,7 @@ export default function Dashboard() {
                 <p className="mt-2 text-sm text-ink-soft">{addr.line1}{addr.line2 ? `، ${addr.line2}` : ""}</p>
                 <p className="text-sm text-ink-soft">{addr.city}، {addr.region} · {addr.postalCode}</p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <button onClick={() => editAddress(addr)} className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-ink hover:bg-white">
+                  <button onClick={() => editAddress(addr)} className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft">
                     ویرایش
                   </button>
                   {!addr.isDefault && (
@@ -325,7 +325,7 @@ export default function Dashboard() {
                       تنظیم به‌عنوان پیش‌فرض
                     </button>
                   )}
-                  <button onClick={() => void removeAddress({ id: addr._id })} className="text-[10px] uppercase tracking-[0.18em] text-rose-700 hover:text-rose-900">
+                  <button onClick={() => void removeAddress({ id: addr._id })} className="text-[10px] uppercase tracking-[0.18em] text-rose-300 hover:text-rose-200">
                     حذف
                   </button>
                 </div>
@@ -386,7 +386,7 @@ export default function Dashboard() {
               }} className="mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-[10px] font-medium uppercase tracking-[0.18em] text-canvas hover:bg-primary">
                 {editingAddressId ? "به‌روزرسانی آدرس" : "ذخیره آدرس"}
               </button>
-              {editingAddressId ? <button onClick={resetAddressDraft} className="mr-3 mt-6 rounded-full hairline px-5 py-3 text-[10px] uppercase tracking-[0.18em] text-ink-soft hover:bg-white">انصراف</button> : null}
+              {editingAddressId ? <button onClick={resetAddressDraft} className="mr-3 mt-6 rounded-full hairline px-5 py-3 text-[10px] uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft">انصراف</button> : null}
             </div>
           </div>
         )}
@@ -477,13 +477,13 @@ export default function Dashboard() {
                   onClick={() => {
                     clearCart();
                   }}
-                  className="rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white"
+                  className="rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft"
                 >
                   پاک کردن سبد خرید
                 </button>
                 <button
                   onClick={clearRecent}
-                  className="rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white"
+                  className="rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-canvas-soft"
                 >
                   پاک کردن بازدیدهای اخیر
                 </button>
@@ -496,8 +496,8 @@ export default function Dashboard() {
         {active === "notifications" && <NotificationCenter />}
         {active === "returns" && (
           <div className="space-y-3">
-            {!returns ? <p className="text-sm text-ink-muted">در حال بارگذاری…</p> : returns.length === 0 ? <p className="rounded-3xl border border-dashed border-edge bg-white/60 px-6 py-12 text-center text-sm text-ink-muted">مرجوعی ثبت نشده.</p> : returns.map((r) => (
-              <div key={r._id} className="rounded-2xl border border-edge bg-white px-4 py-3 flex justify-between text-sm">
+            {!returns ? <p className="text-sm text-ink-muted">در حال بارگذاری…</p> : returns.length === 0 ? <p className="rounded-3xl border border-dashed border-edge bg-canvas/60 px-6 py-12 text-center text-sm text-ink-muted">مرجوعی ثبت نشده.</p> : returns.map((r) => (
+              <div key={r._id} className="rounded-2xl border border-edge bg-canvas-soft px-4 py-3 flex justify-between text-sm">
                 <span>{r.type === "return" ? "مرجوعی" : "تعویض"} · {r.reason}</span><span className="text-xs text-ink-muted">{r.status}</span>
               </div>
             ))}
@@ -523,7 +523,7 @@ export default function Dashboard() {
             <div>
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
                 {recent.slice(0, 16).map((p) => (
-                  <Link key={p.id} to={`/shop/${p.slug}`} className="glass rounded-2xl p-3 transition hover:bg-white/60">
+                  <Link key={p.id} to={`/shop/${p.slug}`} className="glass rounded-2xl p-3 transition hover:bg-canvas-soft">
                     <ProductImage
                       gradient={p.colors[0].gradient}
                       silhouette={silhouetteFor(p.category)}
@@ -568,7 +568,7 @@ function StatCard({ label, value, icon }: { label: string; value: string; icon: 
       className="glass-strong rounded-3xl p-7"
     >
       <div className="flex items-center gap-2 text-ink-muted">
-        <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-white/50">
+        <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-canvas/60">
           {icon}
         </span>
         <p className="type-eyebrow">{label}</p>

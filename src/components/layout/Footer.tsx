@@ -149,7 +149,7 @@ export function Footer() {
             </p>
             <Link
               to="https://instagram.com"
-              className="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-full hairline text-ink-soft transition hover:bg-white/40 hover:text-ink"
+              className="mt-6 inline-flex h-10 w-10 items-center justify-center rounded-full hairline text-ink-soft transition hover:bg-canvas/60 hover:text-ink"
               aria-label="اینستاگرام"
             >
               <Instagram className="h-4 w-4" />
@@ -213,7 +213,7 @@ export function Footer() {
                 issuance; the admin stores the code in settings. */}
             <div className="flex items-center gap-2" aria-label="مجوزها و امنیت پرداخت">
               {(["اینماد", "ساماندهی", "SSL"] as const).map((badge) => (
-                <span key={badge} className="inline-flex h-16 min-w-16 items-center justify-center rounded-xl hairline bg-white/60 px-2 text-center text-[8px] leading-tight text-ink-muted" title={badge === "اینماد" && store?.enamadCode ? `نماد اعتماد، کد ${store.enamadCode}` : `${badge} — فضای آماده برای مجوز رسمی`}>
+                <span key={badge} className="inline-flex h-16 min-w-16 items-center justify-center rounded-xl hairline bg-canvas/60 px-2 text-center text-[8px] leading-tight text-ink-muted" title={badge === "اینماد" && store?.enamadCode ? `نماد اعتماد، کد ${store.enamadCode}` : `${badge} — فضای آماده برای مجوز رسمی`}>
                   {badge}<br />{badge === "SSL" ? "امن" : "آماده"}
                 </span>
               ))}

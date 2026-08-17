@@ -13,7 +13,7 @@ export default function NotFound() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <div className="pointer-events-none absolute -right-40 top-12 h-[640px] w-[640px] rounded-full bg-accent/40 blur-[140px]" />
-      <div className="pointer-events-none absolute -left-40 bottom-10 h-[640px] w-[640px] rounded-full bg-rose-quartz/30 blur-[140px] opacity-50" />
+      <div className="pointer-events-none absolute -left-40 bottom-10 h-[640px] w-[640px] rounded-full bg-lia-rose/30 blur-[140px] opacity-50" />
       <div className="relative mx-auto flex min-h-screen max-w-[1728px] flex-col items-center justify-center px-6 text-center lg:px-10">
         <motion.span
           initial={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export default function NotFound() {
           </Link>
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-white/60"
+            className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
           >
             مشاهده کالکسیون
           </Link>

@@ -53,7 +53,7 @@ export function InstagramGallery() {
           href="https://instagram.com"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 font-sans text-[11px] font-medium tracking-[0.04em] text-ink hover:bg-white"
+          className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 font-sans text-[11px] font-medium tracking-[0.04em] text-ink hover:bg-canvas-soft"
         >
           <Instagram className="h-3.5 w-3.5" />
           دنبال کنید

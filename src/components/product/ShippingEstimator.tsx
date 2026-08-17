@@ -105,7 +105,7 @@ export function ShippingEstimator({ defaultZip = "" }: ShippingEstimatorProps) {
                 "flex items-center justify-between rounded-2xl px-4 py-3 text-sm",
                 opt.recommended
                   ? "bg-ink text-canvas"
-                  : "hairline bg-white/50 text-ink"
+                  : "hairline bg-canvas/60 text-ink"
               )}
             >
               <span className="flex items-center gap-2">
