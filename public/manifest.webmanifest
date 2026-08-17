@@ -1,11 +1,11 @@
 {
-  "name": "لونا — بوتیک لباس زیر زنانه",
-  "short_name": "لونا",
-  "description": "بوتیک لباس زیر زنانه با طراحی ظریف و دوخت دست.",
+  "name": "LIA Lingerie — لیا | بوتیک لباس زیر زنانه",
+  "short_name": "LIA",
+  "description": "بوتیک لباس زیر زنانه با طراحی ظریف و دوخت دست. feel beautiful, be you.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F5E9DA",
-  "theme_color": "#F5E9DA",
+  "background_color": "#1C1114",
+  "theme_color": "#1C1114",
   "lang": "fa",
   "dir": "rtl",
   "icons": [

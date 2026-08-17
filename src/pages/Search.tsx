@@ -18,7 +18,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useWishlist } from "@/hooks/use-wishlist";
 import { formatPrice } from "@/lib/format";
 
-const RECENT_KEY = "lona-recent-searches-v1";
+const RECENT_KEY = "lia-recent-searches-v1";
 const POPULAR = [
   "سوتین",
   "شورت",
@@ -65,8 +65,8 @@ export default function Search() {
   const trending = useNewArrivals(4) ?? [];
 
   usePageMeta({
-    title: q ? `جستجو: ${q}` : "جستجو در محصولات لونا",
-    description: q ? `نتایج جستجوی «${q}» در کالکسیون لونا` : "جستجو در میان محصولات لباس زیر، لباس خواب و پوشاک راحتی زنانه لونا",
+    title: q ? `جستجو: ${q}` : "جستجو در محصولات لیا",
+    description: q ? `نتایج جستجوی «${q}» در کالکسیون لیا` : "جستجو در میان محصولات لباس زیر، لباس خواب و پوشاک راحتی زنانه لیا",
     ogType: "website",
     noindex: true,
   });

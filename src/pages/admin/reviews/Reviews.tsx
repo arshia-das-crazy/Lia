@@ -101,26 +101,27 @@ export default function ReviewsAdmin() {
   return (
     <div className="space-y-6" dir="rtl">
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold text-neutral-900">مدیریت نظرات</h1>
-        <p className="text-sm text-neutral-500">تأیید، مخفی‌سازی یا حذف نظرات مشتریان</p>
+        <p className="type-eyebrow text-ink-muted">بازخورد مشتریان</p>
+        <h1 className="font-display text-4xl text-ink lg:text-5xl">مدیریت نظرات</h1>
+        <p className="text-sm text-ink-soft">تأیید، مخفی‌سازی یا حذف نظرات مشتریان</p>
       </header>
 
       <div className={`flex flex-wrap items-center gap-3 p-4 ${glass.surface} rounded-2xl`}>
         <div className="relative flex-1 min-w-[220px]">
-          <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-400" />
+          <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-ink-muted" />
           <input
             value={needle}
             onChange={(e) => setNeedle(e.target.value)}
             placeholder="جستجو در متن نظر، نام نویسنده یا محصول…"
-            className="w-full rounded-xl border border-white/40 bg-white/60 pe-9 ps-3 py-2.5 text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-900/10"
+            className="w-full rounded-xl border border-edge bg-canvas/60 pe-9 ps-3 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-primary/30"
           />
         </div>
-        <div className="flex items-center gap-2 text-sm text-neutral-700">
-          <Filter className="h-4 w-4 text-neutral-400" />
+        <div className="flex items-center gap-2 text-sm text-ink-soft">
+          <Filter className="h-4 w-4 text-ink-muted" />
           <select
             value={status}
             onChange={(e) => setStatus(e.target.value as ReviewStatus | "all")}
-            className="rounded-xl border border-white/40 bg-white/60 px-3 py-2.5 text-sm text-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-900/10"
+            className="rounded-xl border border-edge bg-canvas/60 px-3 py-2.5 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-primary/30"
           >
             <option value="all">همه وضعیت‌ها</option>
             <option value="pending">{STATUS_LABEL.pending}</option>
@@ -156,32 +157,33 @@ export default function ReviewsAdmin() {
                       <span
                         className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
                           tone === "success"
-                            ? "bg-emerald-50 text-emerald-700"
+                            ? "bg-emerald-500/15 text-emerald-300"
                             : tone === "warning"
-                              ? "bg-amber-50 text-amber-700"
+                              ? "bg-amber-500/15 text-amber-200"
                               : tone === "danger"
-                                ? "bg-rose-50 text-rose-700"
-                                : "bg-neutral-100 text-neutral-700"
+                                ? "bg-rose-500/15 text-rose-300"
+                                : "bg-canvas/70 text-ink-soft"
                         }`}
                       >
                         {statusLabel}
                       </span>
                     </div>
                     {row.title && (
-                      <h3 className="mt-2 text-sm font-semibold text-neutral-900">{row.title}</h3>
+                      <h3 className="mt-2 font-display text-lg text-ink">{row.title}</h3>
                     )}
                   </div>
-                  <span className="text-[11px] text-neutral-400">
+                  <span className="flex items-center gap-1 text-[11px] text-ink-muted">
+                    <Calendar className="h-3 w-3" />
                     {created ? toFaDate(created) : "—"}
                   </span>
                 </header>
 
-                <p className="text-sm leading-7 text-neutral-700 line-clamp-3">
+                <p className="text-sm leading-7 text-ink-soft line-clamp-3">
                   {row.body ?? "بدون متن"}
                 </p>
 
-                <footer className="flex items-center justify-between border-t border-white/50 pt-3 text-xs">
-                  <div className="flex flex-col gap-0.5 text-neutral-500">
+                <footer className="flex items-center justify-between border-t border-edge/60 pt-3 text-xs">
+                  <div className="flex flex-col gap-0.5 text-ink-muted">
                     <span className="flex items-center gap-1.5">
                       <User className="h-3 w-3" />
                       {row.authorName ?? row.customerName ?? "مهمان"}
@@ -196,7 +198,7 @@ export default function ReviewsAdmin() {
                     {String(row.status ?? "pending") !== "published" && (
                       <IconButton
                         onClick={() => setConfirm({ open: true, row, action: "approve" })}
-                        className="text-emerald-700"
+                        className="text-emerald-300"
                       >
                         <Check className="h-3.5 w-3.5" /> تأیید
                       </IconButton>
@@ -204,14 +206,14 @@ export default function ReviewsAdmin() {
                     {String(row.status ?? "pending") !== "rejected" && (
                       <IconButton
                         onClick={() => setConfirm({ open: true, row, action: "hide" })}
-                        className="text-neutral-700"
+                        className="text-ink-soft"
                       >
                         <EyeOff className="h-3.5 w-3.5" /> مخفی
                       </IconButton>
                     )}
                     <IconButton
                       onClick={() => setConfirm({ open: true, row, action: "delete" })}
-                      className="text-rose-700"
+                      className="text-rose-300"
                     >
                       <Trash2 className="h-3.5 w-3.5" /> حذف
                     </IconButton>
@@ -256,7 +258,7 @@ export default function ReviewsAdmin() {
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <span className="inline-flex items-center gap-0.5 text-amber-500">
+    <span className="inline-flex items-center gap-0.5 text-amber-400">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
@@ -279,7 +281,7 @@ function IconButton({
   return (
     <button
       onClick={onClick}
-      className={`inline-flex items-center gap-1 rounded-lg border border-white/40 bg-white/60 px-2 py-1 text-[11px] hover:bg-white ${className}`}
+      className={`inline-flex items-center gap-1 rounded-lg hairline bg-canvas/60 px-2 py-1 text-[11px] transition hover:bg-canvas-soft ${className}`}
     >
       {children}
     </button>

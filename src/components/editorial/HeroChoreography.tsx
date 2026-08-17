@@ -7,7 +7,7 @@ import { useMouseParallax } from "@/hooks/use-mouse-parallax";
 import { useReducedMotionStrict } from "@/hooks/use-prefers-reduced-motion";
 import { TextReveal } from "@/components/motion/TextReveal";
 import { ImageMaskReveal } from "@/components/motion/ImageMaskReveal";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 const MotionParagraph = motion.p;
 const MotionDiv = motion.div;
@@ -122,7 +122,7 @@ export function HeroChoreography() {
             transition={{ duration: 0.9, ease: EASE_LUXURY, delay: 1.1 }}
             className="mt-10 max-w-xl text-base leading-[1.85] text-ink-soft lg:text-lg"
           >
-            لونا خانه‌ای ادیتوریال برای لباس‌ها و تکه‌های آرام است. در
+            لیا خانه‌ای ادیتوریال برای لباس‌ها و تکه‌های آرام است. در
             تهران، اصفهان و شیراز با تعداد محدود تولید می‌شود — برای ماندن.
           </MotionParagraph>
 
@@ -207,7 +207,7 @@ export function HeroChoreography() {
                 ۰۱
               </div>
               <span className="absolute right-4 top-4 font-display text-[10px] tracking-[0.4em] text-ink/55">
-                <LonaLogo variant="default" size={28} title="لوگوی لونا" className="h-7 w-7" />
+                <LiaLogo variant="default" size={28} title="لوگوی لیا" className="h-7 w-7" />
               </span>
             </div>
           </ImageMaskReveal>
@@ -239,7 +239,7 @@ export function HeroChoreography() {
                   ۰۲
                 </div>
                 <span className="absolute right-4 top-4 font-display text-[10px] tracking-[0.4em] text-ink/55">
-                  <LonaLogo variant="default" size={28} title="لوگوی لونا" className="h-7 w-7" />
+                  <LiaLogo variant="default" size={28} title="لوگوی لیا" className="h-7 w-7" />
                 </span>
               </MotionDiv>
             </ImageMaskReveal>
@@ -256,7 +256,7 @@ export function HeroChoreography() {
                 ۰۳
               </div>
               <span className="absolute right-4 top-4 font-display text-[10px] tracking-[0.4em] text-canvas/60">
-                <LonaLogo variant="default" size={28} title="لوگوی لونا" className="h-7 w-7" />
+                <LiaLogo variant="default" size={28} title="لوگوی لیا" className="h-7 w-7" />
               </span>
             </div>
           </ImageMaskReveal>

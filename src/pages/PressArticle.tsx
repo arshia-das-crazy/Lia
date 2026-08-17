@@ -1,5 +1,5 @@
 /**
- * Lona — Magazine article page (`/press/:slug`).
+ * Lia — Magazine article page (`/press/:slug`).
  *
  * Renders the live Convex editorial (falling back to the static
  * catalog while loading). Uses the editorial's own cover image when
@@ -16,7 +16,7 @@ import { formatDate } from "@/lib/format";
 import { cn } from "@/lib/glass";
 import { EASE_LUXURY } from "@/lib/motion";
 import { EditorialImage } from "@/components/ui/EditorialImage";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 const categoryLabel: Record<string, string> = {
   journal: "مجله",
@@ -39,9 +39,9 @@ export default function PressArticle() {
 
   usePageMeta({
     title: editorial
-      ? `${editorial.title} | مجله لونا`
+      ? `${editorial.title} | مجله لیا`
       : "نوشته یافت نشد",
-    description: editorial?.excerpt?.slice(0, 155) ?? "مجله لونا",
+    description: editorial?.excerpt?.slice(0, 155) ?? "مجله لیا",
     canonical: editorial
       ? `${window.location.origin}/press/${editorial.slug}`
       : undefined,
@@ -107,7 +107,7 @@ export default function PressArticle() {
       >
         <EditorialImage
           src={editorial.coverImage || images.press_hero}
-          alt={`${editorial.title} — تصویر کاور مجله لونا`}
+          alt={`${editorial.title} — تصویر کاور مجله لیا`}
           className={cn("relative aspect-[16/7]", gradientClass)}
           imgClassName="opacity-95"
           priority
@@ -127,16 +127,16 @@ export default function PressArticle() {
       >
         <p>{editorial.excerpt}</p>
         <p>
-          نوشته‌های کامل به‌زودی در مجلهٔ لونا منتشر می‌شوند. در همین حال
+          نوشته‌های کامل به‌زودی در مجلهٔ لیا منتشر می‌شوند. در همین حال
           کالکسیون‌های فصل را در فروشگاه ببینید یا برای دریافت نامهٔ فصلی،
           ایمیل خود را در پایان همین صفحه ثبت کنید.
         </p>
         <div className="flex items-center gap-3 pt-4">
           <div className="h-px w-8 bg-ink/35" />
-          <LonaLogo
+          <LiaLogo
             variant="default"
             size={28}
-            title="لوگوی لونا"
+            title="لوگوی لیا"
             className="h-7 w-7"
           />
         </div>

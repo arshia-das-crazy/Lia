@@ -28,8 +28,8 @@ const stores = [
 
 export default function About() {
   usePageMeta({
-    title: "درباره لونا — بوتیک لباس زیر زنانه",
-    description: "لونا در سال ۱۳۹۸ در تهران آغاز شد. بوتیک آنلاین لباس زیر زنانه لوکس با تمرکز بر کیفیت پارچه، طراحی ظریف و راحتی روزمره.",
+    title: "درباره لیا — بوتیک لباس زیر زنانه",
+    description: "لیا در سال ۱۳۹۸ در تهران آغاز شد. بوتیک آنلاین لباس زیر زنانه لوکس با تمرکز بر کیفیت پارچه، طراحی ظریف و راحتی روزمره.",
     canonical: `${window.location.origin}/about`,
     ogType: "website",
   });
@@ -37,12 +37,12 @@ export default function About() {
   return (
     <div className="mx-auto max-w-[1728px] px-6 pt-16 pb-24 lg:px-10 lg:pt-24">
       <header className="max-w-4xl">
-        <p className="type-eyebrow text-ink-muted">کارگاه لونا</p>
+        <p className="type-eyebrow text-ink-muted">کارگاه لیا</p>
         <h1 className="mt-3 font-display text-5xl leading-[1.02] text-ink lg:text-9xl">
           خانه‌ای برای آرامش، ماندگاری و ظرافت بی‌صدا.
         </h1>
         <p className="mt-8 text-base leading-relaxed text-ink-soft lg:text-lg">
-          لونا در سال ۱۳۹۸ در تهران با جمعی کوچک از طراحان پارچه، خیاطان و
+          لیا در سال ۱۳۹۸ در تهران با جمعی کوچک از طراحان پارچه، خیاطان و
           مشتریان آگاه آغاز شد. این خانه به تولید محصولاتی ماندگار اختصاص
           دارد — لباس‌های زیر با برش‌های سنجیده، پارچه‌های نرم و لطیف، و
           جزئیاتی که هر روز حس خوبی به همراه دارند.
@@ -59,7 +59,7 @@ export default function About() {
         >
           <EditorialImage
             src={images.about_workshop}
-            alt="تصویر کارگاه تهران لونا"
+            alt="تصویر کارگاه تهران لیا"
             className="gradient-rose aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-inset ring-white/45"
             imgClassName="opacity-90"
           >
@@ -73,7 +73,7 @@ export default function About() {
               هر قطعه به دست یک نفر تمام می‌شود؛ نام او بر برچسب درج شده است.
             </h2>
             <p className="text-sm leading-relaxed text-ink-soft">
-              لونا به تولید انبوه باور ندارد. هر لباس دست‌کم از دوازده جفت
+              لیا به تولید انبوه باور ندارد. هر لباس دست‌کم از دوازده جفت
               دست عبور می‌کند — از برش‌زن تا دوخت آخر. برچسبی درون هر لباس،
               نام سازندگانی را که آن را در دست گرفته‌اند، با افتخار روایت
               می‌کند.
@@ -86,7 +86,7 @@ export default function About() {
         eyebrow="پارچه و مواد"
         quote="ما با دوازده کارخانهٔ پارچه، چهار کارگاه گلدوزی و یک واحد بسته‌بندی در تهران همکاری می‌کنیم. سال‌هاست که با آن‌ها کار می‌کنیم و هرگز برای قمت تأمین‌کننده را تغییر نمی‌دهیم."
         body=""
-        attribution="بنیان‌گذار لونا"
+        attribution="بنیان‌گذار لیا"
       />
 
       {/* Sustainability */}
@@ -97,7 +97,7 @@ export default function About() {
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { stat: "۱۰۰٪", label: "الیاف طبیعی در سری ماندگار لونا." },
+            { stat: "۱۰۰٪", label: "الیاف طبیعی در سری ماندگار لیا." },
             { stat: "≤ ۴ گرم", label: "میانگین کربن برای هر تکه، ممیزی سالانه." },
             { stat: "همیشه", label: "تعمیر، نه تعویض — بازگشت به کارگاه سازنده." },
           ].map((item, i) => (
@@ -123,7 +123,7 @@ export default function About() {
           سه فضا.
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft lg:text-base">
-          بوتیک‌های لونا فضاهایی آرام برای تجربهٔ حضوری لباس‌ها هستند؛ جایی
+          بوتیک‌های لیا فضاهایی آرام برای تجربهٔ حضوری لباس‌ها هستند؛ جایی
           برای لمس پارچه، امتحان سایز و گفت‌وگو با مشاوران ما.
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -157,7 +157,7 @@ export default function About() {
               <li className="flex items-center gap-3 py-4 text-sm">
                 <Mail className="h-4 w-4 text-ink-muted" />
                 <span dir="ltr" className="text-ink">
-                  concierge@lona.studio
+                  concierge@lia.studio
                 </span>
               </li>
               <li className="flex items-center gap-3 py-4 text-sm">

@@ -1,5 +1,5 @@
 /**
- * Lona — Benefits grid.
+ * Lia — Benefits grid.
  *
  * Four quiet benefit cards rendered as 01–04 serif numerals + headline
  * + paragraph. No big icons, no badges — the language is the design.
@@ -38,7 +38,7 @@ const BENEFITS: Benefit[] = [
 ];
 
 export function Benefits({
-  eyebrow = "مزایای لونا",
+  eyebrow = "مزایای لیا",
   title = "چهار دلیل برای اعتماد",
 }: {
   eyebrow?: string;

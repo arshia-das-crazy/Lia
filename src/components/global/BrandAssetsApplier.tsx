@@ -1,5 +1,5 @@
 /**
- * Lona — Brand assets applier.
+ * Lia — Brand assets applier.
  *
  * Mounted once inside the page shell. Reads the admin-configured
  * brand image slots (`favicon`, `og_image`) from the shared homepage

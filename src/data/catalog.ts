@@ -14,14 +14,14 @@
  */
 import type { GradientKey } from "@/lib/glass";
 import {
-  LONA_PRODUCTS,
-  LONA_COLLECTIONS,
-  LONA_EDITORIALS,
-  LONA_CATEGORIES,
+  LONA_PRODUCTS as LIA_PRODUCTS,
+  LONA_COLLECTIONS as LIA_COLLECTIONS,
+  LONA_EDITORIALS as LIA_EDITORIALS,
+  LONA_CATEGORIES as LIA_CATEGORIES,
   LINGERIE_SIZES,
   ACCESSORY_SIZES,
-  LONA_COLOR_OPTIONS,
-  type LonaProductRaw,
+  LONA_COLOR_OPTIONS as LIA_COLOR_OPTIONS,
+  type LonaProductRaw as LiaProductRaw,
 } from "@/data/lona-catalog";
 
 // ──────────────────────────────────────────────────────────────
@@ -117,11 +117,11 @@ export interface Order {
 }
 
 // ──────────────────────────────────────────────────────────────
-// ADAPTER — LonaProductRaw → legacy Product
+// ADAPTER — LiaProductRaw → legacy Product
 // ──────────────────────────────────────────────────────────────
 
 function colorFromId(id: string): ProductColor | null {
-  const def = LONA_COLOR_OPTIONS.find((c) => c.id === id);
+  const def = LIA_COLOR_OPTIONS.find((c) => c.id === id);
   if (!def) return null;
   return { id: def.id, name: def.name, gradient: def.gradient };
 }
@@ -133,7 +133,7 @@ function sizeFromId(id: string): ProductSize | null {
   return { id: def.id, label: def.label };
 }
 
-function adaptProduct(p: LonaProductRaw): Product {
+function adaptProduct(p: LiaProductRaw): Product {
   return {
     id: p.slug,
     slug: p.slug,
@@ -156,21 +156,21 @@ function adaptProduct(p: LonaProductRaw): Product {
   };
 }
 
-function adaptCollection(c: (typeof LONA_COLLECTIONS)[number]): Collection {
+function adaptCollection(c: (typeof LIA_COLLECTIONS)[number]): Collection {
   return {
     id: c.slug,
     slug: c.slug,
     name: c.name,
     eyebrow: c.eyebrow,
     description: c.description,
-    productIds: LONA_PRODUCTS.filter((p) => p.collectionSlug === c.slug).map((p) => p.slug),
+    productIds: LIA_PRODUCTS.filter((p) => p.collectionSlug === c.slug).map((p) => p.slug),
     gradient: c.gradient,
     cover: undefined,
     coverImage: undefined,
   };
 }
 
-function adaptEditorial(e: (typeof LONA_EDITORIALS)[number]): Editorial {
+function adaptEditorial(e: (typeof LIA_EDITORIALS)[number]): Editorial {
   return {
     id: e.slug,
     slug: e.slug,
@@ -188,13 +188,13 @@ function adaptEditorial(e: (typeof LONA_EDITORIALS)[number]): Editorial {
 // PUBLIC SURFACE — mirror the legacy static catalog
 // ──────────────────────────────────────────────────────────────
 
-export const products: Product[] = LONA_PRODUCTS.map(adaptProduct);
-export const collections: Collection[] = LONA_COLLECTIONS.map(adaptCollection);
-export const editorials: Editorial[] = LONA_EDITORIALS.map(adaptEditorial);
+export const products: Product[] = LIA_PRODUCTS.map(adaptProduct);
+export const collections: Collection[] = LIA_COLLECTIONS.map(adaptCollection);
+export const editorials: Editorial[] = LIA_EDITORIALS.map(adaptEditorial);
 
 // Categories array — used by Phase 5 legacy filter consumers that haven't
 // migrated to the lingerie taxonomy yet. Each entry is a slimmer shape.
-export const categories = LONA_CATEGORIES.map((c) => ({
+export const categories = LIA_CATEGORIES.map((c) => ({
   slug: c.slug,
   name: c.name,
   description: c.description,
@@ -232,13 +232,13 @@ export function newArrivals(limit?: number): Product[] {
 }
 
 export function featuredProducts(limit?: number): Product[] {
-  const featured = LONA_PRODUCTS.filter((p) => p.featured).map((p) => p.slug);
+  const featured = LIA_PRODUCTS.filter((p) => p.featured).map((p) => p.slug);
   const list = products.filter((p) => featured.includes(p.slug));
   return typeof limit === "number" ? list.slice(0, limit) : list;
 }
 
 export function trendingProducts(limit?: number): Product[] {
-  const trending = LONA_PRODUCTS.filter((p) => p.trending).map((p) => p.slug);
+  const trending = LIA_PRODUCTS.filter((p) => p.trending).map((p) => p.slug);
   const list = products.filter((p) => trending.includes(p.slug));
   return typeof limit === "number" ? list.slice(0, limit) : list;
 }
@@ -254,10 +254,10 @@ export function bestSellers(limit?: number): Product[] {
 // Lightweight testimonial pool — five curated Persian quotes for the
 // home-page Testimonials section. Authors are seed placeholders.
 export const testimonials: Testimonial[] = [
-  { id: "t-1", quote: "کیفیت پارچه و دوخت لونا از هر برند دیگری که تجربه کردم بالاتره. بسته‌بندی محرمانه هم برای من مهم بود.", author: "مریم احمدی",     role: "مشتری وفادار" },
-  { id: "t-2", quote: "سایزبندی‌ها دقیقاً مطابق جدول سایز لونا هست. تیم پشتیبانی هم در انتخاب سایز کمک کرد.",                              author: "زهرا کریمی",     role: "مشتری تازه" },
-  { id: "t-3", quote: "برای شب عروسی دنبال یک ست خاص بودم. ست رویای لونا را انتخاب کردم و شب فراموش‌نشدنی شد.",                                author: "نگار رضایی",    role: "عروس" },
-  { id: "t-4", quote: "راحتی روزانه‌ی محصولات نرم لونا واقعاً با‌کیفیته. از خریدم هیچ‌وقت پشیمان نشدم.",                                            author: "مونا فلاحی",    role: "مشتری ماهانه" },
+  { id: "t-1", quote: "کیفیت پارچه و دوخت لیا از هر برند دیگری که تجربه کردم بالاتره. بسته‌بندی محرمانه هم برای من مهم بود.", author: "مریم احمدی",     role: "مشتری وفادار" },
+  { id: "t-2", quote: "سایزبندی‌ها دقیقاً مطابق جدول سایز لیا هست. تیم پشتیبانی هم در انتخاب سایز کمک کرد.",                              author: "زهرا کریمی",     role: "مشتری تازه" },
+  { id: "t-3", quote: "برای شب عروسی دنبال یک ست خاص بودم. ست رویای لیا را انتخاب کردم و شب فراموش‌نشدنی شد.",                                author: "نگار رضایی",    role: "عروس" },
+  { id: "t-4", quote: "راحتی روزانه‌ی محصولات نرم لیا واقعاً با‌کیفیته. از خریدم هیچ‌وقت پشیمان نشدم.",                                            author: "مونا فلاحی",    role: "مشتری ماهانه" },
   { id: "t-5", quote: "ارسال سریع، بسته‌بندی شیک و محرمانه، و کیفیتی که از یک برند لوکس انتظار دارید.",                                              author: "رویا شفیعی",    role: "مشتری وفادار" },
 ];
 

@@ -1,10 +1,10 @@
 /**
- * لونا — Product feed architecture
+ * لیا — Product feed architecture
  *
  * Prepares the data model for future marketplace integration
  * (ترب, دیجی‌کالا, Google Merchant Center, etc.).
  *
- * Each function maps from the internal Lona product shape to
+ * Each function maps from the internal Lia product shape to
  * a standardized external feed format. Keep these adapters
  * pure — no side effects, no network calls.
  *
@@ -20,7 +20,7 @@ import type { Product as CatalogProduct } from "@/data/catalog";
 // ──────────────────────────────────────────────
 
 export interface FeedItem {
-  /** Unique identifier — matches the Lona slug. */
+  /** Unique identifier — matches the Lia slug. */
   id: string;
   /** Persian product title. */
   title: string;
@@ -42,7 +42,7 @@ export interface FeedItem {
   brand: string;
   /** Google product category (ID) or local taxonomy path. */
   google_product_category?: string;
-  /** Product condition: always "new" for Lona. */
+  /** Product condition: always "new" for Lia. */
   condition: "new";
   /** GTIN / barcode — placeholder for future. */
   gtin?: string;
@@ -52,14 +52,14 @@ export interface FeedItem {
   sizes: string[];
   /** Colors available. */
   colors: string[];
-  /** Gender — always "female" for Lona. */
+  /** Gender — always "female" for Lia. */
   gender: "female";
   /** Age group — "adult". */
   age_group: "adult";
 }
 
 // ──────────────────────────────────────────────
-// Category mapping — Lona taxonomy → Google product taxonomy
+// Category mapping — Lia taxonomy → Google product taxonomy
 // ──────────────────────────────────────────────
 
 const CATEGORY_MAP: Record<string, string> = {
@@ -94,7 +94,7 @@ export function toFeedItem(
     price: p.price,
     currency: "IRT",
     availability: "in stock",
-    brand: "لونا",
+    brand: "لیا",
     google_product_category: CATEGORY_MAP[p.category],
     condition: "new",
     sizes: p.sizes.map((s) => s.label),

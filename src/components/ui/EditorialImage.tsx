@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/glass";
-import { LONA_MOCK_FALLBACK } from "@/data/mock-images";
+import { LIA_MOCK_FALLBACK } from "@/data/mock-images";
 
 interface EditorialImageProps {
   src: string;
@@ -23,8 +23,8 @@ export function EditorialImage({
   alt,
   className,
   imgClassName,
-  fallbackClassName = "gradient-lona-pearl",
-  fallbackSrc = LONA_MOCK_FALLBACK,
+  fallbackClassName = "gradient-lia-pearl",
+  fallbackSrc = LIA_MOCK_FALLBACK,
   priority = false,
   children,
 }: EditorialImageProps) {

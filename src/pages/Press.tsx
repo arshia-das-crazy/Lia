@@ -34,9 +34,9 @@ export default function Press() {
   return (
     <div className="mx-auto max-w-[1728px] px-6 pt-16 pb-24 lg:px-10 lg:pt-24">
       <header>
-        <p className="type-eyebrow text-ink-muted">مجلهٔ لونا</p>
+        <p className="type-eyebrow text-ink-muted">مجلهٔ لیا</p>
         <h1 className="mt-3 font-display text-5xl leading-[1.02] text-ink lg:text-8xl">
-          روایت‌های بلند خانهٔ لونا.
+          روایت‌های بلند خانهٔ لیا.
         </h1>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft lg:text-base">
           نوشته‌ها، یادداشت‌های کارگاه و آرشیو کالکسیون‌ها — هر زمان که سخنی
@@ -53,7 +53,7 @@ export default function Press() {
           >
           <EditorialImage
             src={hero.coverImage || images.press_hero}
-            alt={`${hero.title} — مجله لونا`}
+            alt={`${hero.title} — مجله لیا`}
             className={cn("relative aspect-[16/8]", gradientFor(hero.cover))}
             imgClassName="opacity-90"
           >
@@ -79,7 +79,7 @@ export default function Press() {
       ) : (
         <div className="mt-16 rounded-3xl border border-edge bg-canvas-soft px-6 py-16 text-center">
           <p className="font-display text-2xl text-ink">هنوز داستانی منتشر نشده است.</p>
-          <p className="mt-3 text-sm text-ink-muted">به‌زودی روایت‌های تازهٔ لونا را اینجا می‌خوانید.</p>
+          <p className="mt-3 text-sm text-ink-muted">به‌زودی روایت‌های تازهٔ لیا را اینجا می‌خوانید.</p>
         </div>
       )}
 
@@ -96,7 +96,7 @@ export default function Press() {
             <Link to={`/press/${e.slug}`} className="group block overflow-hidden rounded-2xl">
               <EditorialImage
                 src={e.coverImage || images[PRESS_SLOTS[i % PRESS_SLOTS.length]]}
-                alt={`${e.title} — مجله لونا`}
+                alt={`${e.title} — مجله لیا`}
                 className={cn(
                   "relative aspect-[4/5] transition duration-700 group-hover:scale-[1.03]",
                   gradientFor(e.cover)

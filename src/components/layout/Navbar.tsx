@@ -16,13 +16,13 @@ import { useWishlist } from "@/hooks/use-wishlist";
 import { useAuth } from "@/hooks/use-auth";
 import { useOverlay } from "@/hooks/use-overlay";
 import { EASE_LUXURY, SPRING_GENTLE, SPRING_SNAP } from "@/lib/motion";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 const PRIMARY_LINKS: { label: string; to: string }[] = [
   { label: "بوتیک", to: "/shop" },
   { label: "کالکسیون‌ها", to: "/collections" },
   { label: "مجله", to: "/press" },
-  { label: "درباره لونا", to: "/about" },
+  { label: "درباره لیا", to: "/about" },
 ];
 
 export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
@@ -150,16 +150,16 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
           </ul>
         </div>
 
-        {/* Center — Lona mark + wordmark in a serif block */}
+        {/* Center — Lia mark + wordmark in a serif block */}
         <Link
           to="/"
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2"
-          aria-label="لونا — خانه"
+          aria-label="لیا — خانه"
         >
-          <LonaLogo
+          <LiaLogo
             variant="default"
             size={34}
-            title="لونا — خانه"
+            title="لیا — خانه"
             className="h-9 w-9"
           />
         </Link>
@@ -245,7 +245,7 @@ export function Navbar({ onMenuToggle }: { onMenuToggle?: () => void }) {
                     setSearchValue("");
                   }
                 }}
-                placeholder="جست‌وجو در لونا…"
+                placeholder="جست‌وجو در لیا…"
                 className="flex-1 bg-transparent text-sm text-ink placeholder:text-ink-muted focus:outline-none"
                 dir="rtl"
               />

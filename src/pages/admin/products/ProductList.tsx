@@ -222,7 +222,7 @@ export default function ProductList() {
             محصولات
           </h1>
           <p className="mt-2 max-w-xl text-sm text-ink-soft">
-            تمام تکه‌های لونا — پیش‌نویس، منتشر شده و آرشیو شده — در یک جدول
+            تمام تکه‌های لیا — پیش‌نویس، منتشر شده و آرشیو شده — در یک جدول
             قابل جست‌وجو.
           </p>
         </div>
@@ -250,7 +250,7 @@ export default function ProductList() {
               "rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] transition",
               status === filter.value
                 ? "bg-ink text-canvas"
-                : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+                : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
             )}
           >
             {filter.label}
@@ -311,8 +311,8 @@ function Pill({
     tone === "primary"
       ? "bg-primary/10 text-primary"
       : tone === "info"
-        ? "bg-sky-100 text-sky-700"
-        : "bg-zinc-100 text-zinc-600";
+        ? "bg-sky-500/15 text-sky-300"
+        : "bg-canvas/70 text-ink-soft";
   return (
     <span
       className={cn(
@@ -339,7 +339,7 @@ function GradientChip({ row }: { row: ProductRow }) {
   return (
     <div
       className={cn(
-        "h-12 w-10 overflow-hidden rounded-lg ring-1 ring-inset ring-white/40",
+        "h-12 w-10 overflow-hidden rounded-lg ring-1 ring-inset ring-edge-bright/30",
         cls,
       )}
     />
@@ -361,7 +361,7 @@ function RowActions({
       <Link
         to={`/admin/products/${row._id}`}
         aria-label="ویرایش"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
       >
         <Edit3 className="h-3.5 w-3.5 text-ink" />
       </Link>
@@ -377,7 +377,7 @@ function RowActions({
           }
         }}
         aria-label="کپی"
-        className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+        className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
       >
         <Copy className="h-3.5 w-3.5 text-ink" />
       </button>
@@ -394,7 +394,7 @@ function RowActions({
             }
           }}
           aria-label="بازنشانی"
-          className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+          className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
         >
           <RotateCcw className="h-3.5 w-3.5 text-ink" />
         </button>
@@ -411,7 +411,7 @@ function RowActions({
             }
           }}
           aria-label="بایگانی"
-          className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+          className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
         >
           <Archive className="h-3.5 w-3.5 text-ink" />
         </button>
@@ -443,7 +443,7 @@ function PublishGate({ row }: { row: ProductRow }) {
       }}
       aria-label="انتشار"
       title="انتشار مستقیم از فهرست"
-      className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white disabled:opacity-40"
+      className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft disabled:opacity-40"
     >
       <Send className="h-3.5 w-3.5 text-ink" />
     </button>

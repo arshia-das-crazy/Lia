@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52" role="img" aria-labelledby="lia-wm-light-title lia-wm-light-desc">
+  <title id="lia-wm-light-title">LIA Lingerie</title>
+  <desc id="lia-wm-light-desc">لوگوی روشن لیا برای زمینه‌های روشن</desc>
+
+  <!-- burgundy serif wordmark -->
+  <text
+    x="0"
+    y="32"
+    font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-size="38"
+    font-weight="600"
+    letter-spacing="6"
+    fill="#5C1B2E">LIA</text>
+
+  <!-- burgundy small-caps tagline -->
+  <text
+    x="3"
+    y="44"
+    font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+    font-size="8.5"
+    letter-spacing="5"
+    fill="#7A2A3E">LINGERIE</text>
+
+  <!-- gold underline accent -->
+  <rect x="3" y="48" width="44" height="1.2" fill="#C9A76B" />
+</svg>

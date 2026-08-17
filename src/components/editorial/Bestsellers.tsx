@@ -1,5 +1,5 @@
 /**
- * Lona — Bestsellers grid.
+ * Lia — Bestsellers grid.
  *
  * 4-up product grid with Persian copy. Replaces the placeholder
  * `Recommendations` component on the homepage. In production this

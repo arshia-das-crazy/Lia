@@ -1,5 +1,5 @@
 /**
- * Lona — Category grid.
+ * Lia — Category grid.
  *
  * 10 lingerie categories (Phase 5.8 taxonomy). Calm 2-col mobile /
  * 4-col desktop grid. Subtle gradient plates, serif labels,
@@ -22,17 +22,17 @@ interface Category {
     | "gradient-mist"
     | "gradient-rose-quartz"
     | "gradient-deep"
-    | "gradient-lona-rose"
-    | "gradient-lona-pearl";
+    | "gradient-lia-rose"
+    | "gradient-lia-pearl";
   tone: "ink" | "canvas";
 }
 
 const CATEGORIES: Category[] = [
   { name: "سوتین",               path: "/shop?category=bras",       gradient: "gradient-oat",         tone: "ink" },
-  { name: "شورت",                path: "/shop?category=briefs",     gradient: "gradient-lona-pearl",  tone: "ink" },
+  { name: "شورت",                path: "/shop?category=briefs",     gradient: "gradient-lia-pearl",  tone: "ink" },
   { name: "ست لباس زیر",         path: "/shop?category=sets",       gradient: "gradient-rose-quartz", tone: "ink" },
   { name: "لباس خواب",           path: "/shop?category=sleepwear",  gradient: "gradient-mist",        tone: "ink" },
-  { name: "لباس راحتی",          path: "/shop?category=loungewear", gradient: "gradient-lona-rose",   tone: "ink" },
+  { name: "لباس راحتی",          path: "/shop?category=loungewear", gradient: "gradient-lia-rose",   tone: "ink" },
   { name: "بادی",                path: "/shop?category=bodysuits",  gradient: "gradient-oat",         tone: "ink" },
   { name: "گن",                  path: "/shop?category=shapewear",  gradient: "gradient-mist",        tone: "ink" },
   { name: "لباس ورزشی زنانه",    path: "/shop?category=sportswear", gradient: "gradient-deep",        tone: "canvas" },
@@ -58,7 +58,7 @@ export function CategoryGrid() {
   return (
     <section
       className="mx-auto mt-32 max-w-[1728px] px-6 lg:px-10"
-      aria-label="دسته‌بندی‌های لونا"
+      aria-label="دسته‌بندی‌های لیا"
     >
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
@@ -88,7 +88,7 @@ export function CategoryGrid() {
             >
               <EditorialImage
                 src={categoryImages[i]}
-                alt={`تصویر دسته‌بندی ${cat.name} لونا`}
+                alt={`تصویر دسته‌بندی ${cat.name} لیا`}
                 className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
                 imgClassName="opacity-85"
                 fallbackClassName={cat.gradient}

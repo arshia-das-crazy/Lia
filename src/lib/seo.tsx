@@ -1,5 +1,5 @@
 /**
- * لونا — SEO utilities
+ * لیا — SEO utilities
  *
  * Lightweight, zero-dependency page metadata management for a Vite SPA.
  * Every page component calls `usePageMeta(opts)` to set:
@@ -27,7 +27,7 @@ export interface PageMeta {
   noindex?: boolean;
 }
 
-const BRAND = "لونا";
+const BRAND = "لیا";
 const SITE_URL = typeof window !== "undefined" ? window.location.origin : "";
 const DEFAULT_IMAGE = `${SITE_URL}/logo.svg`;
 
@@ -229,7 +229,7 @@ export interface StoreInfo {
 
 /** LocalBusiness + ContactPoint — trust signals for Iranian ecommerce. */
 export function LocalBusinessJsonLd(s: StoreInfo) {
-  const name = s.shopName || "لونا";
+  const name = s.shopName || "لیا";
   const contact: Record<string, unknown> = {
     "@type": "ContactPoint",
     contactType: "customer service",

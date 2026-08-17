@@ -1,22 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="logo-title logo-desc">
-  <title id="logo-title">LONA</title>
-  <desc id="logo-desc">نشان دایره‌ای لونا با زمینه کرم و نوشته مشکی</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="lia-logo-title lia-logo-desc">
+  <title id="lia-logo-title">LIA Lingerie</title>
+  <desc id="lia-logo-desc">نشان دایره‌ای لیا — قاب طلایی، تایپوگرافی عاجی و نگین شرابی</desc>
 
-  <circle cx="500" cy="500" r="496" fill="#F4E5D8" />
+  <!-- outer champagne-gold ring -->
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#C9A76B" stroke-width="1.6" />
+  <!-- inner hairline ring -->
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#C9A76B" stroke-opacity="0.35" stroke-width="0.8" />
 
-  <!-- L -->
-  <path fill="#080808" d="M151 381c0-9 7-15 19-15h32c-8 6-11 13-11 25v181c0 7 3 11 11 14l78 25c21 7 39 14 57 14 16 0 30-3 44-11-13 22-39 35-66 35-19 0-40-6-62-14l-55-20c-19-7-32-11-47-11V407c0-12-1-19-10-26-6-5-10-8-10-0z" />
+  <!-- serif monogram -->
+  <text
+    x="60"
+    y="66"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-size="34"
+    font-weight="500"
+    letter-spacing="4"
+    fill="#EFE3D0">LIA</text>
 
-  <!-- O -->
-  <path fill="#080808" fill-rule="evenodd" d="M365 381c65 0 111 43 111 101 0 65-50 110-112 110-66 0-111-43-111-101 0-64 49-110 112-110zm-1 8c-47 0-82 38-82 96 0 56 35 98 83 98 48 0 82-38 82-96 0-57-35-98-83-98z" />
-  <!-- sparkle inside O -->
-  <path fill="#080808" d="M389 463c4 16 10 22 27 26-17 4-23 10-27 27-4-17-10-23-27-27 17-4 23-10 27-26z" />
-
-  <!-- N -->
-  <path fill="#080808" d="M495 402c0-12-5-18-17-26h37l126 154V414c0-18-4-29-16-38h43c-11 9-15 20-15 38v168h-14L520 430v137c0 19 4 29 16 38h-42c11-9 15-19 15-38V402h-14z" />
-
-  <!-- A -->
-  <path fill="#080808" d="M671 579l70-181c5-14 4-22-7-29h38l72 191c6 16 14 26 27 34h-61c12-8 14-16 9-30l-17-46h-83l-17 45c-5 14-2 23 10 31h-57c9-7 13-13 16-15zm54-69h69l-35-91-34 91z" />
-  <!-- A's delicate lower sweep -->
-  <path fill="#080808" d="M692 573c22-34 48-51 76-51 21 0 35 9 50 18 12 7 23 12 36 12 11 0 20-3 29-10-10 17-24 25-41 25-17 0-32-7-47-15-13-7-25-13-38-13-21 0-42 13-65 34z" />
+  <!-- burgundy diamond pendant -->
+  <rect x="55.4" y="80.4" width="9.2" height="9.2" rx="1.5" fill="#6E2138" transform="rotate(45 60 85)" />
 </svg>

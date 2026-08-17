@@ -126,7 +126,7 @@ export default function ProductWizard() {
   }
   if (product === null) {
     return (
-      <div className="rounded-3xl border border-edge bg-white/85 p-10 text-center">
+      <div className="rounded-3xl border border-edge bg-canvas-soft p-10 text-center">
         <p className="font-display text-2xl text-ink">محصول یافت نشد.</p>
         <Link
           to="/admin/products"
@@ -246,7 +246,7 @@ function WizardHeader({
                 "inline-flex h-8 items-center gap-2 rounded-full px-3 text-[11px] font-medium uppercase tracking-[0.16em] transition",
                 active
                   ? "bg-ink text-canvas"
-                  : "hairline bg-white/70 text-ink-soft hover:bg-white",
+                  : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
               )}
             >
               <span className="grid h-5 w-5 place-items-center rounded-full bg-canvas/30 text-[10px]">
@@ -281,7 +281,7 @@ function WizardFooter({
         type="button"
         onClick={onPrev}
         disabled={index === 0}
-        className="inline-flex items-center gap-2 rounded-full hairline bg-white/70 px-4 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-white disabled:opacity-30"
+        className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft disabled:opacity-30"
       >
         <ArrowLeft className="h-3.5 w-3.5" /> بازگشت
       </button>
@@ -327,7 +327,7 @@ function BasicInfoStep({
     description: product.description,
     composition: product.composition,
     origin: product.origin,
-    brand: product.brand ?? "لونا",
+    brand: product.brand ?? "لیا",
     barcode: product.barcode ?? "",
     material: product.material ?? "",
     care: product.care ?? "",
@@ -366,7 +366,7 @@ function BasicInfoStep({
   };
 
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <div className="mb-5 flex items-center justify-between">
         <div>
           <p className="type-eyebrow text-ink-muted">مرحلهٔ ۱ از ۸</p>
@@ -447,7 +447,7 @@ function BasicInfoStep({
             value={form.brand}
             onChange={(e) => set("brand", e.target.value)}
             className="admin-input"
-            placeholder="لونا"
+            placeholder="لیا"
           />
         </Field>
         <Field label="بارکد (EAN/GTIN)" hint="اختیاری — در فیدهای بازار استفاده می‌شود">
@@ -497,7 +497,7 @@ function BasicInfoStep({
  * =================================================================== */
 function MediaStep({ product }: { product: Doc<"products"> }) {
   return (
-    <div className="space-y-3 rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="space-y-3 rounded-3xl border border-edge bg-canvas-soft p-6">
       <p className="type-eyebrow text-ink-muted">مرحلهٔ ۲ از ۸</p>
       <h3 className="font-display text-2xl text-ink">کتابخانهٔ رسانه</h3>
       <p className="text-sm text-ink-soft">
@@ -525,7 +525,7 @@ function CategoriesStep({
   const [category, setCategory] = React.useState(product.category);
   const [busy, setBusy] = React.useState(false);
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <p className="type-eyebrow text-ink-muted">مرحلهٔ ۳ از ۸</p>
       <h3 className="mt-2 font-display text-2xl text-ink">دسته‌بندی‌ها</h3>
       <p className="mt-2 text-sm text-ink-soft">
@@ -538,7 +538,7 @@ function CategoriesStep({
             key={c.value}
             className={cn(
               "flex cursor-pointer items-center gap-3 rounded-2xl border border-edge bg-canvas-soft px-3 py-2.5 text-sm transition",
-              category === c.value && "ring-2 ring-primary bg-white",
+              category === c.value && "ring-2 ring-primary bg-canvas/60",
             )}
           >
             <input
@@ -593,7 +593,7 @@ function CollectionsStep({
     product.collectionSlug ? [product.collectionSlug] : [],
   );
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <p className="type-eyebrow text-ink-muted">مرحلهٔ ۴ از ۸</p>
       <h3 className="mt-2 font-display text-2xl text-ink">کالکسیون‌ها</h3>
       <p className="mt-2 text-sm text-ink-soft">
@@ -619,7 +619,7 @@ function CollectionsStep({
                   "rounded-full px-4 py-2 text-[11px] font-medium uppercase tracking-[0.16em] transition",
                   on
                     ? "bg-ink text-canvas"
-                    : "hairline bg-canvas/60 text-ink-soft hover:bg-white",
+                    : "hairline bg-canvas/60 text-ink-soft hover:bg-canvas-soft",
                 )}
               >
                 {c.name} ({c.slug})
@@ -700,7 +700,7 @@ function PricingInventoryStep({
   const [busy, setBusy] = React.useState(false);
   const [pricingError, setPricingError] = React.useState<string | null>(null);
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <p className="type-eyebrow text-ink-muted">مرحلهٔ ۶ از ۸</p>
       <h3 className="mt-2 font-display text-2xl text-ink">قیمت‌گذاری و موجودی</h3>
       <div className="mt-5 grid gap-5 lg:grid-cols-2">
@@ -726,7 +726,7 @@ function PricingInventoryStep({
         </Field>
       </div>
       {pricingError && (
-        <p className="mt-3 rounded-xl bg-rose-50 px-3 py-2 text-[12px] text-rose-700">
+        <p className="mt-3 rounded-xl bg-rose-500/15 px-3 py-2 text-[12px] text-rose-300">
           {pricingError}
         </p>
       )}
@@ -790,7 +790,7 @@ function SeoStep({
     product.seoDescription ?? "",
   );
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <p className="type-eyebrow text-ink-muted">مرحلهٔ ۷ از ۸</p>
       <h3 className="mt-2 font-display text-2xl text-ink">سئو</h3>
       <p className="mt-2 text-sm text-ink-soft">
@@ -882,7 +882,7 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-3xl border border-edge bg-white/85 p-6">
+      <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
         <p className="type-eyebrow text-ink-muted">مرحلهٔ ۸ از ۸</p>
         <h3 className="mt-2 font-display text-2xl text-ink">انتشار نهایی</h3>
         <p className="mt-2 text-sm text-ink-soft">
@@ -902,11 +902,11 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
               key={key}
               className={cn(
                 "flex cursor-pointer items-center justify-between gap-3 rounded-2xl border border-edge bg-canvas-soft px-4 py-3 transition",
-                state && "ring-2 ring-primary bg-white",
+                state && "ring-2 ring-primary bg-canvas/60",
               )}
             >
               <span className="flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full hairline bg-white text-primary">
+                <span className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 text-primary">
                   <Icon className="h-4 w-4" />
                 </span>
                 <span className="text-sm font-medium text-ink">{label}</span>
@@ -953,7 +953,7 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
                   setBusy(false);
                 }
               }}
-              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
             >
               Archive
             </button>
@@ -970,7 +970,7 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
                   setBusy(false);
                 }
               }}
-              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
             >
               Restore as draft
             </button>
@@ -982,7 +982,7 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, ease: EASE_LUXURY }}
-            className="mt-4 rounded-xl bg-emerald-50 px-3 py-2 text-[12px] text-emerald-700"
+            className="mt-4 rounded-xl bg-emerald-500/15 px-3 py-2 text-[12px] text-emerald-300"
           >
             Live on the storefront. Storefront subscriptions will reflect
             the change within their next roundtrip.
@@ -993,7 +993,7 @@ function PublishingStep({ product }: { product: Doc<"products"> }) {
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, ease: EASE_LUXURY }}
-            className="mt-4 rounded-xl bg-amber-50 px-3 py-2 text-[12px] text-amber-800"
+            className="mt-4 rounded-xl bg-amber-500/15 px-3 py-2 text-[12px] text-amber-200"
           >
             Missing fields before publishing:{" "}
             <strong>
@@ -1046,8 +1046,8 @@ function SaveIndicator({ state }: { state: "idle" | "ok" | "err" }) {
   const text = state === "ok" ? "Saved" : "Could not save";
   const cls =
     state === "ok"
-      ? "bg-emerald-50 text-emerald-700"
-      : "bg-rose-50 text-rose-700";
+      ? "bg-emerald-500/15 text-emerald-300"
+      : "bg-rose-500/15 text-rose-300";
   return (
     <span className={cn("rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.16em]", cls)}>
       {text}

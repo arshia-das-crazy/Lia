@@ -1,5 +1,5 @@
 /**
- * Lona — refined product card.
+ * Lia — refined product card.
  *
  * Hover language:
  *   - Scale 1.02 (gentle, not 1.06)
@@ -51,11 +51,11 @@ const gradientClass = (k: TProduct["colors"][number]["gradient"]) => {
     case "rose":
       return "gradient-rose-quartz";
     case "blush":
-      return "gradient-lona-rose";
+      return "gradient-lia-rose";
     case "pearl":
-      return "gradient-lona-pearl";
+      return "gradient-lia-pearl";
     case "noir":
-      return "gradient-lona-noir";
+      return "gradient-lia-noir";
     default:
       return "gradient-oat";
   }

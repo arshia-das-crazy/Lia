@@ -4,7 +4,7 @@
  * Surface: `/admin/collections`.
  *
  * Reads from `api.admin_catalog.listCollectionsForAdmin` and
- * surfaces the Lona merchandising tool: create, edit, archive,
+ * surfaces the Lia merchandising tool: create, edit, archive,
  * restore, soft-delete (the Convex `deleteCollection` refuses
  * when products still reference the collection — we surface that
  * error via ConfirmDialog and let the user move products first).
@@ -104,7 +104,7 @@ export default function Collections() {
             "rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] transition",
             showArchived
               ? "bg-primary text-canvas"
-              : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+              : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
           )}
         >
           {showArchived ? "شامل آرشیو" : "فقط فعال"}
@@ -122,7 +122,7 @@ export default function Collections() {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-edge bg-white/85">
+      <div className="overflow-hidden rounded-2xl border border-edge bg-canvas-soft">
         <div className="overflow-x-auto">
           <table className="w-full text-start text-sm">
             <thead className="bg-canvas-soft text-ink-muted">
@@ -208,11 +208,11 @@ export default function Collections() {
                             className={cn(
                               "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] uppercase tracking-[0.16em]",
                               row.kind === "seasonal"
-                                ? "bg-emerald-50 text-emerald-700"
+                                ? "bg-emerald-500/15 text-emerald-300"
                                 : row.kind === "campaign"
-                                  ? "bg-sky-50 text-sky-700"
+                                  ? "bg-sky-500/15 text-sky-300"
                                   : row.kind === "editorial"
-                                    ? "bg-rose-50 text-rose-700"
+                                    ? "bg-rose-500/15 text-rose-300"
                                     : "bg-canvas-soft text-ink-soft",
                             )}
                           >
@@ -247,7 +247,7 @@ export default function Collections() {
                               type="button"
                               onClick={() => setEditId(row._id)}
                               aria-label="ویرایش"
-                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                             >
                               <Pencil className="h-3.5 w-3.5 text-ink" />
                             </button>
@@ -256,7 +256,7 @@ export default function Collections() {
                                 type="button"
                                 onClick={() => archive({ id: row._id })}
                                 aria-label="آرشیو"
-                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                               >
                                 <Archive className="h-3.5 w-3.5 text-ink" />
                               </button>
@@ -265,7 +265,7 @@ export default function Collections() {
                                 type="button"
                                 onClick={() => restore({ id: row._id })}
                                 aria-label="بازنشانی"
-                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 hover:bg-white"
+                                className="grid h-8 w-8 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
                               >
                                 <RotateCcw className="h-3.5 w-3.5 text-ink" />
                               </button>
@@ -274,7 +274,7 @@ export default function Collections() {
                               type="button"
                               onClick={() => setDelId(row._id)}
                               aria-label="حذف"
-                              className="grid h-8 w-8 place-items-center rounded-full hairline bg-white/80 text-rose-700 hover:bg-rose-50"
+                              className="grid h-8 w-8 place-items-center rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-300 hover:bg-rose-500/20"
                             >
                               <Trash2 className="h-3.5 w-3.5" />
                             </button>
@@ -442,7 +442,7 @@ function CollectionEditDrawer({
         initial={{ x: 32, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: EASE_LUXURY }}
-        className="flex h-full w-full max-w-3xl flex-col overflow-hidden border border-edge bg-white/95 shadow-2xl"
+        className="flex h-full w-full max-w-3xl flex-col overflow-hidden border border-edge bg-canvas-soft shadow-2xl"
       >
         <header className="flex items-start justify-between gap-4 border-b border-edge px-7 py-6">
           <div className="text-start">
@@ -457,7 +457,7 @@ function CollectionEditDrawer({
             type="button"
             onClick={onClose}
             aria-label="بستن"
-            className="grid h-9 w-9 place-items-center rounded-full hairline bg-white hover:bg-canvas-soft"
+            className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60 hover:bg-canvas-soft"
           >
             <X className="h-3.5 w-3.5 text-ink" />
           </button>
@@ -523,7 +523,7 @@ function CollectionEditDrawer({
                       "rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.16em]",
                       kind === k
                         ? "bg-ink text-canvas"
-                        : "hairline bg-canvas/70 text-ink-soft hover:bg-white",
+                        : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
                     )}
                   >
                     {label}
@@ -539,7 +539,7 @@ function CollectionEditDrawer({
                     type="button"
                     onClick={() => setGradient(g.id)}
                     className={cn(
-                      "h-12 w-16 rounded-xl ring-1 ring-inset ring-white/40 transition",
+                      "h-12 w-16 rounded-xl ring-1 ring-inset ring-edge-bright/30 transition",
                       g.cls,
                       gradient === g.id
                         ? "ring-2 ring-primary ring-offset-2"
@@ -580,7 +580,7 @@ function CollectionEditDrawer({
             </Field>
             <Field label="تصویر کاور" full>
               <CoverImageField
-                label={`کاور ${name || "کالکسیون"} — لونا`}
+                label={`کاور ${name || "کالکسیون"} — لیا`}
                 value={coverImage}
                 onChange={setCoverImage}
                 section="general"
@@ -618,7 +618,7 @@ function CollectionEditDrawer({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+                className="rounded-full hairline bg-canvas/70 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
               >
                 انصراف
               </button>

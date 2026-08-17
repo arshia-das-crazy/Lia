@@ -45,9 +45,9 @@ export default function AdminStub() {
       transition={{ duration: 0.45, ease: EASE_LUXURY }}
       className="grid gap-6 lg:grid-cols-[2fr_1fr]"
     >
-      <div className="rounded-3xl border border-edge bg-white/85 p-10">
+      <div className="rounded-3xl border border-edge bg-canvas-soft p-10">
         <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-          <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-white text-primary">
+          <span className="grid h-7 w-7 place-items-center rounded-full hairline bg-canvas/60 text-primary">
             {ICONS[spec.icon] ?? <Blocks className="h-3 w-3" />}
           </span>
           {spec.eyebrow}
@@ -67,7 +67,7 @@ export default function AdminStub() {
           </Link>
           <Link
             to="/admin"
-            className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-5 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-white"
+            className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/70 px-5 py-3 text-[11px] uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
           >
             بازگشت به نمای کلی
           </Link>
@@ -75,7 +75,7 @@ export default function AdminStub() {
       </div>
 
       <aside className="space-y-4">
-        <div className="rounded-3xl border border-edge bg-white/85 p-6">
+        <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
           <p className="type-eyebrow text-ink-muted">مراحل بعدی</p>
           <ul className="mt-4 space-y-2">
             {spec.upNext.map((item) => (
@@ -89,7 +89,7 @@ export default function AdminStub() {
             ))}
           </ul>
         </div>
-        <div className="rounded-3xl border border-edge bg-white/85 p-6">
+        <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
           <p className="type-eyebrow text-ink-muted">دسترسی‌ها</p>
           <p className="mt-3 text-[12px] uppercase tracking-[0.18em] text-ink-soft">
             {spec.permission}

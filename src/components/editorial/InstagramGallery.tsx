@@ -3,17 +3,17 @@ import { Instagram } from "lucide-react";
 import { cn } from "@/lib/glass";
 import { EASE_LUXURY } from "@/lib/motion";
 import { EditorialImage } from "@/components/ui/EditorialImage";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 import { useHomepageImages } from "@/lib/homepage-images";
 
 const gradients: Array<
-  "gradient-mist" | "gradient-oat" | "gradient-rose-quartz" | "gradient-deep" | "gradient-lona-rose" | "gradient-lona-pearl"
+  "gradient-mist" | "gradient-oat" | "gradient-rose-quartz" | "gradient-deep" | "gradient-lia-rose" | "gradient-lia-pearl"
 > = [
-  "gradient-lona-pearl",
+  "gradient-lia-pearl",
   "gradient-oat",
   "gradient-rose-quartz",
   "gradient-mist",
-  "gradient-lona-rose",
+  "gradient-lia-rose",
   "gradient-deep",
 ];
 
@@ -40,13 +40,13 @@ export function InstagramGallery() {
   return (
     <section
       className="mx-auto mt-36 max-w-[1728px] px-6 lg:px-10"
-      aria-label="اینستاگرام لونا"
+      aria-label="اینستاگرام لیا"
     >
       <div className="flex items-end justify-between">
         <div>
           <p className="type-eyebrow text-ink-muted">ما را دنبال کنید</p>
           <h2 className="mt-3 font-display text-4xl font-light leading-[1.02] text-ink lg:text-5xl">
-            @lona.lingerie
+            @lia.lingerie
           </h2>
         </div>
         <a
@@ -74,13 +74,13 @@ export function InstagramGallery() {
           >
             <EditorialImage
               src={instagramImages[i]}
-              alt={`تصویر ${captions[i]} در اینستاگرام لونا`}
+              alt={`تصویر ${captions[i]} در اینستاگرام لیا`}
               className="absolute inset-0 h-full w-full"
               imgClassName="opacity-90"
               fallbackClassName={g}
             />
             <span className="absolute right-3 top-3 rounded-full bg-ink/85 px-2 py-1 font-latin-display text-[9px] tracking-[0.36em] text-canvas opacity-0 transition group-hover:opacity-100">
-              <LonaLogo variant="default" size={24} title="لوگوی لونا" className="h-6 w-6" />
+              <LiaLogo variant="default" size={24} title="لوگوی لیا" className="h-6 w-6" />
             </span>
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-3">
               <span className="line-clamp-1 font-sans text-[11px] font-medium text-ink/85">

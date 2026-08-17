@@ -16,7 +16,7 @@ export default function Collection() {
 
   usePageMeta({
     title: collection ? `کالکسیون ${collection.name}` : "کالکسیون یافت نشد",
-    description: collection?.description?.slice(0, 155) ?? "کالکسیون‌های لونا",
+    description: collection?.description?.slice(0, 155) ?? "کالکسیون‌های لیا",
     canonical: collection ? `${window.location.origin}/collections/${collection.slug}` : undefined,
     ogType: "website",
     noindex: !collection,
@@ -57,7 +57,7 @@ export default function Collection() {
         >
           <EditorialImage
             src={collection.coverImage || images.collection_hero}
-            alt={`${collection.name} — تصویر کالکشن لونا`}
+            alt={`${collection.name} — تصویر کالکشن لیا`}
             className={cn("absolute inset-0", gradientClass)}
             imgClassName="opacity-90"
           />

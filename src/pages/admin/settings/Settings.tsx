@@ -118,7 +118,7 @@ export default function Settings() {
         </div>
       </header>
 
-      <div className="overflow-hidden rounded-3xl border border-edge bg-white/85">
+      <div className="overflow-hidden rounded-3xl border border-edge bg-canvas-soft">
         <nav
           role="tablist"
           aria-label="بخش‌های تنظیمات"
@@ -136,7 +136,7 @@ export default function Settings() {
                 "inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition",
                 tab === t.id
                   ? "bg-ink text-canvas"
-                  : "hairline bg-white/70 text-ink-soft hover:bg-white",
+                  : "hairline bg-canvas/70 text-ink-soft hover:bg-canvas-soft",
               )}
             >
               <t.icon className="h-3.5 w-3.5" />
@@ -201,7 +201,7 @@ function BrandPanel({
   pending: string | null;
   onSave: (value: Record<string, unknown>) => void;
 }) {
-  const [name, setName] = React.useState((value.name as string) ?? "Lona");
+  const [name, setName] = React.useState((value.name as string) ?? "لیا");
   const [tagline, setTagline] = React.useState((value.tagline as string) ?? "");
   const [description, setDescription] = React.useState(
     (value.description as string) ?? "",
@@ -257,7 +257,7 @@ function StorePanel({
   onSave: (value: Record<string, unknown>) => void;
 }) {
   const [shopName, setShopName] = React.useState(
-    (value.shopName as string) ?? "لونا"
+    (value.shopName as string) ?? "لیا"
   );
   const [legalName, setLegalName] = React.useState((value.legalName as string) ?? "");
   const [registrationNumber, setRegistrationNumber] = React.useState((value.registrationNumber as string) ?? "");
@@ -296,7 +296,7 @@ function StorePanel({
             dir="rtl"
             value={shopName}
             onChange={(e) => setShopName(e.target.value)}
-            placeholder="لونا — بوتیک لباس زیر زنانه"
+            placeholder="لیا — بوتیک لباس زیر زنانه"
             className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
           />
         </Field>
@@ -318,7 +318,7 @@ function StorePanel({
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="hello@lona.luxury"
+            placeholder="hello@lia.luxury"
             className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
           />
         </Field>
@@ -378,8 +378,8 @@ function StorePanel({
         </p>
         {(
           [
-            ["instagram", "Instagram", "@lonaboutique"],
-            ["telegram", "Telegram", "@lona_official"],
+            ["instagram", "Instagram", "@liaboutique"],
+            ["telegram", "Telegram", "@lia_official"],
             ["whatsapp", "WhatsApp", "https://wa.me/98…"],
           ] as const
         ).map(([key, label, placeholder]) => (
@@ -392,7 +392,7 @@ function StorePanel({
                 setSocial((prev) => ({ ...prev, [key]: e.target.value }))
               }
               placeholder={placeholder}
-              className="flex-1 rounded-xl border border-edge bg-white px-3 py-2 text-sm text-ink focus:border-primary focus:outline-none"
+              className="flex-1 rounded-xl border border-edge bg-canvas/60 px-3 py-2 text-sm text-ink focus:border-primary focus:outline-none"
             />
           </div>
         ))}
@@ -661,7 +661,7 @@ function SeoPanel({
   onSave: (value: Record<string, unknown>) => void;
 }) {
   const [siteTitle, setSiteTitle] = React.useState(
-    (value.siteTitle as string) ?? "لونا · لباس زیر و راحتی زنانه",
+    (value.siteTitle as string) ?? "لیا · لباس زیر و راحتی زنانه",
   );
   const [metaDescription, setMetaDescription] = React.useState(
     (value.metaDescription as string) ?? "",
@@ -707,7 +707,7 @@ function SeoPanel({
           dir="ltr"
           value={twitterHandle}
           onChange={(e) => setTwitterHandle(e.target.value)}
-          placeholder="@lonaboutique"
+          placeholder="@liaboutique"
           className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm text-ink focus:border-primary focus:outline-none"
         />
       </Field>
@@ -857,7 +857,7 @@ function SaveBar({
           در حال ذخیره…
         </span>
       ) : (
-        <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+        <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-emerald-300">
           <Check className="h-3 w-3" />
           تغییرات ذخیره شده‌اند.
         </span>
@@ -897,13 +897,13 @@ function Toggle({
         "flex w-full items-center gap-4 rounded-2xl border px-4 py-3 text-start transition",
         checked
           ? "border-primary/40 bg-primary/8"
-          : "border-edge bg-canvas/60 hover:bg-white",
+          : "border-edge bg-canvas/60 hover:bg-canvas-soft",
       )}
     >
       <span
         className={cn(
           "grid h-9 w-9 shrink-0 place-items-center rounded-full hairline",
-          checked ? "bg-primary text-canvas" : "bg-white text-ink-soft",
+          checked ? "bg-primary text-canvas" : "bg-canvas/60 text-ink-soft",
         )}
       >
         <Icon className="h-3.5 w-3.5" />
@@ -1129,7 +1129,7 @@ function ImageSlotCard({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-2xl border bg-white/80 transition",
+        "overflow-hidden rounded-2xl border bg-canvas-soft transition",
         overridden ? "border-primary/40" : "border-edge",
       )}
     >
@@ -1179,7 +1179,7 @@ function ImageSlotCard({
             type="button"
             onClick={() => inputRef.current?.click()}
             disabled={busy !== null}
-            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg hairline text-ink-soft transition hover:bg-white hover:text-ink disabled:opacity-50"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg hairline text-ink-soft transition hover:bg-canvas-soft hover:text-ink disabled:opacity-50"
             aria-label="بارگذاری تصویر"
             title="بارگذاری از دستگاه"
           >
@@ -1189,7 +1189,7 @@ function ImageSlotCard({
             type="button"
             onClick={() => void reset()}
             disabled={busy !== null || !overridden}
-            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg hairline text-ink-soft transition hover:bg-white hover:text-ink disabled:opacity-40"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg hairline text-ink-soft transition hover:bg-canvas-soft hover:text-ink disabled:opacity-40"
             aria-label="بازگشت به پیش‌فرض"
             title="بازگشت به پیش‌فرض"
           >
@@ -1211,7 +1211,7 @@ function ImageSlotCard({
             }}
           />
         </div>
-        {error ? <p className="text-[11px] text-rose-700">{error}</p> : null}
+        {error ? <p className="text-[11px] text-rose-300">{error}</p> : null}
       </div>
     </div>
   );

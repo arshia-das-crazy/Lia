@@ -1,12 +1,12 @@
 /**
- * Lona — Editorial story (Journal).
+ * Lia — Editorial story (Journal).
  *
  * Two-column editorial pull-quote + body. Used on the homepage as the
- * "مجله لونا" section. Generous whitespace, no decoration.
+ * "مجله لیا" section. Generous whitespace, no decoration.
  */
 import { motion } from "framer-motion";
 import { EASE_LUXURY } from "@/lib/motion";
-import { LonaLogo } from "@/components/brand/LonaLogo";
+import { LiaLogo } from "@/components/brand/LiaLogo";
 
 interface Props {
   eyebrow?: string;
@@ -16,7 +16,7 @@ interface Props {
 }
 
 export function EditorialStory({
-  eyebrow = "مجله لونا",
+  eyebrow = "مجله لیا",
   quote,
   body,
   attribution,
@@ -52,7 +52,7 @@ export function EditorialStory({
           </p>
           <div className="mt-8 flex items-center gap-3">
             <div className="h-px w-8 bg-ink/35" />
-            <LonaLogo variant="default" size={28} title="لوگوی لونا" className="h-7 w-7" />
+            <LiaLogo variant="default" size={28} title="لوگوی لیا" className="h-7 w-7" />
           </div>
         </div>
       </motion.div>

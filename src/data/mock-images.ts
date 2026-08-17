@@ -1,12 +1,12 @@
 /**
- * Temporary editorial image pool for Lona's mock storefront.
+ * Temporary editorial image pool for Lia's mock storefront.
  *
  * These URLs are intentionally centralized so homepage and editorial surfaces
  * share one consistent image source while the real media library is pending.
  */
-export const LONA_MOCK_FALLBACK = "/lona-mock-editorial.svg";
+export const LIA_MOCK_FALLBACK = "/lia-mock-editorial.svg";
 
-export const LONA_MOCK_IMAGES = {
+export const LIA_MOCK_IMAGES = {
   editorialPortrait: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1400&q=82",
   editorialFashion: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1400&q=82",
   softPortrait: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1400&q=82",
@@ -21,4 +21,4 @@ export const LONA_MOCK_IMAGES = {
   activeMood: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1400&q=82",
 } as const;
 
-export type LonaMockImageKey = keyof typeof LONA_MOCK_IMAGES;
+export type LiaMockImageKey = keyof typeof LIA_MOCK_IMAGES;

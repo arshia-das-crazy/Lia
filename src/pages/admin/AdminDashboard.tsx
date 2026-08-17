@@ -55,7 +55,7 @@ function KpisAndFeeds() {
     return (
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className="h-32 animate-pulse rounded-3xl bg-white/60" />
+          <div key={i} className="h-32 animate-pulse rounded-3xl bg-canvas/60" />
         ))}
       </div>
     );
@@ -68,7 +68,7 @@ function KpisAndFeeds() {
           خوش آمدید · {user?.name || "مدیر بوتیک"}
         </p>
         <h1 className="font-display text-4xl text-ink lg:text-5xl">
-          وضعیت لونا، امروز.
+          وضعیت لیا، امروز.
         </h1>
       </header>
 
@@ -126,7 +126,7 @@ function KpisAndFeeds() {
         />
       </div>
 
-      <div className="rounded-3xl border border-edge bg-white/85 p-6">
+      <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
         <div className="flex items-center gap-2">
           <AlertTriangle className="h-4 w-4 text-primary" />
           <h2 className="font-display text-2xl text-ink">محصولات با موجودی کم</h2>
@@ -153,7 +153,7 @@ function KpisAndFeeds() {
                     {[row.size, row.color].filter(Boolean).join(" · ") || "—"} · {row.sku}
                   </p>
                 </div>
-                <span className="rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-700">
+                <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-medium text-amber-300">
                   {row.stock.toLocaleString("fa-IR")} عدد باقی
                 </span>
               </motion.li>
@@ -182,7 +182,7 @@ function RecentOrdersCard({
   }>;
 }) {
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <div className="flex items-baseline justify-between">
         <h2 className="font-display text-2xl text-ink">سفارش‌های اخیر</h2>
         <Link
@@ -209,7 +209,7 @@ function RecentOrdersCard({
               className="rounded-2xl border border-edge bg-canvas-soft px-4 py-3"
             >
               <div className="flex items-center gap-3">
-                <div className="grid h-9 w-9 place-items-center rounded-full hairline bg-white">
+                <div className="grid h-9 w-9 place-items-center rounded-full hairline bg-canvas/60">
                   <Package className="h-3.5 w-3.5 text-ink" />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -245,7 +245,7 @@ function ActivityFeed({
   }>;
 }) {
   return (
-    <div className="rounded-3xl border border-edge bg-white/85 p-6">
+    <div className="rounded-3xl border border-edge bg-canvas-soft p-6">
       <div className="flex items-center gap-2">
         <Activity className="h-4 w-4 text-primary" />
         <h2 className="font-display text-2xl text-ink">فعالیت‌ها</h2>

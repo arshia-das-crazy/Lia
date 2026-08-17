@@ -1,5 +1,5 @@
 /**
- * Lona — payment provider abstraction (Phase 8.1).
+ * Lia — payment provider abstraction (Phase 8.1).
  *
  * The commerce core (Convex `orders`) never talks to a gateway
  * directly: it only records `paymentStatus` / `paymentReference` on

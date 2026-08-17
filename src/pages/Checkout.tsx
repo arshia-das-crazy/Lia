@@ -423,7 +423,7 @@ export default function Checkout() {
       <header>
         <p className="type-eyebrow text-ink-muted">پرداخت امن</p>
         <h1 className="mt-3 flex items-center gap-3 font-display text-4xl text-ink lg:text-5xl">
-          تکمیل خرید از لونا
+          تکمیل خرید از لیا
           <Lock className="h-4 w-4 text-ink-muted" />
         </h1>
       </header>
@@ -738,7 +738,7 @@ export default function Checkout() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="h-4 w-4 text-primary" />
-                      <p className="type-eyebrow text-ink-muted">درگاه پرداخت لونا</p>
+                      <p className="type-eyebrow text-ink-muted">درگاه پرداخت لیا</p>
                     </div>
                     <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-medium text-emerald-700">
                       <Lock className="h-3 w-3" /> اتصال امن
@@ -900,8 +900,8 @@ function Success({
       <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-ink-soft">
         پرداخت سفارش <span className="text-ink">{orderNumber}</span> تأیید شد.
         نامه‌ای به آدرس <span className="text-ink" dir="ltr">{email || "ایمیل شما"}</span> ارسال خواهد شد.
-        بوتیک لونا سفارش شما را با دقت آماده و ارسال می‌کند. بسته‌بندی محرمانه و ظریف، مطابق
-        استاندارد لونا.
+        بوتیک لیا سفارش شما را با دقت آماده و ارسال می‌کند. بسته‌بندی محرمانه و ظریف، مطابق
+        استاندارد لیا.
       </p>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
         <Link

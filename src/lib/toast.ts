@@ -1,5 +1,5 @@
 /**
- * Lona — Persian Sonner wrappers.
+ * Lia — Persian Sonner wrappers.
  *
  * All customer-visible toast strings. Currency references و تومان.
  */
