@@ -27,7 +27,7 @@ export function OrderTimeline({ status, history }: { status: string; history?: A
           const Icon = step.icon;
           return (
             <div key={step.key + String(i)} className="flex flex-1 flex-col items-center gap-2">
-              <div className={cn("grid h-9 w-9 place-items-center rounded-full border text-sm", done ? "bg-ink text-canvas border-ink" : "bg-white border-edge text-ink-muted", current && "ring-2 ring-primary ring-offset-2")}>
+              <div className={cn("grid h-9 w-9 place-items-center rounded-full border text-sm", done ? "bg-ink text-canvas border-ink" : "bg-canvas/60 border-edge text-ink-muted", current && "ring-2 ring-primary ring-offset-2")}>
                 {done ? <Check className="h-4 w-4" /> : <Icon className="h-4 w-4" />}
               </div>
               <span className={cn("text-[11px] text-center", done ? "text-ink font-medium" : "text-ink-muted")}>{step.label}</span>
@@ -36,11 +36,11 @@ export function OrderTimeline({ status, history }: { status: string; history?: A
           );
         })}
       </div>
-      {isCancelled && <p className="rounded-2xl bg-zinc-100 px-4 py-3 text-sm text-ink-soft text-center">سفارش لغو شده است.</p>}
+      {isCancelled && <p className="rounded-2xl border border-edge bg-canvas/60 px-4 py-3 text-sm text-ink-muted text-center">سفارش لغو شده است.</p>}
       {history && history.length > 0 && (
         <ol className="space-y-3">
           {history.map((h) => (
-            <li key={String(h.at) + h.status} className="flex gap-3 rounded-2xl border border-edge bg-white/70 px-4 py-3">
+            <li key={String(h.at) + h.status} className="flex gap-3 rounded-2xl border border-edge bg-canvas/60 px-4 py-3">
               <span className="mt-1 h-2 w-2 rounded-full bg-primary shrink-0" />
               <div className="min-w-0">
                 <p className="text-sm text-ink">{h.status} {h.note ? `— ${h.note}` : ""}</p>
