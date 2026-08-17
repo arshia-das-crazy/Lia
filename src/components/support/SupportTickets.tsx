@@ -59,7 +59,7 @@ export function SupportTickets() {
           <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="شرح درخواست…" rows={3} className="md:col-span-2 rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm" />
         </div>
         {err && <p className="mt-2 text-xs text-destructive">{err}</p>}
-        {ok && <p className="mt-2 text-xs text-emerald-600">{ok}</p>}
+        {ok && <p className="mt-2 text-xs text-emerald-300">{ok}</p>}
         <button onClick={submit} className="mt-4 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-2.5 text-sm text-canvas hover:bg-primary"><Send className="h-4 w-4" /> ارسال</button>
       </div>
 

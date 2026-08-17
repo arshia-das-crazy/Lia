@@ -96,7 +96,7 @@ export function ListCard({ product }: ListCardProps) {
                 "grid h-9 w-9 place-items-center rounded-full hairline transition hover:bg-canvas-soft",
                 favorite && "text-primary"
               )}
-              aria-label={favorite ? "Remove from wishlist" : "Save to wishlist"}
+              aria-label={favorite ? "حذف از علاقه‌مندی‌ها" : "افزودن به علاقه‌مندی‌ها"}
             >
               <Heart className={cn("h-4 w-4", favorite && "fill-primary")} />
             </button>
