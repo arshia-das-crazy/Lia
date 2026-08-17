@@ -182,7 +182,8 @@ export default function OrdersAdmin() {
         />
       ) : (
         <div className={`overflow-hidden rounded-2xl ${glass.surface}`}>
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
             <thead className="bg-canvas-soft text-ink-muted">
               <tr className="text-right">
                 <th className="px-4 py-3 text-[10px] font-medium uppercase tracking-[0.16em]">کد سفارش</th>
@@ -237,8 +238,9 @@ export default function OrdersAdmin() {
                   </tr>
                 );
               })}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
