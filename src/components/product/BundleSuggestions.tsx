@@ -120,7 +120,7 @@ export function BundleSuggestions({ primaryId }: BundleSuggestionsProps) {
             )}
             <label
               className={cn(
-                "flex flex-1 cursor-pointer items-center gap-4 rounded-2xl bg-canvas/60 p-3 ring-1 ring-inset ring-white/35 transition hover:bg-white/80",
+                "flex flex-1 cursor-pointer items-center gap-4 rounded-2xl bg-canvas/60 p-3 ring-1 ring-inset ring-edge-bright/30 transition hover:bg-canvas-soft",
                 picked.has(p.id) && "ring-primary"
               )}
             >

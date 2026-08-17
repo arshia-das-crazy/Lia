@@ -47,7 +47,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           <LiaLogo variant="default" size={42} title="لوگوی لیا" className="h-11 w-11" />
           <button
             onClick={onClose}
-            className="grid h-10 w-10 place-items-center rounded-full hairline text-ink hover:bg-white/60"
+            className="grid h-10 w-10 place-items-center rounded-full hairline text-ink hover:bg-canvas-soft"
             aria-label="بستن"
           >
             <X className="h-4 w-4" />

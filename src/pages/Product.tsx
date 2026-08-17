@@ -206,7 +206,7 @@ export default function Product() {
             <div className="glass flex items-center rounded-full px-1 py-1">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}
-                className="grid h-9 w-9 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                className="grid h-9 w-9 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                 aria-label="کاهش تعداد"
               >
                 <Minus className="h-3.5 w-3.5" />
@@ -216,7 +216,7 @@ export default function Product() {
               </span>
               <button
                 onClick={() => setQty((q) => q + 1)}
-                className="grid h-9 w-9 place-items-center rounded-full text-ink-soft hover:bg-white/60"
+                className="grid h-9 w-9 place-items-center rounded-full text-ink-soft hover:bg-canvas-soft"
                 aria-label="افزایش تعداد"
               >
                 <Plus className="h-3.5 w-3.5" />
@@ -239,7 +239,7 @@ export default function Product() {
                 favorite ? toast.unwished(product.name) : toast.wished(product.name);
               }}
               className={cn(
-                "grid h-12 w-12 place-items-center rounded-full glass transition hover:bg-white/60",
+                "grid h-12 w-12 place-items-center rounded-full glass transition hover:bg-canvas-soft",
                 favorite && "text-primary"
               )}
               aria-label={favorite ? "حذف از علاقه‌مندی‌ها" : "افزودن به علاقه‌مندی‌ها"}
@@ -261,8 +261,8 @@ export default function Product() {
           </ul>
 
           {/* Shipping estimator (collapsed by default) */}
-          <details className="mt-8 group rounded-2xl hairline bg-white/45 p-1">
-            <summary className="flex cursor-pointer items-center justify-between rounded-xl px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink transition hover:bg-white/60 [&::-webkit-details-marker]:hidden">
+          <details className="mt-8 group rounded-2xl hairline bg-canvas/60 p-1">
+            <summary className="flex cursor-pointer items-center justify-between rounded-xl px-4 py-3 text-[11px] uppercase tracking-[0.18em] text-ink transition hover:bg-canvas-soft [&::-webkit-details-marker]:hidden">
               برآورد ارسال و هزینه‌ها
               <span className="text-ink-muted transition group-open:rotate-45">+</span>
             </summary>

@@ -50,7 +50,7 @@ export function HeroChoreography() {
       <MotionDiv
         aria-hidden
         style={{ x: reduced ? 0 : mouse.x * 24, y: backdropY }}
-        className="pointer-events-none absolute -right-40 top-60 h-[520px] w-[520px] rounded-full bg-rose-quartz/30 blur-[140px] opacity-50"
+        className="pointer-events-none absolute -right-40 top-60 h-[520px] w-[520px] rounded-full bg-lia-rose/30 blur-[140px] opacity-50"
       />
 
       <MotionDiv
@@ -148,7 +148,7 @@ export function HeroChoreography() {
             </Link>
             <Link
               to="/collections"
-              className="group inline-flex items-center gap-3 rounded-full glass-subtle px-5 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-ink transition hover:bg-white/60"
+              className="group inline-flex items-center gap-3 rounded-full glass-subtle px-5 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-ink transition hover:bg-canvas-soft"
             >
               مطالعهٔ مجله
               <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:group-hover:translate-x-0 rtl:group-hover:-translate-x-0.5" />

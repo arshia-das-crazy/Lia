@@ -77,7 +77,7 @@ export default function Wishlist() {
                   <button
                     onClick={() => remove(product.id)}
                     className={cn(
-                      "grid h-8 w-8 place-items-center rounded-full glass-subtle text-ink-soft hover:bg-white hover:text-ink"
+                      "grid h-8 w-8 place-items-center rounded-full glass-subtle text-ink-soft hover:bg-canvas-soft hover:text-ink"
                     )}
                     aria-label="حذف از علاقه‌مندی‌ها"
                   >

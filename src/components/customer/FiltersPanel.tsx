@@ -117,8 +117,8 @@ export function FiltersPanel({ filters, onChange, compact, variant = "sidebar" }
                 className={cn(
                   "flex w-full items-center justify-between rounded-xl px-3 py-2 text-right text-sm transition",
                   filters.category === c.id
-                    ? "bg-white/80 font-medium text-ink"
-                    : "text-ink-soft hover:bg-white/40 hover:text-ink"
+                    ? "bg-canvas-soft font-medium text-ink"
+                    : "text-ink-soft hover:bg-canvas/60 hover:text-ink"
                 )}
               >
                 <span>{c.label}</span>
@@ -149,7 +149,7 @@ export function FiltersPanel({ filters, onChange, compact, variant = "sidebar" }
                 "rounded-full border border-edge px-3 py-1.5 text-[11px] transition",
                 filters.availability === opt.id
                   ? "bg-ink text-canvas"
-                  : "text-ink-soft hover:bg-white/40"
+                  : "text-ink-soft hover:bg-canvas/60"
               )}
             >
               {opt.label}
@@ -230,7 +230,7 @@ export function FiltersPanel({ filters, onChange, compact, variant = "sidebar" }
                       "rounded-lg py-2 text-[10px] transition",
                       on
                         ? "bg-ink text-canvas"
-                        : "hairline text-ink-soft hover:bg-white/40"
+                        : "hairline text-ink-soft hover:bg-canvas/60"
                     )}
                   >
                     {s.label}
@@ -304,7 +304,7 @@ function PriceRangePill({
           e.stopPropagation();
           setOpen((o) => !o);
         }}
-        className="h-9 rounded-full border border-edge bg-canvas/70 px-4 text-[11px] text-ink hover:bg-white/80"
+        className="h-9 rounded-full border border-edge bg-canvas/70 px-4 text-[11px] text-ink hover:bg-canvas-soft"
       >
         قیمت · {formatPrice(min)} – {formatPrice(max)}
       </button>

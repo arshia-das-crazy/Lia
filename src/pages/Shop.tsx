@@ -172,7 +172,7 @@ export default function Shop() {
         <div className="flex flex-wrap items-center gap-3">
           <button
             onClick={() => setDrawer((d) => !d)}
-            className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-white/80"
+            className="inline-flex items-center gap-2 rounded-full hairline bg-canvas/60 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-ink hover:bg-canvas-soft"
           >
             <SlidersHorizontal className="h-3.5 w-3.5" />
             فیلتر
@@ -227,7 +227,7 @@ export default function Shop() {
             />
             <button
               onClick={() => onFiltersChange(FILTER_DEFAULTS)}
-              className="mt-10 w-full rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-white"
+              className="mt-10 w-full rounded-full hairline bg-canvas/60 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft"
             >
               پاک کردن همه فیلترها
             </button>

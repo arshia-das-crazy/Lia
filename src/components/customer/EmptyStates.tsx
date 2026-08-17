@@ -46,7 +46,7 @@ export function EmptyState({
       )}
     >
       {icon && (
-        <span className="grid h-14 w-14 place-items-center rounded-full hairline bg-white/60">
+        <span className="grid h-14 w-14 place-items-center rounded-full hairline bg-canvas/60">
           {icon}
         </span>
       )}
@@ -103,7 +103,7 @@ export function EmptySearch({
 export function EmptyCart() {
   return (
     <div className="mx-auto max-w-2xl px-6 pt-28 pb-24 text-center lg:px-10">
-      <span className="mx-auto grid h-16 w-16 place-items-center rounded-full hairline bg-white/60">
+      <span className="mx-auto grid h-16 w-16 place-items-center rounded-full hairline bg-canvas/60">
         <ShoppingBag className="h-5 w-5 text-ink" />
       </span>
       <p className="type-eyebrow mt-6 text-ink-muted">کیف</p>
@@ -127,7 +127,7 @@ export function EmptyCart() {
 export function EmptyWishlist() {
   return (
     <div className="mt-16 text-center">
-      <span className="mx-auto grid h-16 w-16 place-items-center rounded-full hairline bg-white/60">
+      <span className="mx-auto grid h-16 w-16 place-items-center rounded-full hairline bg-canvas/60">
         <Heart className="h-5 w-5 text-ink" />
       </span>
       <p className="mt-6 font-display text-3xl text-ink lg:text-4xl">
