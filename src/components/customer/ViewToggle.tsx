@@ -29,7 +29,7 @@ export function ViewToggle() {
       />
       <button
         onClick={() => set("grid")}
-        aria-label="grid view"
+        aria-label="نمای شبکه‌ای"
         aria-pressed={view === "grid"}
         className={cn(
           "relative z-10 flex items-center justify-center gap-1.5 rounded-full text-[11px] uppercase tracking-[0.16em] transition",
@@ -37,7 +37,7 @@ export function ViewToggle() {
         )}
       >
         <LayoutGrid className="h-3.5 w-3.5" />
-        Grid
+        شبکه‌ای
       </button>
       <button
         onClick={() => set("list")}
@@ -49,7 +49,7 @@ export function ViewToggle() {
         )}
       >
         <Rows3 className="h-3.5 w-3.5" />
-        List
+        فهرستی
       </button>
     </div>
   );

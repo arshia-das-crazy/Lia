@@ -157,7 +157,7 @@ class RootErrorBoundary extends React.Component<
               <button onClick={() => window.location.reload()} className="rounded-full bg-ink px-6 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-canvas hover:bg-primary">
                 تلاش دوباره
               </button>
-              <a href="/" className="rounded-full hairline bg-canvas/60 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft hover:bg-white">
+              <a href="/" className="rounded-full hairline bg-canvas/60 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-ink-soft transition hover:bg-canvas-soft hover:text-ink">
                 بازگشت به خانه
               </a>
             </div>

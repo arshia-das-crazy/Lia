@@ -34,7 +34,7 @@ export function ReturnRequest({ orderId }: { orderId: Id<"orders"> }) {
       <input value={reason} onChange={(e) => setReason(e.target.value)} placeholder="دلیل" className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm" />
       <textarea value={desc} onChange={(e) => setDesc(e.target.value)} placeholder="توضیح اختیاری" rows={2} className="w-full rounded-2xl border border-edge bg-canvas/60 px-4 py-2.5 text-sm" />
       {err && <p className="text-xs text-destructive">{err}</p>}
-      {msg && <p className="text-xs text-emerald-600">{msg}</p>}
+      {msg && <p className="text-xs text-emerald-300">{msg}</p>}
       <button onClick={submit} className="rounded-full bg-ink px-6 py-2.5 text-sm text-canvas hover:bg-primary">ثبت درخواست</button>
       {my === undefined ? <Loader2 className="h-4 w-4 animate-spin" /> : orderReturns.length > 0 && (
         <ul className="space-y-2 pt-2">

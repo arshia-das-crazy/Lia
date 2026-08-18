@@ -46,7 +46,7 @@ export function VariantPicker({
         <div className="flex items-center justify-between">
           <p className="type-eyebrow text-ink-muted">سایز</p>
           <button className="text-xs uppercase tracking-[0.18em] text-ink-soft underline-offset-4 hover:underline">
-            Size guide
+            راهنمای سایز
           </button>
         </div>
         <div className="mt-3 grid grid-cols-5 gap-2 sm:grid-cols-6">
@@ -82,9 +82,9 @@ export function VariantPicker({
         <span className={cn("text-ink-soft")}>
           {inStock
             ? isLimited
-              ? "Limited run · last pieces"
-              : "In stock · ships within 48h"
-            : "Out of stock — restocking next season"}
+              ? "تولید محدود · آخرین تکه‌ها"
+              : "موجود · ارسال در ۴۸ ساعت"
+            : "ناموجود — موجودی در فصل بعد"}
         </span>
       </div>
     </>
